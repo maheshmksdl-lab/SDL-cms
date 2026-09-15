@@ -1,0 +1,4864 @@
+{
+  "index": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind SDL."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How SDL thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses SDL works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with SDL."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "PILLAR_GLYPHS": {
+      "Digital engineering": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path fill-rule=\"evenodd\" clip-rule=\"evenodd\" fill=\"currentColor\" d=\"M50 4L84 25L84 75L50 96L16 75L16 25Z M50 30A20 20 0 1 0 50.01 30Z\"/></svg>",
+      "Business transformation": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M74 28A34 34 0 1 1 28 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"14\" stroke-linecap=\"round\"/><path d=\"M18 10 L30 24 L14 30 Z\" fill=\"currentColor\"/></svg>",
+      "Digital experience": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M22 8 L22 84 L41 67 L53 92 L66 86 L54 61 L78 61 Z\" fill=\"currentColor\"/></svg>",
+      "Growth transformation": "<svg viewBox=\"0 0 100 100\" xmlns=\"http://www.w3.org/2000/svg\"><path d=\"M18 82 L82 18\" stroke=\"currentColor\" stroke-width=\"14\" stroke-linecap=\"round\" fill=\"none\"/><path d=\"M46 18 L82 18 L82 54\" stroke=\"currentColor\" stroke-width=\"14\" stroke-linecap=\"round\" stroke-linejoin=\"round\" fill=\"none\"/></svg>",
+      "Products & platforms": "<svg viewBox=\"0 0 100 116\" xmlns=\"http://www.w3.org/2000/svg\"><polygon points=\"50,6 92,28 50,50 8,28\" fill=\"currentColor\"/><polygon points=\"50,36 92,58 50,80 8,58\" fill=\"currentColor\" opacity=\"0.7\"/><polygon points=\"50,66 92,88 50,110 8,88\" fill=\"currentColor\" opacity=\"0.45\"/></svg>"
+    },
+    "PILLAR_MOTIF_COLORS": [
+      [
+        "#7C97FF",
+        "#2B49DB"
+      ],
+      [
+        "#8FD6FF",
+        "#2B8FDB"
+      ],
+      [
+        "#FFE38A",
+        "#F4C430"
+      ],
+      [
+        "#6FDBA0",
+        "#28C76F"
+      ],
+      [
+        "#A9BBFF",
+        "#3E5FE0"
+      ],
+      [
+        "#9BEFC4",
+        "#22B368"
+      ]
+    ],
+    "PILLARS": [
+      {
+        "title": "AI transformation",
+        "tagline": "Put AI to work where it matters.",
+        "desc": "Identify meaningful opportunities, build practical AI capabilities and accelerate adoption.",
+        "tags": [
+          "AI strategy & consulting",
+          "Generative AI",
+          "AI applications",
+          "AI agents & automation",
+          "AI-enabled engineering",
+          "AI integration"
+        ],
+        "cta": {
+          "label": "Explore AI transformation",
+          "href": "ai-transformation.html"
+        }
+      },
+      {
+        "title": "Digital engineering",
+        "tagline": "Build what moves you forward.",
+        "desc": "Create, modernize and scale digital products, applications and platforms.",
+        "tags": [
+          "Web App",
+          "Mobile App",
+          "Microservices",
+          "Quality engineering",
+          "Application modernization",
+          "Cloud"
+        ],
+        "cta": {
+          "label": "Explore digital engineering",
+          "href": "digital-engineering.html"
+        }
+      },
+      {
+        "title": "Business transformation",
+        "tagline": "Rethink how work gets done.",
+        "desc": "Modernize systems and processes to create stronger, more efficient ways of working.",
+        "tags": [
+          "Digital transformation",
+          "E-commerce",
+          "Business applications",
+          "Process modernization",
+          "SaaS"
+        ],
+        "cta": {
+          "label": "Explore business transformation",
+          "href": "business-transformation.html"
+        }
+      },
+      {
+        "title": "Digital experience",
+        "tagline": "Make every interaction matter.",
+        "desc": "Create digital experiences that work better for customers, employees and the business.",
+        "tags": [
+          "UX strategy",
+          "UI design",
+          "Product design",
+          "Customer experience",
+          "Employee experience",
+          "Design systems"
+        ],
+        "cta": {
+          "label": "Explore digital experience",
+          "href": "digital-experience.html"
+        }
+      },
+      {
+        "title": "Growth transformation",
+        "tagline": "Turn attention into business.",
+        "desc": "Bring AI search, SEO, digital marketing and digital channels together to create qualified demand and improve conversion.",
+        "tags": [
+          "AI search & visibility",
+          "SEO",
+          "Performance marketing",
+          "Content & demand generation",
+          "Conversion optimization",
+          "Analytics & measurement"
+        ],
+        "cta": {
+          "label": "Explore growth transformation",
+          "href": "growth-transformation.html"
+        }
+      },
+      {
+        "title": "Products & platforms",
+        "tagline": "Extend what your business can do.",
+        "desc": "Practical business software for managing customers, operations and people.",
+        "tags": [
+          "CRM",
+          "Campaigns",
+          "ServiceOps",
+          "Desk",
+          "Projects",
+          "Sync",
+          "Inventory",
+          "Billing",
+          "HRMS",
+          "Skillberry"
+        ],
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        }
+      }
+    ],
+    "INVEST_STEPS": [
+      {
+        "n": "01",
+        "title": "Investment",
+        "caption": "What you put in"
+      },
+      {
+        "n": "02",
+        "title": "Technology",
+        "caption": "What you build"
+      },
+      {
+        "n": "03",
+        "title": "Acceleration",
+        "caption": "How you move"
+      },
+      {
+        "n": "04",
+        "title": "Capability",
+        "caption": "What gets stronger"
+      },
+      {
+        "n": "05",
+        "title": "Outcome",
+        "caption": "What changes"
+      }
+    ],
+    "AI_STEPS": [
+      {
+        "n": "01",
+        "title": "Find",
+        "desc": "Identify where AI can create value."
+      },
+      {
+        "n": "02",
+        "title": "Build",
+        "desc": "Turn opportunities into useful capabilities."
+      },
+      {
+        "n": "03",
+        "title": "Accelerate",
+        "desc": "Move from idea to implementation faster."
+      },
+      {
+        "n": "04",
+        "title": "Scale",
+        "desc": "Take what works into the business."
+      }
+    ],
+    "CLIENT_LOGOS": [
+      "assets/clients/client1.jpg",
+      "assets/clients/client2.jpg",
+      "assets/clients/client3.jpg",
+      "assets/clients/client4.jpg",
+      "assets/clients/client5.jpg",
+      "assets/clients/client6.jpg"
+    ],
+    "TESTIMONIALS": [
+      {
+        "name": "Andy Collen",
+        "role": "Great flexibility!",
+        "avatar": "assets/testimonials/andy.png",
+        "quote": "Jumping into a new ring of technology can sometimes be frustrating. However, the professional, talented folks at Social DNA Labs made App development fun and exciting. With Social DNA Labs, the possibilities are endless."
+      },
+      {
+        "name": "Jay Shah",
+        "role": "Super support!",
+        "avatar": "assets/testimonials/jayesh.png",
+        "quote": "Social DNA Labs provided my business the Data Systems with fully-fledged digital marketing services encompassing demand generation, digital advertising, search engine optimization, marketing automation, and lead generation. Their team works as an extension of our team, who are extremely efficient and provide real-time metrics that indicate the constant value our organization is receiving."
+      }
+    ],
+    "INSIGHT_COLORS": [
+      {
+        "bg": "var(--success)",
+        "text": "dark"
+      },
+      {
+        "bg": "var(--attention)",
+        "text": "dark"
+      },
+      {
+        "bg": "var(--accent)",
+        "text": "light"
+      }
+    ],
+    "INSIGHTS": [
+      {
+        "cat": "AI / Technology",
+        "title": "Add a strong recent AI or technology article",
+        "readTime": "6 min read",
+        "thumb": "url(assets/insights/ai-tech.jpg)"
+      },
+      {
+        "cat": "Business / Transformation",
+        "title": "Add a strong strategic transformation article",
+        "readTime": "8 min read"
+      },
+      {
+        "cat": "Growth / Digital",
+        "title": "Add a strong practical growth article",
+        "readTime": "5 min read",
+        "thumb": "url(assets/insights/growth.jpg)"
+      },
+      {
+        "cat": "Data / Analytics",
+        "title": "Add a strong data and analytics article",
+        "readTime": "7 min read"
+      },
+      {
+        "cat": "Cloud / Platforms",
+        "title": "Add a strong cloud and platforms article",
+        "readTime": "6 min read",
+        "thumb": "url(assets/insights/cloud.jpg)"
+      },
+      {
+        "cat": "Customer Experience",
+        "title": "Add a strong customer experience article",
+        "readTime": "5 min read"
+      }
+    ],
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact"
+          }
+        ]
+      }
+    ]
+  },
+  "services": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind Social DNA Labs."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How Social DNA Labs thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses Social DNA Labs works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with Social DNA Labs."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "PILLARS": [
+      {
+        "title": "AI transformation",
+        "tagline": "Put AI to work.",
+        "desc": "Identify meaningful opportunities, build practical AI capabilities and accelerate adoption. From strategy and generative AI to intelligent agents and AI-enabled engineering, we help turn experimentation into measurable business value. The result is AI that fits how your teams actually work, not a bolt-on feature nobody uses.",
+        "tags": [
+          "AI strategy & consulting",
+          "Generative AI",
+          "AI applications",
+          "AI agents & automation",
+          "AI-enabled engineering",
+          "AI integration"
+        ],
+        "cta": {
+          "label": "Explore AI transformation",
+          "href": "ai-transformation.html"
+        }
+      },
+      {
+        "title": "Digital engineering",
+        "tagline": "Build and modernize.",
+        "desc": "Create, modernize and scale digital products, applications and platforms. We combine strong engineering practices with modern architectures to help you ship faster, integrate more easily and build systems that hold up as the business grows. Every solution is built to be maintainable, secure and ready for what comes next.",
+        "tags": [
+          "Web & application engineering",
+          "Mobile engineering",
+          "API & microservices",
+          "Cloud engineering",
+          "Application modernization",
+          "Quality engineering"
+        ],
+        "cta": {
+          "label": "Explore digital engineering",
+          "href": "digital-engineering.html"
+        }
+      },
+      {
+        "title": "Business transformation",
+        "tagline": "Transform how the business works.",
+        "desc": "Modernize systems and processes to create stronger, more efficient ways of working. We look across people, technology and workflows to remove friction, connect disconnected systems and give teams the tools they need to move faster. The outcome is a business that runs on processes built for today, not decisions made years ago.",
+        "tags": [
+          "Digital transformation",
+          "CRM",
+          "E-commerce",
+          "Business applications",
+          "Process modernization",
+          "SaaS"
+        ],
+        "cta": {
+          "label": "Explore business transformation",
+          "href": "business-transformation.html"
+        }
+      },
+      {
+        "title": "Digital experience",
+        "tagline": "Design better digital interactions.",
+        "desc": "Create digital experiences that work better for customers, employees and the business. From research and design to the systems that keep experiences consistent at scale, we focus on interactions that are intuitive, accessible and aligned with what people actually need. Better experience drives better outcomes on both sides of the relationship.",
+        "tags": [
+          "UX strategy",
+          "UI design",
+          "Product design",
+          "Customer experience",
+          "Employee experience",
+          "Design systems"
+        ],
+        "cta": {
+          "label": "Explore digital experience",
+          "href": "digital-experience.html"
+        }
+      },
+      {
+        "title": "Growth transformation",
+        "tagline": "Create demand that converts.",
+        "desc": "Bring AI search, SEO, digital marketing and digital channels together to create qualified demand and improve conversion. We connect strategy, content and measurement so every channel works toward the same outcome instead of pulling in different directions. The focus stays on attention that converts into real business results.",
+        "tags": [
+          "AI search & visibility",
+          "SEO",
+          "Performance marketing",
+          "Content & demand generation",
+          "Conversion optimization",
+          "Analytics & measurement"
+        ],
+        "cta": {
+          "label": "Explore growth transformation",
+          "href": "growth-transformation.html"
+        }
+      }
+    ],
+    "OPPORTUNITY_STEPS": [
+      {
+        "n": "01",
+        "title": "Accelerate",
+        "desc": "Move from idea to implementation faster."
+      },
+      {
+        "n": "02",
+        "title": "Apply",
+        "desc": "Use the right technology where it creates real business value."
+      },
+      {
+        "n": "03",
+        "title": "Evolve",
+        "desc": "Continuously improve products, systems and experiences as your business changes."
+      }
+    ],
+    "INSIGHT_COLORS": [
+      {
+        "bg": "var(--success)",
+        "text": "dark"
+      },
+      {
+        "bg": "var(--attention)",
+        "text": "dark"
+      },
+      {
+        "bg": "var(--accent)",
+        "text": "light"
+      }
+    ],
+    "INSIGHTS": [
+      {
+        "cat": "AI / Technology",
+        "title": "AI and the changing technology landscape",
+        "readTime": "6 min read",
+        "thumb": "url(assets/insights/ai-tech.jpg)"
+      },
+      {
+        "cat": "Business / Transformation",
+        "title": "Business transformation without the disruption",
+        "readTime": "8 min read"
+      },
+      {
+        "cat": "Growth / Digital",
+        "title": "Turning technology into business growth",
+        "readTime": "5 min read",
+        "thumb": "url(assets/insights/growth.jpg)"
+      },
+      {
+        "cat": "Digital Experience",
+        "title": "Designing digital experiences people actually use",
+        "readTime": "6 min read"
+      },
+      {
+        "cat": "Digital Engineering",
+        "title": "Building digital products for what's next",
+        "readTime": "7 min read",
+        "thumb": "url(assets/insights/cloud.jpg)"
+      },
+      {
+        "cat": "Data / Analytics",
+        "title": "What good data discipline looks like",
+        "readTime": "5 min read"
+      }
+    ],
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact"
+          }
+        ]
+      }
+    ]
+  },
+  "ai-transformation": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind SDL."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How SDL thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses SDL works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with SDL."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact"
+          }
+        ]
+      }
+    ],
+    "AI_CAPABILITIES": [
+      {
+        "title": "AI strategy & consulting",
+        "desc": "Identify where AI can create meaningful business value and what it will take to get there. Assess AI readiness, prioritize high-value use cases and define a practical roadmap aligned with business priorities, technology capabilities and investment goals."
+      },
+      {
+        "title": "Generative AI",
+        "desc": "Build practical applications around generative AI, from intelligent assistants and knowledge systems to content, search and customer experiences. Connect language models with business information and workflows to create AI experiences that are relevant, useful and grounded in context."
+      },
+      {
+        "title": "AI applications",
+        "desc": "Turn intelligence into useful products and applications that solve specific business problems. Build capabilities such as intelligent search, recommendations, prediction and personalization around the people, processes and experiences they are designed to improve."
+      },
+      {
+        "title": "AI agents & automation",
+        "desc": "Move beyond assistance with AI agents and intelligent workflows that can reason across information, coordinate tasks and take action within defined boundaries. Identify processes where intelligent automation can reduce manual effort, accelerate execution and improve how work moves across people and systems."
+      },
+      {
+        "title": "AI-enabled engineering",
+        "desc": "Use AI throughout the engineering lifecycle to accelerate development, modernize applications, improve quality and increase developer productivity. Combine AI-assisted development, automated testing, code modernization and disciplined engineering practices to deliver faster without compromising production quality."
+      },
+      {
+        "title": "AI integration & modernization",
+        "desc": "Bring AI into the technology landscape already running the business. Connect AI capabilities with applications, data, APIs, CRM, ERP, e-commerce and cloud platforms, while modernizing existing technology where AI can improve how systems and capabilities work."
+      }
+    ],
+    "CAP_SHAPE_COLORS": [
+      [
+        "#7C97FF",
+        "#2B49DB"
+      ],
+      [
+        "#6FDBA0",
+        "#28C76F"
+      ],
+      [
+        "#FFE38A",
+        "#F4C430"
+      ],
+      [
+        "#8FD6FF",
+        "#2B8FDB"
+      ],
+      [
+        "#A9BBFF",
+        "#3E5FE0"
+      ],
+      [
+        "#9BEFC4",
+        "#22B368"
+      ]
+    ],
+    "AI_VALUE_ITEMS": [
+      {
+        "title": "Customer experience",
+        "desc": "Make interactions more relevant, responsive and useful across digital channels.",
+        "icon": "<path d=\"M20 14.5a3 3 0 0 1-3 3H9l-4.5 3.2V6.5a3 3 0 0 1 3-3h9.5a3 3 0 0 1 3 3z\"/><path d=\"M9 10.5h6M9 14h4\"/>"
+      },
+      {
+        "title": "Employee productivity",
+        "desc": "Reduce repetitive work and give teams faster access to the information they need.",
+        "icon": "<path d=\"M13 3 4.5 13.8H10l-1 7.2 8.6-10.9H12z\"/>"
+      },
+      {
+        "title": "Business operations",
+        "desc": "Automate processes, reduce friction and help work move faster across the organization.",
+        "icon": "<path d=\"M20.5 12a8.5 8.5 0 0 1-14.2 6.3\"/><path d=\"M3.5 12a8.5 8.5 0 0 1 14.2-6.3\"/><path d=\"M17.7 2.3v3.6h-3.6M6.3 21.7v-3.6h3.6\"/>"
+      },
+      {
+        "title": "Decision making",
+        "desc": "Turn business information into timely insights that help people make better decisions.",
+        "icon": "<path d=\"M4 20V11M10 20V5M16 20v-6M21.5 20h-19\"/>"
+      },
+      {
+        "title": "Digital products",
+        "desc": "Introduce intelligent features and new capabilities that create more useful products and services.",
+        "icon": "<rect x=\"3\" y=\"4.5\" width=\"18\" height=\"15\" rx=\"2.5\"/><path d=\"M3 9.5h18M7 7h.01M10 7h.01\"/>"
+      },
+      {
+        "title": "Software engineering",
+        "desc": "Accelerate development, testing and modernization while helping engineering teams work more effectively.",
+        "icon": "<path d=\"m8.5 8-4.5 4 4.5 4M15.5 8l4.5 4-4.5 4M13.5 5l-3 14\"/>"
+      }
+    ]
+  },
+  "business-transformation": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind SDL."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How SDL thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses SDL works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with SDL."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact"
+          }
+        ]
+      }
+    ],
+    "BT_CAPABILITIES": [
+      {
+        "title": "Digital transformation",
+        "tagline": "Turn business goals into digital change.",
+        "desc": "Modernize the technology, processes and operating models that support the business. Identify opportunities for change, define the right transformation roadmap and turn priorities into practical digital capabilities."
+      },
+      {
+        "title": "Business application modernization",
+        "tagline": "Give aging applications new life.",
+        "desc": "Modernize applications that have become difficult to maintain, change or scale while preserving the business capabilities they already provide."
+      },
+      {
+        "title": "E-commerce transformation",
+        "tagline": "Commerce platforms built to convert.",
+        "desc": "Build and modernize digital commerce capabilities that make it easier to sell, manage orders and serve customers across B2B and B2C channels.",
+        "tech": "Magento · Shopify · WooCommerce · Nextmerce · Headless commerce",
+        "cta": true
+      },
+      {
+        "title": "Process modernization",
+        "tagline": "Redesign how the work actually gets done.",
+        "desc": "Redesign inefficient or manual processes around better digital workflows, automation and more effective ways of working."
+      },
+      {
+        "title": "SaaS & business platforms",
+        "tagline": "Turn platforms into productivity.",
+        "desc": "Implement and optimize business platforms to support core operations, improve productivity and connect processes across the organization."
+      },
+      {
+        "title": "Integration & automation",
+        "tagline": "Make systems work together.",
+        "desc": "Connect applications, data and workflows so information moves where it is needed and repetitive work becomes easier to manage."
+      },
+      {
+        "title": "Custom business applications",
+        "tagline": "Purpose-built tools, not disconnected ones.",
+        "desc": "Build applications around business requirements that cannot be addressed effectively through existing platforms or standard software."
+      }
+    ],
+    "BT_CAP_SHAPE_COLORS": [
+      [
+        "#FFE38A",
+        "#F4C430"
+      ],
+      [
+        "#8FD6FF",
+        "#2B8FDB"
+      ],
+      [
+        "#6FDBA0",
+        "#28C76F"
+      ],
+      [
+        "#7C97FF",
+        "#2B49DB"
+      ],
+      [
+        "#FFD199",
+        "#E68A2E"
+      ],
+      [
+        "#9BEFC4",
+        "#22B368"
+      ],
+      [
+        "#FFB199",
+        "#E64A3C"
+      ]
+    ],
+    "BT_VALUE_ITEMS": [
+      {
+        "title": "Simpler operations",
+        "desc": "Reduce manual effort, unnecessary steps and disconnected processes.",
+        "icon": "<path d=\"M4 5h16l-6 8v6l-4-2v-4z\"/>"
+      },
+      {
+        "title": "Better customer relationships",
+        "desc": "Give teams a clearer view of customers and create more consistent experiences.",
+        "icon": "<circle cx=\"8\" cy=\"8\" r=\"3\"/><circle cx=\"16.5\" cy=\"9\" r=\"2.4\"/><path d=\"M2.5 19c.6-3.6 3-6 5.5-6s4.9 2.4 5.5 6\"/><path d=\"M14.2 19c.4-2.6 1.8-4.5 3.5-4.5 1.8 0 3.3 1.7 3.8 4\"/>"
+      },
+      {
+        "title": "Faster execution",
+        "desc": "Remove bottlenecks and give teams the systems and information they need to act faster.",
+        "icon": "<path d=\"M13 2 4.5 13.8H10l-1 7.2 8.6-10.9H12z\"/>"
+      },
+      {
+        "title": "Connected business capabilities",
+        "desc": "Bring applications, data and workflows together so information can move where it is needed.",
+        "icon": "<path d=\"M9.5 14.5l5-5\"/><path d=\"M8 16a3.5 3.5 0 0 1 0-5l2-2a3.5 3.5 0 0 1 5 0\"/><path d=\"M16 8a3.5 3.5 0 0 1 0 5l-2 2a3.5 3.5 0 0 1-5 0\"/>"
+      },
+      {
+        "title": "Scalable operations",
+        "desc": "Build processes and systems that support growth without adding unnecessary complexity.",
+        "icon": "<path d=\"M9 3H3v6M15 21h6v-6M3 21l7-7M21 3l-7 7\"/>"
+      },
+      {
+        "title": "New business capabilities",
+        "desc": "Create digital products, services and operating models that open new opportunities.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 8v8M8 12h8\"/>"
+      }
+    ]
+  },
+  "digital-engineering": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind SDL."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How SDL thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses SDL works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with SDL."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact"
+          }
+        ]
+      }
+    ],
+    "DE_CAPABILITIES": [
+      {
+        "title": "Web & application engineering",
+        "desc": "Build, modernize and scale web applications, portals and digital platforms around real business requirements.",
+        "href": "web-application-engineering.html"
+      },
+      {
+        "title": "Mobile engineering",
+        "desc": "Build mobile applications across iOS, Android and cross-platform environments, with the engineering needed for reliable performance and connected experiences.",
+        "href": "mobile-engineering.html"
+      },
+      {
+        "title": "Cloud engineering",
+        "desc": "Modernize and build cloud-based applications and platforms with architecture designed for scalability, resilience, security and operational efficiency.",
+        "href": "cloud-engineering.html"
+      },
+      {
+        "title": "Quality engineering",
+        "desc": "Build quality into the engineering lifecycle through automation, testing, performance engineering and continuous validation.",
+        "href": "quality-engineering.html"
+      }
+    ],
+    "DE_CAP_SHAPE_COLORS": [
+      [
+        "#8FD6FF",
+        "#2B8FDB"
+      ],
+      [
+        "#7C97FF",
+        "#2B49DB"
+      ],
+      [
+        "#6FDBA0",
+        "#28C76F"
+      ],
+      [
+        "#FFE38A",
+        "#F4C430"
+      ]
+    ],
+    "DE_AI_TAGS": [
+      "AI-assisted development",
+      "Code modernization",
+      "Automated testing",
+      "Code analysis",
+      "Engineering automation"
+    ],
+    "DE_VALUE_ITEMS": [
+      {
+        "title": "Launch faster",
+        "desc": "Bring new digital products, applications and capabilities to market with focused engineering.",
+        "icon": "<path d=\"M12 2.2c2.8 2.2 4.5 5.8 4.5 9.3 0 2-.6 3.8-1.6 5.3l-2.9 3-2.9-3C8.1 15.3 7.5 13.5 7.5 11.5c0-3.5 1.7-7.1 4.5-9.3z\"/><circle cx=\"12\" cy=\"10\" r=\"1.7\"/><path d=\"M9.2 16.8l-2.4 4.6M14.8 16.8l2.4 4.6\"/>"
+      },
+      {
+        "title": "Modernize with confidence",
+        "desc": "Improve aging technology while preserving the business capabilities that still matter.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M12 16V8M8.5 11.5L12 8l3.5 3.5\"/>"
+      },
+      {
+        "title": "Scale as demand grows",
+        "desc": "Design applications and platforms that can handle changing users, workloads and business requirements.",
+        "icon": "<path d=\"M9 3H3v6M15 21h6v-6M3 21l7-7M21 3l-7 7\"/>"
+      },
+      {
+        "title": "Connect what already exists",
+        "desc": "Integrate applications, APIs and platforms so information and capabilities can move where they are needed.",
+        "icon": "<path d=\"M9.5 14.5l5-5\"/><path d=\"M8 16a3.5 3.5 0 0 1 0-5l2-2a3.5 3.5 0 0 1 5 0\"/><path d=\"M16 8a3.5 3.5 0 0 1 0 5l-2 2a3.5 3.5 0 0 1-5 0\"/>"
+      },
+      {
+        "title": "Improve reliability",
+        "desc": "Build quality, performance and maintainability into the engineering lifecycle.",
+        "icon": "<path d=\"M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z\"/><path d=\"M9 12l2 2 4-4.5\"/>"
+      },
+      {
+        "title": "Prepare for what's next",
+        "desc": "Create flexible technology foundations that can support emerging capabilities, including AI.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"9\"/><path d=\"M15 9l-2 5-5 2 2-5z\"/>"
+      }
+    ],
+    "DE_VALUE_ACCENT_COLORS": [
+      "#2B8FDB",
+      "#2B49DB",
+      "#28C76F",
+      "#F4C430",
+      "#3E5FE0",
+      "#22B368"
+    ],
+    "DE_TECH_GROUPS": [
+      {
+        "label": "Frontend",
+        "desc": "Building fast, accessible interfaces that users enjoy working in.",
+        "list": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Vue.js",
+          "Angular",
+          "Svelte"
+        ],
+        "mockType": "ui",
+        "icon": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"M3 9h18\"/><circle cx=\"6.5\" cy=\"6.5\" r=\"0.6\" fill=\"currentColor\" stroke=\"none\"/>",
+        "metric": {
+          "value": "40% faster",
+          "label": "page load times"
+        },
+        "checklist": [
+          "Responsive across devices",
+          "Accessible by default",
+          "SEO-ready out of the box"
+        ]
+      },
+      {
+        "label": "Backend",
+        "desc": "Reliable APIs and business logic that hold up under real workloads.",
+        "list": [
+          "Node.js",
+          "Python",
+          "Go",
+          "Rust",
+          ".NET",
+          "PHP"
+        ],
+        "mockType": "server",
+        "icon": "<rect x=\"4\" y=\"4\" width=\"16\" height=\"6\" rx=\"1.5\"/><rect x=\"4\" y=\"14\" width=\"16\" height=\"6\" rx=\"1.5\"/><circle cx=\"7.5\" cy=\"7\" r=\"0.7\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"7.5\" cy=\"17\" r=\"0.7\" fill=\"currentColor\" stroke=\"none\"/>",
+        "metric": {
+          "value": "99.9% uptime",
+          "label": "under real traffic"
+        },
+        "checklist": [
+          "Secure by design",
+          "Scales under load",
+          "Fully observable"
+        ]
+      },
+      {
+        "label": "Frameworks",
+        "desc": "Opinionated tooling that speeds up delivery without cutting corners.",
+        "list": [
+          "Django",
+          "FastAPI",
+          "Laravel",
+          "NestJS"
+        ],
+        "mockType": "code",
+        "icon": "<rect x=\"4\" y=\"4\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"13\" y=\"4\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"4\" y=\"13\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"13\" y=\"13\" width=\"7\" height=\"7\" rx=\"1.5\"/>",
+        "metric": {
+          "value": "2x faster",
+          "label": "delivery cycles"
+        },
+        "checklist": [
+          "Consistent code standards",
+          "Faster onboarding",
+          "Built-in best practices"
+        ]
+      },
+      {
+        "label": "Full-stack",
+        "desc": "Proven, end-to-end stacks for shipping a product from one codebase.",
+        "list": [
+          "MERN",
+          "MEAN",
+          "LAMP"
+        ],
+        "mockType": "split",
+        "icon": "<path d=\"M12 3 4 7l8 4 8-4z\"/><path d=\"M4 12l8 4 8-4M4 17l8 4 8-4\"/>",
+        "metric": {
+          "value": "One team",
+          "label": "full ownership, one codebase"
+        },
+        "checklist": [
+          "Less handoff between teams",
+          "Faster iteration",
+          "Lower maintenance overhead"
+        ]
+      },
+      {
+        "label": "Content platforms",
+        "desc": "Flexible systems for managing, structuring and publishing content.",
+        "list": [
+          "WordPress",
+          "Drupal",
+          "Alfresco",
+          "Headless CMS"
+        ],
+        "mockType": "cms",
+        "icon": "<path d=\"M6 3h9l3 3v15H6z\"/><path d=\"M15 3v3h3\"/><path d=\"M9 12h6M9 16h6\"/>",
+        "metric": {
+          "value": "Zero-code",
+          "label": "publishing for content teams"
+        },
+        "checklist": [
+          "Non-technical teams can publish",
+          "Structured, reusable content",
+          "Faster content updates"
+        ]
+      },
+      {
+        "label": "Architecture & engineering",
+        "desc": "The foundations — integration, data and quality — that keep it all running.",
+        "list": [
+          "APIs",
+          "Microservices",
+          "Cloud",
+          "Databases",
+          "DevOps",
+          "Quality engineering"
+        ],
+        "mockType": "graph",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 2v3M12 19v3M2 12h3M19 12h3M4.5 4.5l2 2M17.5 17.5l2 2M19.5 4.5l-2 2M6.5 17.5l-2 2\"/>",
+        "metric": {
+          "value": "Zero-downtime",
+          "label": "deployments"
+        },
+        "checklist": [
+          "Systems that scale independently",
+          "Faster incident recovery",
+          "Built-in quality gates"
+        ]
+      }
+    ],
+    "DE_TECH_ACCENTS": [
+      {
+        "solid": "#2B8FDB",
+        "gradA": "rgba(43,143,219,0.20)",
+        "gradB": "rgba(43,143,219,0.05)",
+        "soft": "rgba(43,143,219,0.14)"
+      },
+      {
+        "solid": "#2B49DB",
+        "gradA": "rgba(43,73,219,0.20)",
+        "gradB": "rgba(43,73,219,0.05)",
+        "soft": "rgba(43,73,219,0.14)"
+      },
+      {
+        "solid": "#28C76F",
+        "gradA": "rgba(40,199,111,0.20)",
+        "gradB": "rgba(40,199,111,0.05)",
+        "soft": "rgba(40,199,111,0.14)"
+      },
+      {
+        "solid": "#C9941F",
+        "gradA": "rgba(244,196,48,0.24)",
+        "gradB": "rgba(244,196,48,0.06)",
+        "soft": "rgba(201,148,31,0.14)"
+      },
+      {
+        "solid": "#3E5FE0",
+        "gradA": "rgba(62,95,224,0.20)",
+        "gradB": "rgba(62,95,224,0.05)",
+        "soft": "rgba(62,95,224,0.14)"
+      },
+      {
+        "solid": "#22B368",
+        "gradA": "rgba(34,179,104,0.20)",
+        "gradB": "rgba(34,179,104,0.05)",
+        "soft": "rgba(34,179,104,0.14)"
+      }
+    ]
+  },
+  "digital-experience": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind SDL."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How SDL thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses SDL works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with SDL."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact"
+          }
+        ]
+      }
+    ],
+    "DX_CAPABILITIES": [
+      {
+        "title": "Experience strategy",
+        "desc": "Define the experience direction across products, services and digital touchpoints. Combine research, customer and employee needs, business goals and technology realities to prioritize where experience improvements can create the greatest value."
+      },
+      {
+        "title": "UX strategy",
+        "desc": "Understand users, their needs and the journeys they take across digital touchpoints. Define information architecture, user flows, experience priorities and design direction that align customer needs with business goals."
+      },
+      {
+        "title": "UI design",
+        "desc": "Create clear, consistent and accessible interfaces across web, mobile and digital platforms. Establish visual hierarchy, interaction patterns and responsive designs that make products easier to understand and use."
+      },
+      {
+        "title": "Product design",
+        "desc": "Bring user needs, business priorities and technology together throughout the product lifecycle. From discovery and ideation to prototyping and validation, design products that solve the right problems and are ready to evolve."
+      },
+      {
+        "title": "Customer & employee experience",
+        "desc": "Improve the journeys people take with the business, whether they are customers buying a product or employees completing work. Identify friction across touchpoints and workflows, then design simpler, more effective experiences."
+      },
+      {
+        "title": "Design systems",
+        "desc": "Create reusable design foundations that bring consistency across products and teams. Establish components, patterns, guidelines and governance that improve quality while making design and development faster."
+      }
+    ],
+    "DX_CAP_SHAPE_COLORS": [
+      [
+        "#6FDBA0",
+        "#28C76F"
+      ],
+      [
+        "#8FD6FF",
+        "#2B8FDB"
+      ],
+      [
+        "#FFE38A",
+        "#F4C430"
+      ],
+      [
+        "#7C97FF",
+        "#2B49DB"
+      ],
+      [
+        "#9BEFC4",
+        "#22B368"
+      ],
+      [
+        "#A9BBFF",
+        "#3E5FE0"
+      ]
+    ],
+    "DX_VALUE_ITEMS": [
+      {
+        "title": "Reduce customer friction",
+        "desc": "Make it easier for customers to find, understand and complete what they need."
+      },
+      {
+        "title": "Improve adoption",
+        "desc": "Create products and tools people can understand quickly and use with confidence."
+      },
+      {
+        "title": "Increase productivity",
+        "desc": "Simplify employee workflows and reduce the effort required to get work done."
+      },
+      {
+        "title": "Create consistency",
+        "desc": "Bring clarity and consistency across products, platforms and customer touchpoints."
+      },
+      {
+        "title": "Build better products",
+        "desc": "Turn user needs and business priorities into products that solve meaningful problems."
+      },
+      {
+        "title": "Design for change",
+        "desc": "Create flexible experience foundations that can evolve as products, users and business needs change."
+      }
+    ]
+  },
+  "growth-transformation": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind SDL."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How SDL thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses SDL works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with SDL."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact"
+          }
+        ]
+      }
+    ],
+    "GT_CAPABILITIES": [
+      {
+        "title": "AI search & visibility",
+        "desc": "Help the business get discovered as search changes. Optimize content and digital presence for traditional search as well as AI-powered discovery, answer engines and emerging search experiences."
+      },
+      {
+        "title": "SEO",
+        "desc": "Build sustainable organic visibility around the topics, products and services that matter to the business. Combine technical SEO, content strategy, on-page optimization and authority building to attract relevant search demand."
+      },
+      {
+        "title": "Content & demand generation",
+        "desc": "Create content and campaigns that attract the right audience, build consideration and generate qualified demand. Develop thought leadership, lead-generation assets and campaigns around real customer needs and buying journeys."
+      },
+      {
+        "title": "Performance marketing",
+        "desc": "Reach high-intent audiences through paid search, social and other digital channels. Build campaigns around clear objectives, continuously optimize performance and focus investment on qualified traffic and conversions."
+      },
+      {
+        "title": "Conversion & journey optimization",
+        "desc": "Turn more of the right traffic into meaningful action. Identify friction across landing pages, forms, journeys and digital experiences, then test and improve what influences conversion."
+      },
+      {
+        "title": "Marketing analytics & automation",
+        "desc": "Connect marketing data, automation and measurement to improve decision-making, personalize engagement and make marketing operations more efficient."
+      }
+    ],
+    "GT_CAP_SHAPE_COLORS": [
+      [
+        "#A9BBFF",
+        "#3E5FE0"
+      ],
+      [
+        "#8FD6FF",
+        "#2B8FDB"
+      ],
+      [
+        "#FFE38A",
+        "#F4C430"
+      ],
+      [
+        "#7C97FF",
+        "#2B49DB"
+      ],
+      [
+        "#6FDBA0",
+        "#28C76F"
+      ],
+      [
+        "#9BEFC4",
+        "#22B368"
+      ]
+    ],
+    "GT_BENTO_LAYOUT": [
+      {
+        "variant": "tint featured"
+      },
+      {
+        "variant": "white"
+      },
+      {
+        "variant": "tint"
+      },
+      {
+        "variant": "white"
+      },
+      {
+        "variant": "tint"
+      },
+      {
+        "variant": "white"
+      }
+    ],
+    "GT_VALUE_ITEMS": [
+      {
+        "title": "Increase qualified demand",
+        "desc": "Reach audiences that are more likely to need, consider and buy what the business offers.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"8\"/><circle cx=\"12\" cy=\"12\" r=\"4\"/><circle cx=\"12\" cy=\"12\" r=\"0.8\" fill=\"currentColor\"/>"
+      },
+      {
+        "title": "Improve visibility",
+        "desc": "Build stronger discoverability across search engines, AI-powered search and digital channels.",
+        "icon": "<path d=\"M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7-10-7-10-7z\"/><circle cx=\"12\" cy=\"12\" r=\"3\"/>"
+      },
+      {
+        "title": "Turn interest into action",
+        "desc": "Remove friction from digital journeys and make it easier for prospects to take the next step.",
+        "icon": "<path d=\"M9 2l1 14 3-4 4 4 2-2-4-4 4-3z\"/>"
+      },
+      {
+        "title": "Improve marketing efficiency",
+        "desc": "Understand what is working and focus investment on the channels and activities creating real value.",
+        "icon": "<path d=\"M4 15a8 8 0 1 1 16 0\"/><path d=\"M12 15l4-5\"/><circle cx=\"12\" cy=\"15\" r=\"1\"/>"
+      },
+      {
+        "title": "Build lasting visibility",
+        "desc": "Create content and digital assets that continue to attract relevant audiences over time.",
+        "icon": "<path d=\"M8.5 8.5a5 5 0 0 1 7 0M5.5 5.5a9 9 0 0 1 13 0\"/><circle cx=\"12\" cy=\"15\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>"
+      },
+      {
+        "title": "Measure what matters",
+        "desc": "Move beyond clicks and impressions to understand the business impact of digital growth.",
+        "icon": "<path d=\"M4 20V11M10 20V5M16 20v-6M21.5 20h-19\"/>"
+      }
+    ]
+  },
+  "web-application-engineering": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind SDL."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How SDL thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses SDL works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with SDL."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact"
+          }
+        ]
+      }
+    ],
+    "WAE_CAPABILITIES": [
+      {
+        "title": "Web application engineering",
+        "desc": "Build customer-facing applications, portals and business applications around real business requirements. From new applications to complex digital platforms, create experiences that are reliable, scalable and built for the people who use them.",
+        "icon": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><path d=\"M3 9h18\"/><circle cx=\"6\" cy=\"7\" r=\"0.6\" fill=\"currentColor\" stroke=\"none\"/>",
+        "tech": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Node.js",
+          "Python",
+          ".NET",
+          "PHP"
+        ]
+      },
+      {
+        "title": "Frontend engineering",
+        "desc": "Create responsive, accessible and high-performance interfaces across web applications and digital platforms. Combine modern frontend technologies with thoughtful architecture to make experiences fast, consistent and easy to use.",
+        "icon": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 9h18M9 9v11\"/>",
+        "tech": [
+          "React",
+          "Next.js",
+          "TypeScript",
+          "Vue.js",
+          "Angular",
+          "Svelte"
+        ]
+      },
+      {
+        "title": "Backend engineering",
+        "desc": "Build the application logic, services, APIs and data foundations behind reliable web applications. Design backend systems that support complex business processes, integrations and changing demands.",
+        "icon": "<rect x=\"4\" y=\"4\" width=\"16\" height=\"6\" rx=\"1.5\"/><rect x=\"4\" y=\"14\" width=\"16\" height=\"6\" rx=\"1.5\"/><circle cx=\"7.5\" cy=\"7\" r=\"0.7\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"7.5\" cy=\"17\" r=\"0.7\" fill=\"currentColor\" stroke=\"none\"/>",
+        "tech": [
+          "Node.js",
+          "Python",
+          "Go",
+          "Rust",
+          ".NET",
+          "PHP",
+          "Django",
+          "FastAPI",
+          "Laravel",
+          "NestJS"
+        ]
+      },
+      {
+        "title": "CMS & content platforms",
+        "desc": "Build content-driven websites and applications using traditional, headless and composable approaches. Create flexible content architectures that give teams greater control while delivering consistent digital experiences.",
+        "icon": "<path d=\"M6 3h9l3 3v15H6z\"/><path d=\"M15 3v3h3\"/><path d=\"M9 12h6M9 16h6\"/>",
+        "tech": [
+          "WordPress",
+          "Drupal",
+          "Alfresco",
+          "Headless CMS"
+        ]
+      },
+      {
+        "title": "Application modernization",
+        "desc": "Modernize legacy web applications without unnecessarily starting from scratch. Refactor aging architectures, improve performance, introduce modern technologies and preserve the business capabilities that still matter.",
+        "icon": "<path d=\"M3 12a9 9 0 0 1 15-6.7L21 8\"/><path d=\"M21 3v5h-5\"/><path d=\"M21 12a9 9 0 0 1-15 6.7L3 16\"/><path d=\"M3 21v-5h5\"/>",
+        "tech": [
+          "React",
+          "Next.js",
+          ".NET",
+          "PHP",
+          "Laravel",
+          "APIs",
+          "Microservices",
+          "Cloud"
+        ]
+      },
+      {
+        "title": "Integration & APIs",
+        "desc": "Connect web applications with the systems and services around them. Design APIs and integration layers that allow applications to exchange data and work together across CRM, ERP, commerce, cloud and other business platforms.",
+        "icon": "<path d=\"M9.5 14.5l5-5\"/><path d=\"M8 16a3.5 3.5 0 0 1 0-5l2-2a3.5 3.5 0 0 1 5 0\"/><path d=\"M16 8a3.5 3.5 0 0 1 0 5l-2 2a3.5 3.5 0 0 1-5 0\"/>",
+        "tech": [
+          "APIs",
+          "Microservices",
+          "Node.js",
+          "Python",
+          ".NET",
+          "Cloud",
+          "Databases"
+        ]
+      },
+      {
+        "title": "Full-stack engineering",
+        "desc": "Build complete web applications across the presentation, application and data layers. Combine frontend and backend engineering into cohesive solutions that are easier to develop, maintain and evolve.",
+        "icon": "<path d=\"M12 3 4 7l8 4 8-4z\"/><path d=\"M4 12l8 4 8-4M4 17l8 4 8-4\"/>",
+        "tech": [
+          "MERN",
+          "MEAN",
+          "LAMP"
+        ]
+      }
+    ],
+    "WAE_ACCENT_COLORS": [
+      "#2B8FDB",
+      "#2B49DB",
+      "#28C76F",
+      "#F4C430",
+      "#3E5FE0",
+      "#22B368",
+      "#DB2777"
+    ],
+    "WAE_AI_TAGS": [
+      "AI-assisted development",
+      "Code modernization",
+      "Automated testing",
+      "Performance optimization"
+    ],
+    "WAE_VALUE_ITEMS": [
+      {
+        "title": "Fast experiences",
+        "desc": "Build applications that respond quickly and perform consistently across devices, users and workloads.",
+        "icon": "<path d=\"M13 2L4 14h6l-1 8 9-12h-6l1-8z\"/>"
+      },
+      {
+        "title": "Scalable architecture",
+        "desc": "Create application foundations that can support changing traffic, data, functionality and business requirements.",
+        "icon": "<path d=\"M3 9V3h6\"/><path d=\"M21 15v6h-6\"/><path d=\"M3 3l7 7\"/><path d=\"M21 21l-7-7\"/>"
+      },
+      {
+        "title": "Easier evolution",
+        "desc": "Use modular architectures and maintainable code to make future changes faster and less disruptive.",
+        "icon": "<path d=\"M12 21V9\"/><path d=\"M12 9c0-3.5-2.5-6-6-6 0 3.5 2.5 6 6 6z\"/><path d=\"M12 13c0-3 2-5 5-5 0 3-2 5-5 5z\"/>"
+      },
+      {
+        "title": "Connected applications",
+        "desc": "Integrate applications with APIs, business systems, data and third-party services without creating unnecessary complexity.",
+        "icon": "<circle cx=\"6\" cy=\"6\" r=\"2.2\"/><circle cx=\"18\" cy=\"6\" r=\"2.2\"/><circle cx=\"12\" cy=\"18\" r=\"2.2\"/><path d=\"M7.8 7.3L10.3 16M16.2 7.3L13.7 16M8.2 6h7.6\"/>"
+      },
+      {
+        "title": "Reliable releases",
+        "desc": "Build testing, automation, observability and quality into the engineering lifecycle.",
+        "icon": "<rect x=\"5\" y=\"3\" width=\"14\" height=\"18\" rx=\"2\"/><path d=\"M9 8h6M9 12l1.5 1.5L14 10\"/>",
+        "wide": true
+      }
+    ]
+  },
+  "cloud-engineering": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind SDL."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How SDL thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses SDL works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with SDL."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact"
+          }
+        ]
+      }
+    ],
+    "CE_AI_TAGS": [
+      "AI workload infrastructure",
+      "Cloud modernization",
+      "Data & AI integration",
+      "Infrastructure automation"
+    ],
+    "CE_CAPABILITIES": [
+      {
+        "title": "Cloud application engineering",
+        "desc": "Build and modernize applications designed for cloud environments, with architectures that support scalability, resilience and continuous delivery.",
+        "icon": "<path d=\"M18 16.5A4.5 4.5 0 0 0 16.5 8h-1.3A6 6 0 1 0 5 14\"/><path d=\"M12 14v6M9.5 17.5L12 20l2.5-2.5\"/>"
+      },
+      {
+        "title": "Cloud modernization",
+        "desc": "Move aging applications and infrastructure toward modern cloud architectures while reducing unnecessary disruption to existing business operations.",
+        "icon": "<path d=\"M3 12a9 9 0 0 1 15-6.7L21 8\"/><path d=\"M21 3v5h-5\"/><path d=\"M21 12a9 9 0 0 1-15 6.7L3 16\"/><path d=\"M3 21v-5h5\"/>"
+      },
+      {
+        "title": "Cloud migration",
+        "desc": "Assess, plan and execute application, workload and infrastructure migrations based on business requirements, technical dependencies and operational priorities.",
+        "icon": "<path d=\"M4 16l4-8 4 4 4-6 4 10\"/><path d=\"M4 20h16\"/>"
+      },
+      {
+        "title": "Cloud architecture",
+        "desc": "Design cloud environments around performance, security, scalability, availability and cost considerations.",
+        "icon": "<rect x=\"4\" y=\"4\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"13\" y=\"4\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"4\" y=\"13\" width=\"7\" height=\"7\" rx=\"1.5\"/><rect x=\"13\" y=\"13\" width=\"7\" height=\"7\" rx=\"1.5\"/>"
+      },
+      {
+        "title": "DevOps & automation",
+        "desc": "Automate development, testing, deployment and infrastructure processes to create more consistent and efficient engineering workflows.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 2v3M12 19v3M2 12h3M19 12h3M4.5 4.5l2 2M17.5 17.5l2 2M19.5 4.5l-2 2M6.5 17.5l-2 2\"/>"
+      },
+      {
+        "title": "Cloud integration",
+        "desc": "Connect cloud applications with existing enterprise systems, APIs, databases and third-party services.",
+        "icon": "<path d=\"M9.5 14.5l5-5\"/><path d=\"M8 16a3.5 3.5 0 0 1 0-5l2-2a3.5 3.5 0 0 1 5 0\"/><path d=\"M16 8a3.5 3.5 0 0 1 0 5l-2 2a3.5 3.5 0 0 1-5 0\"/>"
+      },
+      {
+        "title": "Cloud security & resilience",
+        "desc": "Build security, monitoring, backup, recovery and resilience into cloud environments to support dependable operations.",
+        "icon": "<path d=\"M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z\"/><path d=\"M9 12l2 2 4-4.5\"/>"
+      }
+    ],
+    "CE_ACCENT_COLORS": [
+      "#0EA5E9",
+      "#2B49DB",
+      "#28C76F",
+      "#F4C430",
+      "#3E5FE0",
+      "#22B368",
+      "#7C6FF0"
+    ],
+    "CE_VALUE_ITEMS": [
+      {
+        "title": "Scale when needed",
+        "desc": "Cloud environments designed to handle changing workloads without unnecessary infrastructure constraints.",
+        "icon": "<path d=\"M3 9V3h6\"/><path d=\"M21 15v6h-6\"/><path d=\"M3 3l7 7\"/><path d=\"M21 21l-7-7\"/>"
+      },
+      {
+        "title": "Resilient operations",
+        "desc": "Architecture and infrastructure designed to maintain availability and recover effectively when problems occur.",
+        "icon": "<path d=\"M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z\"/><path d=\"M9 12l2 2 4-4.5\"/>"
+      },
+      {
+        "title": "Faster delivery",
+        "desc": "Automation and DevOps practices that make development and deployment more consistent.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 2v3M12 19v3M2 12h3M19 12h3M4.5 4.5l2 2M17.5 17.5l2 2M19.5 4.5l-2 2M6.5 17.5l-2 2\"/>"
+      },
+      {
+        "title": "Better efficiency",
+        "desc": "Infrastructure and application decisions that balance performance, reliability and operational cost.",
+        "icon": "<path d=\"M13 2L4 14h6l-1 8 9-12h-6l1-8z\"/>"
+      },
+      {
+        "title": "Secure foundations",
+        "desc": "Cloud environments designed with security across applications, infrastructure, access and data.",
+        "icon": "<rect x=\"5\" y=\"3\" width=\"14\" height=\"18\" rx=\"2\"/><path d=\"M9 8h6M9 12l1.5 1.5L14 10\"/>",
+        "wide": true
+      }
+    ]
+  },
+  "mobile-engineering": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind SDL."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How SDL thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses SDL works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with SDL."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact"
+          }
+        ]
+      }
+    ],
+    "ME_AI_TAGS": [
+      "AI-powered features",
+      "Personalized experiences",
+      "AI-assisted development",
+      "Automated testing"
+    ],
+    "ME_CAPABILITIES": [
+      {
+        "title": "Native mobile development",
+        "desc": "Build high-performance applications for iOS and Android with platform-specific capabilities, optimized performance and experiences designed around each platform.",
+        "icon": "<rect x=\"7\" y=\"2\" width=\"10\" height=\"20\" rx=\"2\"/><path d=\"M11 18h2\"/>",
+        "tech": [
+          "iOS",
+          "Android",
+          "Swift",
+          "Kotlin"
+        ]
+      },
+      {
+        "title": "Cross-platform development",
+        "desc": "Develop applications for multiple platforms from a shared technology foundation while maintaining a consistent, native-quality experience.",
+        "icon": "<rect x=\"3\" y=\"4\" width=\"12\" height=\"16\" rx=\"2\"/><rect x=\"13\" y=\"9\" width=\"8\" height=\"11\" rx=\"1.5\"/>",
+        "tech": [
+          "React Native",
+          "Flutter"
+        ]
+      },
+      {
+        "title": "Mobile application modernization",
+        "desc": "Modernize existing mobile applications to improve performance, usability, maintainability and compatibility with current platforms and technologies.",
+        "icon": "<path d=\"M3 12a9 9 0 0 1 15-6.7L21 8\"/><path d=\"M21 3v5h-5\"/><path d=\"M21 12a9 9 0 0 1-15 6.7L3 16\"/><path d=\"M3 21v-5h5\"/>"
+      },
+      {
+        "title": "Mobile UI engineering",
+        "desc": "Turn product and UX designs into responsive, accessible and intuitive mobile interfaces that work consistently across devices and screen sizes.",
+        "icon": "<rect x=\"3\" y=\"4\" width=\"18\" height=\"16\" rx=\"2\"/><path d=\"M3 9h18M9 9v11\"/>"
+      },
+      {
+        "title": "Mobile backend & APIs",
+        "desc": "Connect mobile applications with the services, APIs, databases and business systems they depend on. Build secure and scalable backend foundations for mobile products.",
+        "icon": "<rect x=\"4\" y=\"4\" width=\"16\" height=\"6\" rx=\"1.5\"/><rect x=\"4\" y=\"14\" width=\"16\" height=\"6\" rx=\"1.5\"/><circle cx=\"7.5\" cy=\"7\" r=\"0.7\" fill=\"currentColor\" stroke=\"none\"/><circle cx=\"7.5\" cy=\"17\" r=\"0.7\" fill=\"currentColor\" stroke=\"none\"/>"
+      },
+      {
+        "title": "Mobile integration",
+        "desc": "Integrate applications with CRM, ERP, commerce, payment, location, notification and other business services to support complete mobile workflows.",
+        "icon": "<path d=\"M9.5 14.5l5-5\"/><path d=\"M8 16a3.5 3.5 0 0 1 0-5l2-2a3.5 3.5 0 0 1 5 0\"/><path d=\"M16 8a3.5 3.5 0 0 1 0 5l-2 2a3.5 3.5 0 0 1-5 0\"/>"
+      }
+    ],
+    "ME_ACCENT_COLORS": [
+      "#22B368",
+      "#2B8FDB",
+      "#2B49DB",
+      "#F4C430",
+      "#3E5FE0",
+      "#28C76F"
+    ],
+    "ME_VALUE_ITEMS": [
+      {
+        "title": "Reliable performance",
+        "desc": "Applications that remain responsive across devices, networks and real-world usage conditions.",
+        "icon": "<path d=\"M13 2L4 14h6l-1 8 9-12h-6l1-8z\"/>"
+      },
+      {
+        "title": "Seamless experiences",
+        "desc": "Consistent interactions across screens, platforms and connected digital touchpoints.",
+        "icon": "<rect x=\"3\" y=\"4\" width=\"12\" height=\"16\" rx=\"2\"/><rect x=\"13\" y=\"9\" width=\"8\" height=\"11\" rx=\"1.5\"/>"
+      },
+      {
+        "title": "Secure applications",
+        "desc": "Security built into application architecture, data handling, authentication and communication.",
+        "icon": "<path d=\"M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z\"/><path d=\"M9 12l2 2 4-4.5\"/>"
+      },
+      {
+        "title": "Faster evolution",
+        "desc": "A maintainable technical foundation that makes new features and improvements easier to deliver.",
+        "icon": "<path d=\"M12 21V9\"/><path d=\"M12 9c0-3.5-2.5-6-6-6 0 3.5 2.5 6 6 6z\"/><path d=\"M12 13c0-3 2-5 5-5 0 3-2 5-5 5z\"/>"
+      },
+      {
+        "title": "Connected workflows",
+        "desc": "Mobile applications that work naturally with the systems, data and services behind the business.",
+        "icon": "<circle cx=\"6\" cy=\"6\" r=\"2.2\"/><circle cx=\"18\" cy=\"6\" r=\"2.2\"/><circle cx=\"12\" cy=\"18\" r=\"2.2\"/><path d=\"M7.8 7.3L10.3 16M16.2 7.3L13.7 16M8.2 6h7.6\"/>",
+        "wide": true
+      }
+    ]
+  },
+  "quality-engineering": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind SDL."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How SDL thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses SDL works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with SDL."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact"
+          }
+        ]
+      }
+    ],
+    "QE_AI_TAGS": [
+      "AI-assisted test generation",
+      "Intelligent test analysis",
+      "Defect detection",
+      "Automated regression testing"
+    ],
+    "QE_CAPABILITIES": [
+      {
+        "title": "Test automation",
+        "desc": "Automate functional, regression and integration testing to improve coverage, consistency and release confidence.",
+        "icon": "<rect x=\"5\" y=\"3\" width=\"14\" height=\"18\" rx=\"2\"/><path d=\"M9 8h6M9 12l1.5 1.5L14 10\"/>"
+      },
+      {
+        "title": "API & integration testing",
+        "desc": "Validate APIs, services and system integrations to ensure applications exchange data and behave correctly across connected environments.",
+        "icon": "<path d=\"M9.5 14.5l5-5\"/><path d=\"M8 16a3.5 3.5 0 0 1 0-5l2-2a3.5 3.5 0 0 1 5 0\"/><path d=\"M16 8a3.5 3.5 0 0 1 0 5l-2 2a3.5 3.5 0 0 1-5 0\"/>"
+      },
+      {
+        "title": "Performance engineering",
+        "desc": "Identify performance constraints and optimize applications for speed, responsiveness, scalability and stability under real workloads.",
+        "icon": "<path d=\"M13 2L4 14h6l-1 8 9-12h-6l1-8z\"/>"
+      },
+      {
+        "title": "Continuous testing",
+        "desc": "Integrate testing into development and CI/CD pipelines so quality checks happen continuously rather than only before release.",
+        "icon": "<path d=\"M3 12a9 9 0 0 1 15-6.7L21 8\"/><path d=\"M21 3v5h-5\"/><path d=\"M21 12a9 9 0 0 1-15 6.7L3 16\"/><path d=\"M3 21v-5h5\"/>"
+      },
+      {
+        "title": "Application quality assessment",
+        "desc": "Evaluate existing applications to identify defects, technical risks, performance issues and opportunities for improvement.",
+        "icon": "<circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"M21 21l-4.3-4.3\"/>"
+      },
+      {
+        "title": "Security testing",
+        "desc": "Identify application-level security weaknesses and validate security controls as part of the engineering lifecycle.",
+        "icon": "<path d=\"M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z\"/><path d=\"M9 12l2 2 4-4.5\"/>"
+      },
+      {
+        "title": "AI-assisted quality engineering",
+        "desc": "Use AI-assisted test generation, test analysis, defect analysis and code review to accelerate quality activities while keeping engineering judgment in control.",
+        "icon": "<path d=\"M12 2l1.8 5.6L19 9l-5.2 1.4L12 16l-1.8-5.6L5 9l5.2-1.4z\"/>"
+      }
+    ],
+    "QE_ACCENT_COLORS": [
+      "#C9941F",
+      "#2B49DB",
+      "#28C76F",
+      "#2B8FDB",
+      "#3E5FE0",
+      "#22B368",
+      "#7C6FF0"
+    ],
+    "QE_VALUE_ITEMS": [
+      {
+        "title": "Earlier defect detection",
+        "desc": "Identify issues earlier in development when they are easier and less costly to fix.",
+        "icon": "<circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"M21 21l-4.3-4.3\"/>"
+      },
+      {
+        "title": "Higher test coverage",
+        "desc": "Automate repeatable validation across applications, APIs, integrations and critical workflows.",
+        "icon": "<rect x=\"5\" y=\"3\" width=\"14\" height=\"18\" rx=\"2\"/><path d=\"M9 8h6M9 12l1.5 1.5L14 10\"/>"
+      },
+      {
+        "title": "Reliable releases",
+        "desc": "Give engineering teams greater confidence when releasing new features and changes.",
+        "icon": "<path d=\"M12 3l7 3v6c0 4.5-3 7.5-7 9-4-1.5-7-4.5-7-9V6z\"/><path d=\"M9 12l2 2 4-4.5\"/>"
+      },
+      {
+        "title": "Better performance",
+        "desc": "Measure and improve application behavior under realistic workloads and conditions.",
+        "icon": "<path d=\"M13 2L4 14h6l-1 8 9-12h-6l1-8z\"/>"
+      },
+      {
+        "title": "Continuous quality",
+        "desc": "Make quality part of everyday engineering rather than a final checkpoint.",
+        "icon": "<path d=\"M3 12a9 9 0 0 1 15-6.7L21 8\"/><path d=\"M21 3v5h-5\"/><path d=\"M21 12a9 9 0 0 1-15 6.7L3 16\"/><path d=\"M3 21v-5h5\"/>",
+        "wide": true
+      }
+    ]
+  },
+  "evoq": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind SDL."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How SDL thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses SDL works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with SDL."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "index.html#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "index.html#contact"
+          }
+        ]
+      }
+    ],
+    "EVOQ_PRODUCT_COLORS": {
+      "CRM": "#2554EB",
+      "Campaigns": "#6D4FEB",
+      "Practice Management": "#0D9488",
+      "ServiceOps": "#F5A123",
+      "Desk": "#0E8C82",
+      "Projects": "#6D4FEB",
+      "Sync": "#0E9F6E",
+      "Inventory": "#0E8C9E",
+      "CPQ": "#EA580C",
+      "Billing": "#7C6EF0",
+      "HRMS": "#1B7A4D",
+      "Skillberry": "#E94E77"
+    },
+    "EVOQ_PRODUCTS": [
+      {
+        "title": "CRM",
+        "category": "Growth",
+        "desc": "Manage customer relationships, sales activities and opportunities in one place.",
+        "icon": "<circle cx=\"9\" cy=\"8\" r=\"3\"/><path d=\"M3 20c.6-3.6 3-6 6-6s5.4 2.4 6 6\"/><circle cx=\"17\" cy=\"9\" r=\"2.2\"/><path d=\"M15.2 20c.4-2.4 1.6-4.2 3.2-4.2\"/>",
+        "photo": "https://images.pexels.com/photos/36733313/pexels-photo-36733313.jpeg?cs=tinysrgb&w=700&h=560&fit=crop",
+        "mock": "<div class=\"evoq-mk-panel\" style=\"left:6%;top:8%;width:62%\"><div class=\"evoq-mk-head\"><span class=\"evoq-mk-title\">Contacts</span></div><div class=\"evoq-mk-row\" style=\"margin-top:2.6cqw\"><span class=\"evoq-mk-avatar\"></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:62%\"></span><span class=\"evoq-mk-bar\" style=\"width:40%\"></span></div></div><div class=\"evoq-mk-row\" style=\"margin-top:2.6cqw\"><span class=\"evoq-mk-avatar\"></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:48%\"></span><span class=\"evoq-mk-bar\" style=\"width:55%\"></span></div></div><div class=\"evoq-mk-row\" style=\"margin-top:2.6cqw\"><span class=\"evoq-mk-avatar\"></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:70%\"></span><span class=\"evoq-mk-bar\" style=\"width:34%\"></span></div></div></div><div class=\"evoq-mk-panel\" style=\"right:5%;bottom:9%;width:56%\"><span class=\"evoq-mk-label\">Deal value</span><div class=\"evoq-mk-strong\" style=\"margin-top:1cqw\">$24,500</div><div class=\"evoq-mk-row\" style=\"margin-top:2.6cqw\"><span class=\"evoq-mk-chip\">Negotiation</span><span class=\"evoq-mk-chip evoq-mk-chip--grey\">Q3</span></div></div>"
+      },
+      {
+        "title": "Campaigns",
+        "category": "Growth",
+        "desc": "Plan and manage campaigns to engage customers and support growth.",
+        "icon": "<path d=\"M3 10v4h3l10 5V5L6 10H3z\"/><path d=\"M16.5 8.5a4 4 0 0 1 0 7\"/>",
+        "mock": "<div class=\"evoq-mk-panel\" style=\"left:6%;top:8%;width:64%\"><div class=\"evoq-mk-head\"><span class=\"evoq-mk-sq\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><path d=\"M3 10v4h3l10 5V5L6 10H3z\"/></svg></span><span class=\"evoq-mk-title\">Spring launch</span></div><span class=\"evoq-mk-bar evoq-mk-bar--tint\" style=\"width:100%;height:8cqw;border-radius:2cqw;display:block\"></span><div class=\"evoq-mk-col\" style=\"margin-top:2.6cqw\"><span class=\"evoq-mk-bar\" style=\"width:92%\"></span><span class=\"evoq-mk-bar\" style=\"width:74%\"></span><span class=\"evoq-mk-bar\" style=\"width:58%\"></span></div></div><div class=\"evoq-mk-panel\" style=\"right:5%;bottom:10%;width:50%\"><span class=\"evoq-mk-label\">Open rate</span><div class=\"evoq-mk-strong\" style=\"margin-top:1cqw\">62%</div><div class=\"evoq-mk-row\" style=\"margin-top:2.6cqw;align-items:flex-end;height:11cqw;gap:2.2cqw\"><span style=\"width:14%;height:42%;border-radius:0.8cqw;background:var(--cat-soft)\"></span><span style=\"width:14%;height:64%;border-radius:0.8cqw;background:var(--cat-soft)\"></span><span style=\"width:14%;height:82%;border-radius:0.8cqw;background:var(--cat-soft)\"></span><span style=\"width:14%;height:100%;border-radius:0.8cqw;background:var(--cat-color)\"></span></div></div>"
+      },
+      {
+        "title": "Practice Management",
+        "category": "Growth",
+        "desc": "Manage clients, engagements and billable work across your practice.",
+        "icon": "<rect x=\"3\" y=\"7\" width=\"18\" height=\"13\" rx=\"2\"/><path d=\"M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2\"/><path d=\"M3 12h18\"/>",
+        "mock": "<div class=\"evoq-mk-panel\" style=\"left:6%;top:8%;width:64%\"><div class=\"evoq-mk-head\"><span class=\"evoq-mk-title\">Engagements</span><span class=\"evoq-mk-chip\" style=\"margin-left:auto\">6 active</span></div><div class=\"evoq-mk-row\" style=\"margin-top:2.6cqw\"><span class=\"evoq-mk-avatar\"></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:64%\"></span><span class=\"evoq-mk-bar\" style=\"width:42%\"></span></div></div><div class=\"evoq-mk-row\" style=\"margin-top:2.6cqw\"><span class=\"evoq-mk-avatar\"></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:50%\"></span><span class=\"evoq-mk-bar\" style=\"width:58%\"></span></div></div><div class=\"evoq-mk-row\" style=\"margin-top:2.6cqw\"><span class=\"evoq-mk-avatar\"></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:72%\"></span><span class=\"evoq-mk-bar\" style=\"width:36%\"></span></div></div></div><div class=\"evoq-mk-panel\" style=\"right:5%;bottom:9%;width:52%\"><span class=\"evoq-mk-label\">Utilization</span><div class=\"evoq-mk-strong\" style=\"margin-top:1cqw\">82%</div><div class=\"evoq-mk-bar\" style=\"width:100%;margin-top:2.6cqw;position:relative;overflow:hidden\"><span style=\"position:absolute;left:0;top:0;bottom:0;width:82%;border-radius:999px;background:var(--cat-color)\"></span></div></div>"
+      },
+      {
+        "title": "ServiceOps",
+        "category": "Operations",
+        "desc": "Manage service requests, jobs, scheduling and field operations.",
+        "icon": "<circle cx=\"12\" cy=\"12\" r=\"3\"/><path d=\"M12 2v3M12 19v3M2 12h3M19 12h3M4.5 4.5l2 2M17.5 17.5l2 2M19.5 4.5l-2 2M6.5 17.5l-2 2\"/>",
+        "photo": "https://images.pexels.com/photos/3856116/pexels-photo-3856116.jpeg?cs=tinysrgb&w=700&h=560&fit=crop",
+        "mock": "<div class=\"evoq-mk-panel\" style=\"left:6%;top:8%;width:63%\"><div class=\"evoq-mk-head\"><span class=\"evoq-mk-title\">Today's jobs</span></div><div class=\"evoq-mk-col\"><div class=\"evoq-mk-tile\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-chip\">09:00</span><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"flex:1\"></span></div></div><div class=\"evoq-mk-tile\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-chip evoq-mk-chip--grey\">11:30</span><span class=\"evoq-mk-bar\" style=\"flex:1\"></span></div></div><div class=\"evoq-mk-tile\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-chip evoq-mk-chip--grey\">14:00</span><span class=\"evoq-mk-bar\" style=\"flex:1\"></span></div></div></div></div><div class=\"evoq-mk-panel\" style=\"right:5%;bottom:11%;width:54%\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-check\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 12l5 5L20 6\"/></svg></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-title\">Job #482</span><span class=\"evoq-mk-label\">Completed on site</span></div></div></div>"
+      },
+      {
+        "title": "Desk",
+        "category": "Operations",
+        "desc": "Manage customer support requests and help teams resolve issues.",
+        "icon": "<path d=\"M4 13a8 8 0 0 1 16 0\"/><rect x=\"2.5\" y=\"13\" width=\"4\" height=\"6\" rx=\"1.5\"/><rect x=\"17.5\" y=\"13\" width=\"4\" height=\"6\" rx=\"1.5\"/><path d=\"M20 19a4 4 0 0 1-4 4h-2\"/>",
+        "mock": "<div class=\"evoq-mk-panel\" style=\"left:6%;top:8%;width:62%\"><div class=\"evoq-mk-head\"><span class=\"evoq-mk-title\">Open tickets</span><span class=\"evoq-mk-chip\" style=\"margin-left:auto\">12</span></div><div class=\"evoq-mk-row\" style=\"margin-top:2.6cqw\"><span class=\"evoq-mk-avatar\"></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:55%\"></span><span class=\"evoq-mk-bar\" style=\"width:44%\"></span></div></div><div class=\"evoq-mk-row\" style=\"margin-top:2.6cqw\"><span class=\"evoq-mk-avatar\"></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:68%\"></span><span class=\"evoq-mk-bar\" style=\"width:38%\"></span></div></div><div class=\"evoq-mk-row\" style=\"margin-top:2.6cqw\"><span class=\"evoq-mk-avatar\"></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:46%\"></span><span class=\"evoq-mk-bar\" style=\"width:60%\"></span></div></div></div><div class=\"evoq-mk-panel\" style=\"right:5%;bottom:10%;width:56%\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-check\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 12l5 5L20 6\"/></svg></span><span class=\"evoq-mk-title\">Resolved</span></div><div class=\"evoq-mk-line\"></div><div class=\"evoq-mk-row\"><span class=\"evoq-mk-label\">First response</span><span class=\"evoq-mk-chip evoq-mk-chip--green\" style=\"margin-left:auto\">6 min</span></div></div>"
+      },
+      {
+        "title": "Projects",
+        "category": "Operations",
+        "desc": "Plan, manage and track projects, tasks and delivery.",
+        "icon": "<rect x=\"3\" y=\"4\" width=\"5.5\" height=\"16\" rx=\"1.5\"/><rect x=\"10.2\" y=\"4\" width=\"5.5\" height=\"10\" rx=\"1.5\"/><rect x=\"17.5\" y=\"4\" width=\"3.5\" height=\"7\" rx=\"1.5\"/>",
+        "photo": "https://images.pexels.com/photos/7693103/pexels-photo-7693103.jpeg?cs=tinysrgb&w=700&h=560&fit=crop",
+        "mock": "<div class=\"evoq-mk-panel\" style=\"left:5%;top:9%;right:5%\"><div class=\"evoq-mk-head\"><span class=\"evoq-mk-title\">Delivery board</span></div><div class=\"evoq-mk-row\" style=\"align-items:stretch\"><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-label\">To do</span><div class=\"evoq-mk-tile\"><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:80%\"></span><span class=\"evoq-mk-bar\" style=\"width:55%\"></span></div><div class=\"evoq-mk-tile\"><span class=\"evoq-mk-bar\" style=\"width:65%\"></span></div></div><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-label\">Doing</span><div class=\"evoq-mk-tile\"><span class=\"evoq-mk-bar evoq-mk-bar--tint\" style=\"width:88%\"></span><span class=\"evoq-mk-bar\" style=\"width:50%\"></span></div></div><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-label\">Done</span><div class=\"evoq-mk-tile\"><span class=\"evoq-mk-bar\" style=\"width:70%\"></span></div><div class=\"evoq-mk-tile\"><span class=\"evoq-mk-bar\" style=\"width:84%\"></span></div></div></div></div><div class=\"evoq-mk-panel\" style=\"right:7%;bottom:8%;width:46%\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-label\">Sprint progress</span><span class=\"evoq-mk-chip evoq-mk-chip--green\" style=\"margin-left:auto\">78%</span></div><div class=\"evoq-mk-bar\" style=\"width:100%;margin-top:2cqw;position:relative;overflow:hidden\"><span style=\"position:absolute;left:0;top:0;bottom:0;width:78%;border-radius:999px;background:var(--cat-color)\"></span></div></div>"
+      },
+      {
+        "title": "Sync",
+        "category": "Operations",
+        "desc": "Keep business data synchronized across the systems you use.",
+        "icon": "<path d=\"M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3\"/><path d=\"M16 3.7v4h-4M8 20.3v-4h4\"/>",
+        "mock": "<div class=\"evoq-mk-panel\" style=\"left:5%;top:16%;width:41%\"><span class=\"evoq-mk-label\">Source</span><div class=\"evoq-mk-row\" style=\"margin-top:2cqw\"><span class=\"evoq-mk-sq\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"4\" y=\"4\" width=\"16\" height=\"6\" rx=\"1.5\"/><rect x=\"4\" y=\"14\" width=\"16\" height=\"6\" rx=\"1.5\"/></svg></span><span class=\"evoq-mk-title\">ERP</span></div><div class=\"evoq-mk-col\" style=\"margin-top:2.6cqw\"><span class=\"evoq-mk-bar\" style=\"width:88%\"></span><span class=\"evoq-mk-bar\" style=\"width:64%\"></span><span class=\"evoq-mk-bar\" style=\"width:76%\"></span></div></div><div class=\"evoq-mk-panel\" style=\"right:5%;top:16%;width:41%\"><span class=\"evoq-mk-label\">Target</span><div class=\"evoq-mk-row\" style=\"margin-top:2cqw\"><span class=\"evoq-mk-sq\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\"><rect x=\"3\" y=\"3\" width=\"8\" height=\"8\" rx=\"2\"/><rect x=\"13\" y=\"3\" width=\"8\" height=\"8\" rx=\"2\"/><rect x=\"3\" y=\"13\" width=\"8\" height=\"8\" rx=\"2\"/><rect x=\"13\" y=\"13\" width=\"8\" height=\"8\" rx=\"2\"/></svg></span><span class=\"evoq-mk-title\">EVOQ</span></div><div class=\"evoq-mk-col\" style=\"margin-top:2.6cqw\"><span class=\"evoq-mk-bar evoq-mk-bar--tint\" style=\"width:88%\"></span><span class=\"evoq-mk-bar evoq-mk-bar--tint\" style=\"width:64%\"></span><span class=\"evoq-mk-bar evoq-mk-bar--tint\" style=\"width:76%\"></span></div></div><div class=\"evoq-mk-panel\" style=\"left:50%;top:50%;transform:translate(-50%,-50%);padding:2.6cqw 3cqw\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-sq\" style=\"background:var(--cat-color)\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"2.4\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 12a8 8 0 0 1 14-5.3M20 12a8 8 0 0 1-14 5.3\"/><path d=\"M16 3.7v4h-4M8 20.3v-4h4\"/></svg></span><span class=\"evoq-mk-label\">In sync</span></div></div>"
+      },
+      {
+        "title": "Inventory",
+        "category": "Operations",
+        "desc": "Manage inventory, stock movements and product operations.",
+        "icon": "<path d=\"M12 3 4 7l8 4 8-4z\"/><path d=\"M4 7v10l8 4 8-4V7\"/><path d=\"M12 11v10\"/>",
+        "photo": "https://images.pexels.com/photos/4483942/pexels-photo-4483942.jpeg?cs=tinysrgb&w=700&h=560&fit=crop",
+        "mock": "<div class=\"evoq-mk-panel\" style=\"left:6%;top:8%;width:64%\"><div class=\"evoq-mk-head\"><span class=\"evoq-mk-title\">Stock levels</span></div><div class=\"evoq-mk-col\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-sq\"></span><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"flex:1\"></span><span class=\"evoq-mk-chip evoq-mk-chip--green\">248</span></div><div class=\"evoq-mk-row\"><span class=\"evoq-mk-sq\"></span><span class=\"evoq-mk-bar\" style=\"flex:1\"></span><span class=\"evoq-mk-chip evoq-mk-chip--grey\">96</span></div><div class=\"evoq-mk-row\"><span class=\"evoq-mk-sq\"></span><span class=\"evoq-mk-bar\" style=\"flex:1\"></span><span class=\"evoq-mk-chip evoq-mk-chip--grey\">64</span></div></div></div><div class=\"evoq-mk-panel\" style=\"right:5%;bottom:10%;width:54%\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-sq\" style=\"background:rgba(244,196,48,0.18)\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#C9941F\" stroke-width=\"2.4\" stroke-linecap=\"round\"><path d=\"M12 8v5M12 16.5v.5\"/><path d=\"M12 3 2 20h20z\"/></svg></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-title\">Low stock</span><span class=\"evoq-mk-label\">Reorder 3 items</span></div></div></div>"
+      },
+      {
+        "title": "CPQ",
+        "category": "Operations",
+        "desc": "Configure products, generate accurate quotes and control pricing and approvals.",
+        "icon": "<path d=\"M20.6 12.6 12 21.2 2.8 12 12 2.8h6.4a2 2 0 0 1 2 2z\"/><circle cx=\"15.5\" cy=\"7.5\" r=\"1.5\"/>",
+        "mock": "<div class=\"evoq-mk-panel\" style=\"left:6%;top:8%;width:62%\"><div class=\"evoq-mk-head\"><span class=\"evoq-mk-title\">New quote</span></div><div class=\"evoq-mk-col\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-bar\" style=\"flex:1\"></span><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:20%\"></span></div><div class=\"evoq-mk-row\"><span class=\"evoq-mk-bar\" style=\"flex:1\"></span><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:20%\"></span></div></div><div class=\"evoq-mk-line\"></div><div class=\"evoq-mk-row\"><span class=\"evoq-mk-label\">Total</span><span class=\"evoq-mk-strong\" style=\"margin-left:auto;font-size:4cqw\">$12,400</span></div></div><div class=\"evoq-mk-panel\" style=\"right:5%;bottom:11%;width:52%\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-check\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 12l5 5L20 6\"/></svg></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-title\">Approved</span><span class=\"evoq-mk-label\">Ready to send</span></div></div></div>"
+      },
+      {
+        "title": "Billing",
+        "category": "Operations",
+        "desc": "Manage billing, invoices and financial workflows.",
+        "icon": "<path d=\"M6 3h12v18l-3-2-3 2-3-2-3 2z\"/><path d=\"M9 8h6M9 12h6M9 16h3\"/>",
+        "mock": "<div class=\"evoq-mk-panel\" style=\"left:6%;top:8%;width:62%\"><div class=\"evoq-mk-head\"><span class=\"evoq-mk-title\">Invoice #2041</span></div><div class=\"evoq-mk-col\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-bar\" style=\"flex:1\"></span><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:18%\"></span></div><div class=\"evoq-mk-row\"><span class=\"evoq-mk-bar\" style=\"flex:1\"></span><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:18%\"></span></div><div class=\"evoq-mk-row\"><span class=\"evoq-mk-bar\" style=\"flex:1\"></span><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:18%\"></span></div></div><div class=\"evoq-mk-line\"></div><div class=\"evoq-mk-row\"><span class=\"evoq-mk-label\">Total</span><span class=\"evoq-mk-strong\" style=\"margin-left:auto;font-size:4cqw\">$8,400</span></div></div><div class=\"evoq-mk-panel\" style=\"right:5%;bottom:11%;width:50%\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-check\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 12l5 5L20 6\"/></svg></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-title\">Paid</span><span class=\"evoq-mk-label\">Auto-reconciled</span></div></div></div>"
+      },
+      {
+        "title": "HRMS",
+        "category": "People",
+        "desc": "Manage employee information and core HR processes.",
+        "icon": "<rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"2\"/><circle cx=\"9\" cy=\"11\" r=\"2.2\"/><path d=\"M5.5 16c.5-1.8 2-3 3.5-3s3 1.2 3.5 3\"/><path d=\"M14 9h5M14 13h5\"/>",
+        "photo": "https://images.pexels.com/photos/5989931/pexels-photo-5989931.jpeg?cs=tinysrgb&w=700&h=560&fit=crop",
+        "mock": "<div class=\"evoq-mk-panel\" style=\"left:6%;top:8%;width:62%\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-avatar\" style=\"width:9cqw;height:9cqw\"></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-bar evoq-mk-bar--dark\" style=\"width:70%\"></span><span class=\"evoq-mk-bar\" style=\"width:48%\"></span></div></div><div class=\"evoq-mk-line\"></div><div class=\"evoq-mk-row\" style=\"align-items:stretch\"><div class=\"evoq-mk-tile\" style=\"flex:1\"><span class=\"evoq-mk-label\">Leave</span><span class=\"evoq-mk-title\">12d</span></div><div class=\"evoq-mk-tile\" style=\"flex:1\"><span class=\"evoq-mk-label\">Tenure</span><span class=\"evoq-mk-title\">3y</span></div></div></div><div class=\"evoq-mk-panel\" style=\"right:5%;bottom:10%;width:54%\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-check\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"3.5\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M4 12l5 5L20 6\"/></svg></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-title\">Leave approved</span><span class=\"evoq-mk-label\">2 days · May</span></div></div></div>"
+      },
+      {
+        "title": "Skillberry",
+        "category": "People",
+        "desc": "Manage learning, training and employee development.",
+        "icon": "<path d=\"M12 4 2 9l10 5 10-5-10-5z\"/><path d=\"M6 12v5c0 1.5 3 3 6 3s6-1.5 6-3v-5\"/>",
+        "mock": "<div class=\"evoq-mk-panel\" style=\"left:6%;top:8%;width:63%\"><span class=\"evoq-mk-bar evoq-mk-bar--tint\" style=\"width:100%;height:9cqw;border-radius:2cqw;display:block\"></span><div class=\"evoq-mk-title\" style=\"margin-top:2.6cqw\">Onboarding path</div><div class=\"evoq-mk-row\" style=\"margin-top:2cqw\"><span class=\"evoq-mk-label\">6 of 8 modules</span></div><div class=\"evoq-mk-bar\" style=\"width:100%;margin-top:2cqw;position:relative;overflow:hidden\"><span style=\"position:absolute;left:0;top:0;bottom:0;width:75%;border-radius:999px;background:var(--cat-color)\"></span></div></div><div class=\"evoq-mk-panel\" style=\"right:5%;bottom:10%;width:52%\"><div class=\"evoq-mk-row\"><span class=\"evoq-mk-sq\" style=\"background:var(--cat-color)\"><svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"#FFFFFF\" stroke-width=\"2.2\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><circle cx=\"12\" cy=\"9\" r=\"5\"/><path d=\"M8.5 13.5 7 21l5-2.5L17 21l-1.5-7.5\"/></svg></span><div class=\"evoq-mk-col\" style=\"flex:1\"><span class=\"evoq-mk-title\">Certified</span><span class=\"evoq-mk-label\">Skill verified</span></div></div></div>"
+      }
+    ],
+    "EVOQ_TAB_LIST": [
+      "All",
+      "Growth",
+      "Operations",
+      "People"
+    ],
+    "EVOQ_INDUSTRIES": [
+      {
+        "name": "Manufacturing",
+        "photo": "https://images.pexels.com/photos/37668543/pexels-photo-37668543.jpeg?cs=tinysrgb&w=500&h=375&fit=crop"
+      },
+      {
+        "name": "Distribution",
+        "photo": "https://images.pexels.com/photos/4487383/pexels-photo-4487383.jpeg?cs=tinysrgb&w=500&h=375&fit=crop"
+      },
+      {
+        "name": "Field Service",
+        "photo": "https://images.pexels.com/photos/17842832/pexels-photo-17842832.jpeg?cs=tinysrgb&w=500&h=375&fit=crop"
+      },
+      {
+        "name": "Professional Services",
+        "photo": "https://images.pexels.com/photos/36765718/pexels-photo-36765718.jpeg?cs=tinysrgb&w=500&h=375&fit=crop"
+      },
+      {
+        "name": "Retail",
+        "photo": "https://images.pexels.com/photos/3423860/pexels-photo-3423860.jpeg?cs=tinysrgb&w=500&h=375&fit=crop"
+      },
+      {
+        "name": "Healthcare",
+        "photo": "https://images.pexels.com/photos/31499386/pexels-photo-31499386.jpeg?cs=tinysrgb&w=500&h=375&fit=crop"
+      },
+      {
+        "name": "Construction",
+        "photo": "https://images.pexels.com/photos/6082416/pexels-photo-6082416.jpeg?cs=tinysrgb&w=500&h=375&fit=crop"
+      },
+      {
+        "name": "Logistics",
+        "photo": "https://images.pexels.com/photos/35627339/pexels-photo-35627339.jpeg?cs=tinysrgb&w=500&h=375&fit=crop"
+      },
+      {
+        "name": "Energy & Engineering",
+        "photo": "https://images.pexels.com/photos/2760241/pexels-photo-2760241.jpeg?cs=tinysrgb&w=500&h=375&fit=crop"
+      },
+      {
+        "name": "Technology",
+        "photo": "https://images.pexels.com/photos/37730212/pexels-photo-37730212.jpeg?cs=tinysrgb&w=500&h=375&fit=crop"
+      }
+    ],
+    "EVOQ_INTEGRATION_BADGES": [
+      {
+        "name": "Zoom",
+        "slug": "zoom",
+        "left": 50,
+        "top": 13
+      },
+      {
+        "name": "HubSpot",
+        "slug": "hubspot",
+        "left": 8,
+        "top": 20
+      },
+      {
+        "name": "QuickBooks",
+        "slug": "quickbooks",
+        "left": 30,
+        "top": 15
+      },
+      {
+        "name": "SAP",
+        "slug": "sap",
+        "left": 70,
+        "top": 15
+      },
+      {
+        "name": "Xero",
+        "slug": "xero",
+        "left": 92,
+        "top": 20
+      },
+      {
+        "name": "Zendesk",
+        "slug": "zendesk",
+        "left": 50,
+        "top": 32
+      },
+      {
+        "name": "Mailchimp",
+        "slug": "mailchimp",
+        "left": 12,
+        "top": 38
+      },
+      {
+        "name": "Stripe",
+        "slug": "stripe",
+        "left": 88,
+        "top": 40
+      },
+      {
+        "name": "Google Drive",
+        "slug": "googledrive",
+        "left": 12,
+        "top": 60
+      },
+      {
+        "name": "Shopify",
+        "slug": "shopify",
+        "left": 30,
+        "top": 58
+      },
+      {
+        "name": "WhatsApp Business",
+        "slug": "whatsapp",
+        "left": 70,
+        "top": 60,
+        "large": true
+      },
+      {
+        "name": "PayPal",
+        "slug": "paypal",
+        "left": 88,
+        "top": 60
+      }
+    ]
+  },
+  "zoho-consulting-implementation": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind SDL."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How SDL thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses SDL works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with SDL."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact"
+          }
+        ]
+      }
+    ],
+    "ZH_CAPABILITIES": [
+      {
+        "title": "Zoho consulting",
+        "tagline": "Find the right applications and approach.",
+        "desc": "Identify the right Zoho applications, define the implementation approach and align the platform with business processes and priorities."
+      },
+      {
+        "title": "Zoho implementation",
+        "tagline": "Configure Zoho for day-to-day operations.",
+        "desc": "Configure and deploy Zoho applications with the workflows, roles, data structures and business rules required for day-to-day operations."
+      },
+      {
+        "title": "Zoho customization",
+        "tagline": "Extend the platform to fit the business.",
+        "desc": "Extend standard Zoho capabilities to accommodate unique processes, specialized workflows and business requirements."
+      },
+      {
+        "title": "Zoho integration",
+        "tagline": "Connect Zoho to the rest of the business.",
+        "desc": "Connect Zoho with ERP, e-commerce, finance, websites, third-party applications and other business systems."
+      },
+      {
+        "title": "Data migration",
+        "tagline": "Move existing data in without the mess.",
+        "desc": "Move existing customer, product, transaction and operational data into Zoho with structured migration and validation."
+      },
+      {
+        "title": "Workflow automation",
+        "tagline": "Automate the repetitive parts of the work.",
+        "desc": "Automate repetitive processes, approvals, notifications and data flows across Zoho applications."
+      },
+      {
+        "title": "Zoho application development",
+        "tagline": "Build what standard Zoho can’t.",
+        "desc": "Build custom functions, extensions and applications when standard capabilities are not enough."
+      },
+      {
+        "title": "Support & optimization",
+        "tagline": "Keep an existing Zoho environment improving.",
+        "desc": "Improve an existing Zoho environment through ongoing enhancements, troubleshooting, optimization and support."
+      }
+    ],
+    "ZH_CAP_SHAPE_COLORS": [
+      [
+        "#FFACA6",
+        "#E42527"
+      ],
+      [
+        "#8FD6FF",
+        "#2B8FDB"
+      ],
+      [
+        "#6FDBA0",
+        "#28C76F"
+      ],
+      [
+        "#7C97FF",
+        "#2B49DB"
+      ],
+      [
+        "#FFD199",
+        "#E68A2E"
+      ],
+      [
+        "#9BEFC4",
+        "#22B368"
+      ],
+      [
+        "#FFB199",
+        "#E64A3C"
+      ]
+    ],
+    "ZH_VALUE_ITEMS": [
+      {
+        "title": "Reduce disconnected work",
+        "desc": "Connect applications and workflows so teams spend less time moving information between systems.",
+        "icon": "<path d=\"M9.5 14.5l5-5\"/><path d=\"M8 16a3.5 3.5 0 0 1 0-5l2-2a3.5 3.5 0 0 1 5 0\"/><path d=\"M16 8a3.5 3.5 0 0 1 0 5l-2 2a3.5 3.5 0 0 1-5 0\"/>"
+      },
+      {
+        "title": "Adapt the platform",
+        "desc": "Configure and extend Zoho around business requirements instead of relying entirely on out-of-the-box processes.",
+        "icon": "<path d=\"M4 5h16l-6 8v6l-4-2v-4z\"/>"
+      },
+      {
+        "title": "Grow without unnecessary complexity",
+        "desc": "Start with the applications the business needs and expand the platform as requirements evolve.",
+        "icon": "<path d=\"M9 3H3v6M15 21h6v-6M3 21l7-7M21 3l-7 7\"/>"
+      }
+    ],
+    "ZH_APP_CATEGORIES": [
+      {
+        "title": "Sales & CRM",
+        "apps": "Zoho CRM · Zoho SalesIQ · Zoho Bigin"
+      },
+      {
+        "title": "Finance",
+        "apps": "Zoho Books · Zoho Invoice · Zoho Expense"
+      },
+      {
+        "title": "Service",
+        "apps": "Zoho Desk · Zoho Assist"
+      },
+      {
+        "title": "People & collaboration",
+        "apps": "Zoho People · Zoho Projects · Zoho Cliq"
+      },
+      {
+        "title": "Marketing & commerce",
+        "apps": "Zoho Campaigns · Zoho Commerce"
+      },
+      {
+        "title": "Analytics & automation",
+        "apps": "Zoho Analytics · Zoho Creator · Zoho Flow"
+      }
+    ]
+  },
+  "salesforce-implementation": {
+    "MENUS": [
+      {
+        "key": "services",
+        "label": "Services",
+        "href": "services.html",
+        "cta": {
+          "label": "View all services",
+          "href": "services.html"
+        },
+        "items": [
+          {
+            "title": "AI transformation",
+            "desc": "Turn AI potential into practical business value.",
+            "href": "ai-transformation.html"
+          },
+          {
+            "title": "Digital engineering",
+            "desc": "Build, modernize and scale digital products.",
+            "href": "digital-engineering.html"
+          },
+          {
+            "title": "Business transformation",
+            "desc": "Rethink systems, processes and ways of working.",
+            "href": "business-transformation.html"
+          },
+          {
+            "title": "Digital experience",
+            "desc": "Create better experiences across every touchpoint.",
+            "href": "digital-experience.html"
+          },
+          {
+            "title": "Growth transformation",
+            "desc": "Turn digital attention into qualified demand.",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "key": "products",
+        "label": "Products & Platforms",
+        "cta": {
+          "label": "Explore EVOQ",
+          "href": "evoq.html"
+        },
+        "items": [
+          {
+            "title": "EVOQ",
+            "desc": "The unified business suite for modern operations.",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "key": "insights",
+        "label": "Insights",
+        "cta": {
+          "label": "Explore insights",
+          "href": "#"
+        },
+        "items": [
+          {
+            "title": "Blogs",
+            "desc": "Ideas, perspectives and practical thinking."
+          },
+          {
+            "title": "Case studies",
+            "desc": "Real projects. Real business outcomes."
+          },
+          {
+            "title": "Whitepapers",
+            "desc": "In-depth research and perspectives."
+          },
+          {
+            "title": "Featured projects",
+            "desc": "Selected work and digital experiences."
+          }
+        ]
+      },
+      {
+        "key": "company",
+        "label": "Company",
+        "cta": null,
+        "items": [
+          {
+            "title": "About",
+            "desc": "The people and experience behind SDL."
+          },
+          {
+            "title": "Our approach",
+            "desc": "How SDL thinks, builds and works."
+          },
+          {
+            "title": "Clients",
+            "desc": "The businesses SDL works with."
+          },
+          {
+            "title": "Careers",
+            "desc": "Build what's next with SDL."
+          }
+        ]
+      }
+    ],
+    "ICONS": {
+      "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+      "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+      "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+      "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+      "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+      "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+      "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+      "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+      "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+      "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+      "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+      "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+      "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+      "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+    },
+    "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+    "FOOTER_COLS": [
+      {
+        "title": "Services",
+        "links": [
+          {
+            "label": "AI transformation",
+            "href": "ai-transformation.html"
+          },
+          {
+            "label": "Digital engineering",
+            "href": "digital-engineering.html"
+          },
+          {
+            "label": "Business transformation",
+            "href": "business-transformation.html"
+          },
+          {
+            "label": "Digital experience",
+            "href": "digital-experience.html"
+          },
+          {
+            "label": "Growth transformation",
+            "href": "growth-transformation.html"
+          }
+        ]
+      },
+      {
+        "title": "Products & Platforms",
+        "links": [
+          {
+            "label": "EVOQ",
+            "href": "evoq.html"
+          }
+        ]
+      },
+      {
+        "title": "Insights",
+        "links": [
+          {
+            "label": "Blogs",
+            "href": "#"
+          },
+          {
+            "label": "Case studies",
+            "href": "#"
+          },
+          {
+            "label": "Whitepapers",
+            "href": "#"
+          },
+          {
+            "label": "Featured projects",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Company",
+        "links": [
+          {
+            "label": "About",
+            "href": "#"
+          },
+          {
+            "label": "Our approach",
+            "href": "#"
+          },
+          {
+            "label": "Clients",
+            "href": "#"
+          },
+          {
+            "label": "Careers",
+            "href": "#"
+          }
+        ]
+      },
+      {
+        "title": "Connect",
+        "links": [
+          {
+            "label": "Let's talk",
+            "href": "#contact"
+          },
+          {
+            "label": "Contact us",
+            "href": "#contact"
+          }
+        ]
+      }
+    ],
+    "SF_CAPABILITIES": [
+      {
+        "title": "Salesforce consulting",
+        "tagline": "Turn requirements into an architecture.",
+        "desc": "Translate business and customer-management requirements into a practical Salesforce architecture, configuration and implementation approach."
+      },
+      {
+        "title": "Salesforce implementation",
+        "tagline": "Configure Salesforce for how sales works.",
+        "desc": "Configure Salesforce around sales processes, customer data, workflows, roles and reporting requirements."
+      },
+      {
+        "title": "Salesforce customization",
+        "tagline": "Extend the platform for what standard can’t cover.",
+        "desc": "Extend standard Salesforce capabilities to support business processes and requirements that need a more tailored solution."
+      },
+      {
+        "title": "Salesforce integration",
+        "tagline": "Connect Salesforce to the rest of the business.",
+        "desc": "Connect Salesforce with ERP, finance, e-commerce, marketing, service and other applications to create a more complete business ecosystem."
+      },
+      {
+        "title": "Data migration",
+        "tagline": "Move customer data in with confidence.",
+        "desc": "Plan and execute migration of customer, account, contact, opportunity and other business data into Salesforce."
+      },
+      {
+        "title": "Workflow & automation",
+        "tagline": "Automate the repetitive parts of selling.",
+        "desc": "Automate repetitive sales and customer processes through workflows, approvals, notifications and system integrations."
+      },
+      {
+        "title": "Salesforce optimization",
+        "tagline": "Keep an existing org improving.",
+        "desc": "Improve existing Salesforce environments through configuration changes, process improvements, integration enhancements and ongoing optimization."
+      }
+    ],
+    "SF_CAP_SHAPE_COLORS": [
+      [
+        "#8FD6F5",
+        "#00A1E0"
+      ],
+      [
+        "#8FD6FF",
+        "#2B8FDB"
+      ],
+      [
+        "#6FDBA0",
+        "#28C76F"
+      ],
+      [
+        "#7C97FF",
+        "#2B49DB"
+      ],
+      [
+        "#FFD199",
+        "#E68A2E"
+      ],
+      [
+        "#9BEFC4",
+        "#22B368"
+      ],
+      [
+        "#FFB199",
+        "#E64A3C"
+      ]
+    ],
+    "SF_VALUE_ITEMS": [
+      {
+        "title": "One view of the customer",
+        "desc": "Bring customer information together so teams can work from a more complete picture.",
+        "icon": "<circle cx=\"8\" cy=\"8\" r=\"3\"/><circle cx=\"16.5\" cy=\"9\" r=\"2.4\"/><path d=\"M2.5 19c.6-3.6 3-6 5.5-6s4.9 2.4 5.5 6\"/><path d=\"M14.2 19c.4-2.6 1.8-4.5 3.5-4.5 1.8 0 3.3 1.7 3.8 4\"/>"
+      },
+      {
+        "title": "Cleaner sales processes",
+        "desc": "Standardize workflows, approvals and processes without adding unnecessary complexity.",
+        "icon": "<path d=\"M4 5h16l-6 8v6l-4-2v-4z\"/>"
+      },
+      {
+        "title": "Less manual work",
+        "desc": "Automate repetitive activities and reduce duplicate data entry across customer-facing teams.",
+        "icon": "<path d=\"M9.5 14.5l5-5\"/><path d=\"M8 16a3.5 3.5 0 0 1 0-5l2-2a3.5 3.5 0 0 1 5 0\"/><path d=\"M16 8a3.5 3.5 0 0 1 0 5l-2 2a3.5 3.5 0 0 1-5 0\"/>"
+      },
+      {
+        "title": "Better visibility",
+        "desc": "Give managers and teams clearer insight into pipelines, activities, customers and performance.",
+        "icon": "<path d=\"M13 2 4.5 13.8H10l-1 7.2 8.6-10.9H12z\"/>"
+      },
+      {
+        "title": "A platform that can evolve",
+        "desc": "Build a Salesforce environment that can adapt as processes, teams and business requirements change.",
+        "icon": "<path d=\"M9 3H3v6M15 21h6v-6M3 21l7-7M21 3l-7 7\"/>"
+      }
+    ],
+    "SF_CAP_CATEGORIES": [
+      {
+        "title": "Customer management",
+        "apps": "Accounts · Contacts · Leads · Opportunities"
+      },
+      {
+        "title": "Sales operations",
+        "apps": "Sales processes · Pipelines · Forecasting · Approvals"
+      },
+      {
+        "title": "Customer service",
+        "apps": "Cases · Service workflows · Customer interactions"
+      },
+      {
+        "title": "Reporting & visibility",
+        "apps": "Dashboards · Reports · Performance visibility"
+      },
+      {
+        "title": "Integration",
+        "apps": "ERP · Finance · E-commerce · Marketing · APIs"
+      }
+    ]
+  }
+}

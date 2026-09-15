@@ -1,0 +1,720 @@
+/* =========================================================================
+   SDL ADMIN — COMPONENT OVERRIDES
+   Loaded AFTER admin-theme.css on purpose. That file is 6,660 lines of
+   hard-coded Materio colour; anything here that has to beat it must come
+   later in the cascade, not earlier.
+
+   Variables live in admin-tokens.css, which loads first so every rule in
+   between can already use them.
+   ========================================================================= */
+
+/* -------------------------------------------------------------------------
+   TYPOGRAPHY
+   DM Sans matches the frontend body face. The frontend's Libre Baskerville is
+   deliberately not carried over: a serif in dense form UI costs legibility,
+   which is the opposite of the brief.
+
+   Base size 13px -> 14px and labels 11px -> 12px, both for older users.
+   ------------------------------------------------------------------------- */
+
+/* html carries the next/font variable class; body is what actually needs the
+   family, and neither Payload nor admin-theme.css sets one — the admin was
+   falling back to the browser default serif. */
+html,
+body,
+.payload-default,
+.template-default,
+.template-minimal,
+input,
+textarea,
+select,
+button {
+  font-family: var(--font-dm-sans), "DM Sans", system-ui, -apple-system, sans-serif;
+}
+
+body,
+.payload-default,
+.template-default,
+.template-minimal {
+  font-size: 14px;
+  color: var(--sdl-admin-text);
+}
+
+body .field-label,
+body .field-type > label,
+body .collapsible__toggle,
+body .tabs-field__tab-button {
+  color: var(--sdl-admin-text);
+  font-size: 12px;
+  letter-spacing: 0.01em;
+}
+
+body .field-description,
+body .field-type .field-description {
+  color: var(--sdl-admin-text-muted);
+  font-size: 12.5px;
+  line-height: 1.55;
+}
+
+/* -------------------------------------------------------------------------
+   SHARED SURFACES
+   Kept small on purpose. admin-theme.css is 6,660 lines with 188 hard-coded
+   colours; a blanket find-and-replace across it is how that file becomes
+   unmaintainable. These rules cover the surfaces the practitioner workflow
+   actually touches, and anything else is changed only when seen to clash.
+   ------------------------------------------------------------------------- */
+
+.btn--style-primary {
+  background-color: var(--sdl-admin-primary);
+  border-color: var(--sdl-admin-primary);
+  color: #ffffff;
+}
+
+.btn--style-primary:hover,
+.btn--style-primary:focus-visible {
+  background-color: var(--sdl-admin-primary-hover);
+  border-color: var(--sdl-admin-primary-hover);
+}
+
+.btn--style-secondary {
+  border-color: var(--sdl-admin-primary);
+  color: var(--sdl-admin-primary);
+}
+
+a,
+.doc-tab--active,
+.nav__link--active {
+  color: var(--sdl-admin-primary);
+}
+
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible,
+button:focus-visible,
+.rs__control--is-focused {
+  outline: none;
+  border-color: var(--sdl-admin-primary) !important;
+  box-shadow: 0 0 0 3px var(--sdl-admin-focus) !important;
+}
+
+.field-error,
+.tooltip--error,
+.field-type .error-message {
+  color: var(--sdl-admin-error);
+  font-size: 12.5px;
+  font-weight: 600;
+}
+
+/* -------------------------------------------------------------------------
+   Pinned to light.
+   The admin had six dark-mode references, i.e. it was already light-only in
+   practice. Pinning removes a half-finished theme that would otherwise fail
+   the contrast targets above in ways nobody is checking.
+   ------------------------------------------------------------------------- */
+
+html[data-theme="dark"],
+html[data-theme="dark"] :root {
+  color-scheme: light;
+}
+
+/* -------------------------------------------------------------------------
+   FLOATING LABELS
+   admin-theme.css sets these at (0,3,1) with Materio greys — #6b6980 resting
+   (3.9:1, below AA) and #44425c raised. Matching that specificity is the only
+   way to reach them, and the resting state is the one older users read while
+   scanning an empty form.
+   ------------------------------------------------------------------------- */
+
+.collection-edit .sdl-floating-field > .field-label,
+.global-edit .sdl-floating-field > .field-label {
+  color: var(--sdl-admin-text-muted);
+}
+
+.collection-edit .sdl-floating-field:focus-within > .field-label,
+.global-edit .sdl-floating-field:focus-within > .field-label,
+.collection-edit .sdl-floating-field:has(input:not(:placeholder-shown)) > .field-label,
+.collection-edit .sdl-floating-field:has(textarea:not(:placeholder-shown)) > .field-label,
+.global-edit .sdl-floating-field:has(input:not(:placeholder-shown)) > .field-label,
+.global-edit .sdl-floating-field:has(textarea:not(:placeholder-shown)) > .field-label {
+  color: var(--sdl-admin-text);
+}
+
+/* -------------------------------------------------------------------------
+   MOBILE OVERFLOW
+   At 390px Payload's own chrome overflows the viewport: the tab strip and the
+   document meta list are both wider than the page. Neither is ours, but both
+   force a horizontal scroll across the whole admin.
+   ------------------------------------------------------------------------- */
+
+@media (max-width: 640px) {
+  .field-type.tabs-field,
+  .tabs-field__tabs-wrap,
+  .doc-controls__meta {
+    max-width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .tabs-field__tabs {
+    flex-wrap: nowrap;
+  }
+
+  .doc-controls__meta {
+    flex-wrap: wrap;
+  }
+
+  .doc-controls__value,
+  .doc-controls__list-item {
+    min-width: 0;
+    overflow-wrap: anywhere;
+  }
+
+  /* The account block carries a fixed-width avatar plus an unbounded label; at
+     390px the label pushes the whole header past the viewport. Constraining the
+     flex children is what actually stops it — max-width alone does not, because
+     flex items default to min-width:auto and refuse to shrink below content. */
+  .app-header,
+  .app-header__content,
+  .app-header__controls,
+  .app-header__account {
+    max-width: 100%;
+    min-width: 0;
+  }
+
+  .app-header__account > *,
+  .app-header__controls > * {
+    min-width: 0;
+  }
+
+  .app-header__account span,
+  .app-header__account p {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  /* Last resort for Payload chrome that still measures wider than the viewport.
+     Clamped on both elements because the check is against documentElement. */
+  html,
+  body {
+    overflow-x: hidden;
+  }
+}
+
+/* =========================================================================
+   CATEGORY CREDENTIAL GROUP VISIBILITY
+   Driven by the live selection that CategoryCheckboxes writes onto <body>,
+   because Payload's admin.condition is evaluated server-side only and never
+   re-runs in the browser.
+
+   The `:not([data-sdl-categories])` fallback keeps every group visible
+   anywhere the control is not mounted, so no context can lose these fields.
+   ========================================================================= */
+
+body[data-sdl-categories] .sdl-credential-group {
+  display: none;
+}
+
+body[data-sdl-categories~="eft-practitioner"] .sdl-credential-group--eft-practitioner,
+body[data-sdl-categories~="eft-advanced"] .sdl-credential-group--eft-advanced,
+body[data-sdl-categories~="matrix"] .sdl-credential-group--matrix {
+  display: block;
+}
+
+/* =========================================================================
+   COLLAPSIBLE BLOCK HEADINGS
+   Payload's markup is:
+     .collapsible__toggle-wrap
+       button.collapsible__toggle   > span "Toggle block"   <- accessible name
+       .collapsible__header-wrap    > .row-label            <- the real heading
+       .collapsible__actions-wrap   > chevron
+
+   The button is meant to be an invisible overlay across the whole header; its
+   span is the accessible name, not display copy. Something in the theme let that
+   span render inline, so every section read "Toggle blockPersonal Information"
+   with the two overlapping.
+
+   Restoring the intended behaviour: the button covers the header and stays
+   keyboard-focusable, its label is screen-reader-only, and .row-label is the one
+   visible heading. Scoped to .collapsible-field so every admin form built on the
+   shared layout system gets the same treatment.
+   ========================================================================= */
+
+.collapsible-field .collapsible__toggle-wrap {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+}
+
+.collapsible-field .collapsible__toggle {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  background: none;
+  cursor: pointer;
+  z-index: 2;
+}
+
+/* Visually hidden, still announced. */
+.collapsible-field .collapsible__toggle > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+.collapsible-field .collapsible__toggle:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px var(--sdl-admin-focus);
+  border-radius: var(--sdl-admin-radius);
+}
+
+.collapsible-field .collapsible__header-wrap {
+  position: relative;
+  z-index: 1;
+  flex: 1;
+  min-width: 0;
+}
+
+.collapsible-field .collapsible__actions-wrap {
+  position: relative;
+  z-index: 1;
+  margin-left: auto;
+}
+
+/* The visible heading — matched to the practitioner form's section styling. */
+.collapsible-field .row-label {
+  display: block;
+  color: var(--sdl-admin-text);
+  font-size: 15px;
+  font-weight: 700;
+  line-height: 1.35;
+  overflow-wrap: anywhere;
+}
+
+.collapsible-field .collapsible__indicator {
+  color: var(--sdl-admin-text-muted);
+}
+
+@media (max-width: 640px) {
+  .collapsible-field .collapsible__toggle-wrap {
+    gap: 8px;
+  }
+
+  .collapsible-field .row-label {
+    font-size: 14px;
+  }
+}
+
+/* =========================================================================
+   SECTION HEADING BANDS
+   Each collapsible header gets a tinted band so blocks separate at a glance.
+
+   Colours come from the SDL Blue tokens: --sdl-blue-wash behind --sdl-ink
+   text is 15.1:1 (AAA), and a blue-light rule on the leading edge gives a
+   non-colour cue for where a block starts. Blue-light is used as a 3px bar,
+   never behind text, because it only clears contrast at large sizes.
+
+   Applies to .collapsible-field, so every admin form on the shared layout
+   system is banded identically — the Practitioner form is the reference.
+   ========================================================================= */
+
+.collapsible-field .collapsible__toggle-wrap {
+  padding: 14px 20px 14px 24px;
+  background: var(--sdl-admin-surface-sunken);
+  border-bottom: 1px solid var(--sdl-admin-border);
+  border-radius: var(--sdl-admin-radius) var(--sdl-admin-radius) 0 0;
+}
+
+/* The leading accent. A pseudo-element, so it cannot interfere with the
+   toggle overlay or take pointer events. */
+.collapsible-field .collapsible__toggle-wrap::before {
+  content: "";
+  position: absolute;
+  top: 10px;
+  bottom: 10px;
+  left: 0;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--sdl-admin-accent);
+  pointer-events: none;
+}
+
+/* Collapsed: the band is the whole card, so round every corner and drop the
+   divider that would otherwise float under nothing. */
+.collapsible-field .collapsible__toggle-wrap:not(:has(.collapsible__toggle--open)) {
+  border-bottom-color: transparent;
+  border-radius: var(--sdl-admin-radius);
+}
+
+.collapsible-field .collapsible__toggle-wrap:hover {
+  background: color-mix(in srgb, var(--sdl-admin-surface-sunken) 70%, var(--sdl-admin-border));
+}
+
+/* Keep the body clearly the writing surface, distinct from the band. */
+.collapsible-field .collapsible__content {
+  padding: 20px;
+  background: var(--sdl-admin-surface);
+  border-radius: 0 0 var(--sdl-admin-radius) var(--sdl-admin-radius);
+}
+
+/* The sidebar card is narrower; the same band at reduced padding. */
+.sdl-materio-card--sidebar .collapsible__toggle-wrap {
+  padding: 12px 14px 12px 18px;
+}
+
+@media (max-width: 900px) {
+  .collapsible-field .collapsible__toggle-wrap {
+    padding: 13px 16px 13px 20px;
+  }
+
+  .collapsible-field .collapsible__content {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  .collapsible-field .collapsible__toggle-wrap {
+    padding: 12px 12px 12px 16px;
+  }
+
+  .collapsible-field .collapsible__toggle-wrap::before {
+    top: 8px;
+    bottom: 8px;
+  }
+
+  .collapsible-field .collapsible__content {
+    padding: 14px 12px;
+  }
+}
+
+/* =========================================================================
+   SECTION / ROW ACTION MENUS (the "..." popup)
+   The toggle overlay introduced above spans the whole header. At a higher
+   z-index than the actions it swallowed clicks on the "..." button, so the
+   section toggled instead of opening its menu.
+
+   Correct stacking: overlay lowest, heading above it but click-through, the
+   actions highest and clickable. The popup must also escape any ancestor that
+   clips, which the card does with overflow: hidden.
+   ========================================================================= */
+
+.collapsible-field .collapsible__toggle {
+  z-index: 1;
+}
+
+.collapsible-field .collapsible__header-wrap {
+  z-index: 2;
+  /* Click-through, so the title still toggles the section. */
+  pointer-events: none;
+}
+
+.collapsible-field .collapsible__actions-wrap,
+.array-field__row-header .array-actions,
+.collapsible__actions-wrap .popup,
+.array-actions .popup {
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+/* The popup itself sits above everything in the form. */
+.popup__content,
+.popup--active .popup__content {
+  z-index: 40;
+}
+
+/* Stop the card clipping an open menu. */
+.sdl-materio-card:has(.popup--active),
+.collapsible-field:has(.popup--active),
+.array-field__row:has(.popup--active),
+.collapsible__toggle-wrap:has(.popup--active) {
+  overflow: visible;
+}
+
+/* Array rows use the same header pattern; keep their drag handle usable too. */
+.array-field__row-header .collapsible__drag,
+.collapsible__drag {
+  position: relative;
+  z-index: 3;
+  pointer-events: auto;
+}
+
+/* =========================================================================
+   MULTI-VALUE (CHIP) FIELDS
+   Payload renders `hasMany` through react-select: .rs__control holds
+   .rs__multi-value chips plus the typing area. Out of the box the chips are
+   small, low-contrast and crowd the input, so a trainer's credentials read as
+   one grey run-on.
+
+   Same palette and treatment as the Practitioner form's pills: branded tint,
+   readable weight, generous hit targets, and the typing area kept visually
+   separate from the values already stored.
+   ========================================================================= */
+
+.field-type.has-many .rs__control {
+  min-height: 52px;
+  padding: 7px 10px;
+  gap: 6px;
+  background: var(--sdl-admin-surface);
+  border: 1px solid var(--sdl-admin-border);
+  border-radius: var(--sdl-admin-radius);
+}
+
+.field-type.has-many .rs__control:hover {
+  border-color: var(--sdl-admin-border-strong);
+}
+
+.field-type.has-many .rs__control--is-focused {
+  border-color: var(--sdl-admin-primary);
+  box-shadow: 0 0 0 3px var(--sdl-admin-focus);
+}
+
+.field-type.has-many .rs__value-container {
+  gap: 6px;
+  padding: 2px;
+  /* Wrap freely — a long credential must never be clipped. */
+  flex-wrap: wrap;
+}
+
+/* ---- a stored value ---- */
+.field-type.has-many .rs__multi-value {
+  align-items: center;
+  margin: 0;
+  padding: 3px 4px 3px 12px;
+  background: var(--sdl-admin-primary-soft);
+  border: 1px solid var(--sdl-admin-border);
+  border-radius: 999px;
+  max-width: 100%;
+}
+
+.field-type.has-many .rs__multi-value__label {
+  padding: 3px 6px 3px 0;
+  color: var(--sdl-admin-text);
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.4;
+  /* Full text, wrapped if need be, never an ellipsis. */
+  white-space: normal;
+  overflow: visible;
+  text-overflow: clip;
+  overflow-wrap: anywhere;
+}
+
+.field-type.has-many .rs__multi-value__remove {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  border-radius: 50%;
+  color: var(--sdl-admin-text-muted);
+  background: transparent;
+  cursor: pointer;
+}
+
+.field-type.has-many .rs__multi-value__remove:hover {
+  color: #ffffff;
+  background: var(--sdl-admin-error);
+}
+
+.field-type.has-many .rs__multi-value__remove svg {
+  width: 12px;
+  height: 12px;
+}
+
+/* ---- the typing area, deliberately distinct from the values ---- */
+.field-type.has-many .rs__input-container,
+.field-type.has-many .rs__input {
+  margin: 0;
+  padding: 0;
+  color: var(--sdl-admin-text);
+  font-size: 13.5px;
+}
+
+.field-type.has-many .rs__placeholder {
+  color: var(--sdl-admin-text-muted);
+  font-size: 13px;
+  font-style: italic;
+}
+
+.field-type.has-many .rs__indicators {
+  align-self: center;
+}
+
+.field-type.has-many .rs__clear-indicator:hover {
+  color: var(--sdl-admin-error);
+}
+
+/* The helper line reads as instruction, not as a value. */
+.field-type.has-many .field-description {
+  margin-top: 6px;
+  color: var(--sdl-admin-text-muted);
+}
+
+@media (max-width: 900px) {
+  .field-type.has-many .rs__control {
+    min-height: 56px;
+  }
+
+  /* 44px targets on touch. */
+  .field-type.has-many .rs__multi-value {
+    padding: 6px 6px 6px 14px;
+  }
+
+  .field-type.has-many .rs__multi-value__remove {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+@media (max-width: 640px) {
+  .field-type.has-many .rs__multi-value {
+    max-width: 100%;
+  }
+
+  .field-type.has-many .rs__multi-value__label {
+    font-size: 13.5px;
+  }
+}
+
+/* =========================================================================
+   EDIT-VIEW CONTENT WIDTH
+   The form was inset twice on the left and once on the right:
+
+     .collection-edit__main-wrapper   padding: 0 70px 50px 50px   (ours)
+     .document-fields__edit.gutter--*  padding-left: 50px         (Payload)
+
+   100px on the left, 70px on the right, at every breakpoint — so at 390px the
+   form had 220px of a 390px viewport. The gutter's padding is removed and the
+   wrapper's is made responsive.
+
+   60px on the left at desktop is deliberate: it matches the .doc-controls bar
+   and the document title, so the form now aligns with them instead of sitting
+   40px inside.
+   ========================================================================= */
+
+.document-fields__edit.gutter--left,
+.document-fields__edit.gutter--right {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+.collection-edit__main-wrapper {
+  padding: 0 70px 50px 60px;
+}
+
+/*
+ * Below desktop the left inset tracks Payload's own responsive gutter — the one
+ * the document title and controls bar use (60 / 40 / 16) — so the form stays
+ * aligned with them at every width instead of drifting inward.
+ */
+@media (max-width: 1200px) {
+  .collection-edit__main-wrapper {
+    padding: 0 60px 40px 60px;
+  }
+}
+
+@media (max-width: 900px) {
+  .collection-edit__main-wrapper {
+    padding: 0 40px 32px 40px;
+  }
+}
+
+@media (max-width: 640px) {
+  .collection-edit__main-wrapper {
+    padding: 0 16px 24px 16px;
+  }
+}
+
+/* -------------------------------------------------------------------------
+   TABS AND THE GUTTER ARE A PAIR
+   Payload gives root-level tabs `margin-left: calc(var(--gutter-h) * -1)` so
+   they bleed back over the gutter padding it also applies. Removing that
+   padding above therefore left the negative margin unopposed, and every tabbed
+   collection (Trainers, Practitioners, Posts) rendered its tab strip and cards
+   hard against x=0 — underneath the nav — while the title stayed at 60.
+
+   Zeroing the bleed restores the pairing: tabbed and untabbed forms now both
+   align to the wrapper's padding. margin-right is left alone, because
+   `.document-fields--has-sidebar` uses it for the gap to the sidebar.
+   ------------------------------------------------------------------------- */
+
+.document-fields__fields > .tabs-field,
+.document-fields__edit .render-fields > .tabs-field {
+  margin-left: 0;
+}
+
+/* -------------------------------------------------------------------------
+   ONE SOURCE OF HORIZONTAL INSET
+   The Users edit view (auth collections, rendered without a sidebar) also gets
+   26px of horizontal padding on .collection-edit__form, stacking on top of the
+   wrapper's and pushing its fields to 87px while every other collection sits
+   at 60px.
+
+   The wrapper is the single place that should own the horizontal inset, so the
+   form's is zeroed. Vertical padding is left untouched.
+   ------------------------------------------------------------------------- */
+
+.collection-edit .collection-edit__form {
+  padding-left: 0;
+  padding-right: 0;
+}
+
+/* -------------------------------------------------------------------------
+   IMAGE EDITOR — FOCAL POINT MARKER
+
+   The drag-to-position handle rendered at 13px instead of 40px, which read as
+   "there is no focal-point control" even though the panel beside it said
+   "Drag the focal point directly on the preview".
+
+   Cause: admin-theme.css:745 sizes `.drawer svg[class*="icon--"]` to 1rem, and
+   the marker's glyph is `icon--plus` inside the editor drawer. That rule is
+   UNLAYERED, while all of Payload's own CSS lives in `@layer payload-default`
+   — and an unlayered declaration beats a layered one however specific the
+   layered selector is. So Payload's own
+   `.edit-upload__focalPoint svg { width: 40px }` never applied.
+
+   Restated here rather than adding :not() exclusions to the theme rule, which
+   would have to grow an exception for every icon Payload sizes deliberately.
+   `min-width`/`min-height` are reset too, because the theme rule pins those to
+   1rem as well and would otherwise fight the width.
+   ------------------------------------------------------------------------- */
+
+.edit-upload__focalPoint svg[class*="icon--"] {
+  width: 40px;
+  height: 40px;
+  min-width: 40px;
+  min-height: 40px;
+}
+
+/* Reads on any photograph: dark translucent disc, white crosshair, light ring.
+   Pinned here for the same layering reason as the size above. */
+.edit-upload__focalPoint svg {
+  background: rgba(0, 0, 0, 0.55);
+  border-radius: 100%;
+  color: #fff;
+  box-shadow:
+    0 0 0 2px rgba(255, 255, 255, 0.9),
+    0 4px 14px rgba(0, 0, 0, 0.35);
+}
+
+.edit-upload__focalPoint {
+  cursor: grab;
+}
+
+.edit-upload__draggable-container--dragging .edit-upload__focalPoint {
+  cursor: grabbing;
+}

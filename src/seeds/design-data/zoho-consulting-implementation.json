@@ -1,0 +1,328 @@
+{
+  "MENUS": [
+    {
+      "key": "services",
+      "label": "Services",
+      "href": "services.html",
+      "cta": {
+        "label": "View all services",
+        "href": "services.html"
+      },
+      "items": [
+        {
+          "title": "AI transformation",
+          "desc": "Turn AI potential into practical business value.",
+          "href": "ai-transformation.html"
+        },
+        {
+          "title": "Digital engineering",
+          "desc": "Build, modernize and scale digital products.",
+          "href": "digital-engineering.html"
+        },
+        {
+          "title": "Business transformation",
+          "desc": "Rethink systems, processes and ways of working.",
+          "href": "business-transformation.html"
+        },
+        {
+          "title": "Digital experience",
+          "desc": "Create better experiences across every touchpoint.",
+          "href": "digital-experience.html"
+        },
+        {
+          "title": "Growth transformation",
+          "desc": "Turn digital attention into qualified demand.",
+          "href": "growth-transformation.html"
+        }
+      ]
+    },
+    {
+      "key": "products",
+      "label": "Products & Platforms",
+      "cta": {
+        "label": "Explore EVOQ",
+        "href": "evoq.html"
+      },
+      "items": [
+        {
+          "title": "EVOQ",
+          "desc": "The unified business suite for modern operations.",
+          "href": "evoq.html"
+        }
+      ]
+    },
+    {
+      "key": "insights",
+      "label": "Insights",
+      "cta": {
+        "label": "Explore insights",
+        "href": "#"
+      },
+      "items": [
+        {
+          "title": "Blogs",
+          "desc": "Ideas, perspectives and practical thinking."
+        },
+        {
+          "title": "Case studies",
+          "desc": "Real projects. Real business outcomes."
+        },
+        {
+          "title": "Whitepapers",
+          "desc": "In-depth research and perspectives."
+        },
+        {
+          "title": "Featured projects",
+          "desc": "Selected work and digital experiences."
+        }
+      ]
+    },
+    {
+      "key": "company",
+      "label": "Company",
+      "cta": null,
+      "items": [
+        {
+          "title": "About",
+          "desc": "The people and experience behind SDL."
+        },
+        {
+          "title": "Our approach",
+          "desc": "How SDL thinks, builds and works."
+        },
+        {
+          "title": "Clients",
+          "desc": "The businesses SDL works with."
+        },
+        {
+          "title": "Careers",
+          "desc": "Build what's next with SDL."
+        }
+      ]
+    }
+  ],
+  "ICONS": {
+    "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+    "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+    "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+    "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+    "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+    "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+    "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+    "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+    "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+    "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+    "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+    "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+    "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+    "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+    "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+  },
+  "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+  "FOOTER_COLS": [
+    {
+      "title": "Services",
+      "links": [
+        {
+          "label": "AI transformation",
+          "href": "ai-transformation.html"
+        },
+        {
+          "label": "Digital engineering",
+          "href": "digital-engineering.html"
+        },
+        {
+          "label": "Business transformation",
+          "href": "business-transformation.html"
+        },
+        {
+          "label": "Digital experience",
+          "href": "digital-experience.html"
+        },
+        {
+          "label": "Growth transformation",
+          "href": "growth-transformation.html"
+        }
+      ]
+    },
+    {
+      "title": "Products & Platforms",
+      "links": [
+        {
+          "label": "EVOQ",
+          "href": "evoq.html"
+        }
+      ]
+    },
+    {
+      "title": "Insights",
+      "links": [
+        {
+          "label": "Blogs",
+          "href": "#"
+        },
+        {
+          "label": "Case studies",
+          "href": "#"
+        },
+        {
+          "label": "Whitepapers",
+          "href": "#"
+        },
+        {
+          "label": "Featured projects",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "title": "Company",
+      "links": [
+        {
+          "label": "About",
+          "href": "#"
+        },
+        {
+          "label": "Our approach",
+          "href": "#"
+        },
+        {
+          "label": "Clients",
+          "href": "#"
+        },
+        {
+          "label": "Careers",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "title": "Connect",
+      "links": [
+        {
+          "label": "Let's talk",
+          "href": "#contact"
+        },
+        {
+          "label": "Contact us",
+          "href": "#contact"
+        }
+      ]
+    }
+  ],
+  "ZH_CAPABILITIES": [
+    {
+      "title": "Zoho consulting",
+      "tagline": "Find the right applications and approach.",
+      "desc": "Identify the right Zoho applications, define the implementation approach and align the platform with business processes and priorities."
+    },
+    {
+      "title": "Zoho implementation",
+      "tagline": "Configure Zoho for day-to-day operations.",
+      "desc": "Configure and deploy Zoho applications with the workflows, roles, data structures and business rules required for day-to-day operations."
+    },
+    {
+      "title": "Zoho customization",
+      "tagline": "Extend the platform to fit the business.",
+      "desc": "Extend standard Zoho capabilities to accommodate unique processes, specialized workflows and business requirements."
+    },
+    {
+      "title": "Zoho integration",
+      "tagline": "Connect Zoho to the rest of the business.",
+      "desc": "Connect Zoho with ERP, e-commerce, finance, websites, third-party applications and other business systems."
+    },
+    {
+      "title": "Data migration",
+      "tagline": "Move existing data in without the mess.",
+      "desc": "Move existing customer, product, transaction and operational data into Zoho with structured migration and validation."
+    },
+    {
+      "title": "Workflow automation",
+      "tagline": "Automate the repetitive parts of the work.",
+      "desc": "Automate repetitive processes, approvals, notifications and data flows across Zoho applications."
+    },
+    {
+      "title": "Zoho application development",
+      "tagline": "Build what standard Zoho can’t.",
+      "desc": "Build custom functions, extensions and applications when standard capabilities are not enough."
+    },
+    {
+      "title": "Support & optimization",
+      "tagline": "Keep an existing Zoho environment improving.",
+      "desc": "Improve an existing Zoho environment through ongoing enhancements, troubleshooting, optimization and support."
+    }
+  ],
+  "ZH_CAP_SHAPE_COLORS": [
+    [
+      "#FFACA6",
+      "#E42527"
+    ],
+    [
+      "#8FD6FF",
+      "#2B8FDB"
+    ],
+    [
+      "#6FDBA0",
+      "#28C76F"
+    ],
+    [
+      "#7C97FF",
+      "#2B49DB"
+    ],
+    [
+      "#FFD199",
+      "#E68A2E"
+    ],
+    [
+      "#9BEFC4",
+      "#22B368"
+    ],
+    [
+      "#FFB199",
+      "#E64A3C"
+    ]
+  ],
+  "ZH_VALUE_ITEMS": [
+    {
+      "title": "Reduce disconnected work",
+      "desc": "Connect applications and workflows so teams spend less time moving information between systems.",
+      "icon": "<path d=\"M9.5 14.5l5-5\"/><path d=\"M8 16a3.5 3.5 0 0 1 0-5l2-2a3.5 3.5 0 0 1 5 0\"/><path d=\"M16 8a3.5 3.5 0 0 1 0 5l-2 2a3.5 3.5 0 0 1-5 0\"/>"
+    },
+    {
+      "title": "Adapt the platform",
+      "desc": "Configure and extend Zoho around business requirements instead of relying entirely on out-of-the-box processes.",
+      "icon": "<path d=\"M4 5h16l-6 8v6l-4-2v-4z\"/>"
+    },
+    {
+      "title": "Grow without unnecessary complexity",
+      "desc": "Start with the applications the business needs and expand the platform as requirements evolve.",
+      "icon": "<path d=\"M9 3H3v6M15 21h6v-6M3 21l7-7M21 3l-7 7\"/>"
+    }
+  ],
+  "ZH_APP_CATEGORIES": [
+    {
+      "title": "Sales & CRM",
+      "apps": "Zoho CRM · Zoho SalesIQ · Zoho Bigin"
+    },
+    {
+      "title": "Finance",
+      "apps": "Zoho Books · Zoho Invoice · Zoho Expense"
+    },
+    {
+      "title": "Service",
+      "apps": "Zoho Desk · Zoho Assist"
+    },
+    {
+      "title": "People & collaboration",
+      "apps": "Zoho People · Zoho Projects · Zoho Cliq"
+    },
+    {
+      "title": "Marketing & commerce",
+      "apps": "Zoho Campaigns · Zoho Commerce"
+    },
+    {
+      "title": "Analytics & automation",
+      "apps": "Zoho Analytics · Zoho Creator · Zoho Flow"
+    }
+  ]
+}

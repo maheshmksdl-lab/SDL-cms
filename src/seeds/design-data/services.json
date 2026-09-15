@@ -1,0 +1,366 @@
+{
+  "MENUS": [
+    {
+      "key": "services",
+      "label": "Services",
+      "href": "services.html",
+      "cta": {
+        "label": "View all services",
+        "href": "services.html"
+      },
+      "items": [
+        {
+          "title": "AI transformation",
+          "desc": "Turn AI potential into practical business value.",
+          "href": "ai-transformation.html"
+        },
+        {
+          "title": "Digital engineering",
+          "desc": "Build, modernize and scale digital products.",
+          "href": "digital-engineering.html"
+        },
+        {
+          "title": "Business transformation",
+          "desc": "Rethink systems, processes and ways of working.",
+          "href": "business-transformation.html"
+        },
+        {
+          "title": "Digital experience",
+          "desc": "Create better experiences across every touchpoint.",
+          "href": "digital-experience.html"
+        },
+        {
+          "title": "Growth transformation",
+          "desc": "Turn digital attention into qualified demand.",
+          "href": "growth-transformation.html"
+        }
+      ]
+    },
+    {
+      "key": "products",
+      "label": "Products & Platforms",
+      "cta": {
+        "label": "Explore EVOQ",
+        "href": "evoq.html"
+      },
+      "items": [
+        {
+          "title": "EVOQ",
+          "desc": "The unified business suite for modern operations.",
+          "href": "evoq.html"
+        }
+      ]
+    },
+    {
+      "key": "insights",
+      "label": "Insights",
+      "cta": {
+        "label": "Explore insights",
+        "href": "#"
+      },
+      "items": [
+        {
+          "title": "Blogs",
+          "desc": "Ideas, perspectives and practical thinking."
+        },
+        {
+          "title": "Case studies",
+          "desc": "Real projects. Real business outcomes."
+        },
+        {
+          "title": "Whitepapers",
+          "desc": "In-depth research and perspectives."
+        },
+        {
+          "title": "Featured projects",
+          "desc": "Selected work and digital experiences."
+        }
+      ]
+    },
+    {
+      "key": "company",
+      "label": "Company",
+      "cta": null,
+      "items": [
+        {
+          "title": "About",
+          "desc": "The people and experience behind Social DNA Labs."
+        },
+        {
+          "title": "Our approach",
+          "desc": "How Social DNA Labs thinks, builds and works."
+        },
+        {
+          "title": "Clients",
+          "desc": "The businesses Social DNA Labs works with."
+        },
+        {
+          "title": "Careers",
+          "desc": "Build what's next with Social DNA Labs."
+        }
+      ]
+    }
+  ],
+  "ICONS": {
+    "AI transformation": "<path d=\"M24 6l4.2 9.4L38 20l-9.8 4.6L24 34l-4.2-9.4L10 20l9.8-4.6L24 6z\"/><circle cx=\"24\" cy=\"20\" r=\"3.4\"/>",
+    "Digital engineering": "<path d=\"M17 15l-8 8 8 8M31 15l8 8-8 8M27 12l-6 24\"/>",
+    "Business transformation": "<circle cx=\"24\" cy=\"24\" r=\"7\"/><path d=\"M24 8v5M24 39v5M8 24h5M39 24h5M12.9 12.9l3.5 3.5M31.6 31.6l3.5 3.5M35.1 12.9l-3.5 3.5M16.4 31.6l-3.5 3.5\"/>",
+    "Digital experience": "<rect x=\"10\" y=\"12\" width=\"28\" height=\"20\" rx=\"2.5\"/><path d=\"M18 40h12M24 32v8\"/>",
+    "Growth transformation": "<path d=\"M9 33l9-11 7 7 14-17\"/><path d=\"M31 12h8v8\"/>",
+    "Products & platforms": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+    "EVOQ": "<rect x=\"9\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"9\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"9\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/><rect x=\"26\" y=\"26\" width=\"13\" height=\"13\" rx=\"2\"/>",
+    "Blogs": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 24h14M17 30h14\"/>",
+    "Case studies": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M18 26l4 4 8-9\"/>",
+    "Whitepapers": "<path d=\"M14 8h14l6 6v22a2 2 0 0 1-2 2H14a2 2 0 0 1-2-2V10a2 2 0 0 1 2-2z\"/><path d=\"M28 8v6h6M17 22h14M17 28h9\"/>",
+    "Featured projects": "<path d=\"M24 6l4.6 12.6L42 21l-9 9 2.3 13-11.3-6.5L12.7 43 15 30l-9-9 13.4-2.4L24 6z\"/>",
+    "About": "<rect x=\"12\" y=\"10\" width=\"24\" height=\"28\" rx=\"2\"/><path d=\"M18 18h4M26 18h4M18 26h4M26 26h4M20 38v-6h8v6\"/>",
+    "Our approach": "<circle cx=\"24\" cy=\"24\" r=\"13\"/><circle cx=\"24\" cy=\"24\" r=\"7\"/><circle cx=\"24\" cy=\"24\" r=\"1.6\" fill=\"currentColor\" stroke=\"none\"/>",
+    "Clients": "<circle cx=\"18\" cy=\"18\" r=\"5\"/><circle cx=\"32\" cy=\"20\" r=\"4\"/><path d=\"M9 38c1-6 5-10 9-10s8 4 9 10M27 38c1-5 4-9 8-9 3 0 6 2 7 6\"/>",
+    "Careers": "<rect x=\"8\" y=\"16\" width=\"32\" height=\"20\" rx=\"3\"/><path d=\"M17 16v-4a3 3 0 0 1 3-3h8a3 3 0 0 1 3 3v4\"/><path d=\"M8 25h32\"/>"
+  },
+  "ICON_DEFAULT": "<circle cx=\"24\" cy=\"24\" r=\"4\" fill=\"currentColor\" stroke=\"none\"/>",
+  "PILLARS": [
+    {
+      "title": "AI transformation",
+      "tagline": "Put AI to work.",
+      "desc": "Identify meaningful opportunities, build practical AI capabilities and accelerate adoption. From strategy and generative AI to intelligent agents and AI-enabled engineering, we help turn experimentation into measurable business value. The result is AI that fits how your teams actually work, not a bolt-on feature nobody uses.",
+      "tags": [
+        "AI strategy & consulting",
+        "Generative AI",
+        "AI applications",
+        "AI agents & automation",
+        "AI-enabled engineering",
+        "AI integration"
+      ],
+      "cta": {
+        "label": "Explore AI transformation",
+        "href": "ai-transformation.html"
+      }
+    },
+    {
+      "title": "Digital engineering",
+      "tagline": "Build and modernize.",
+      "desc": "Create, modernize and scale digital products, applications and platforms. We combine strong engineering practices with modern architectures to help you ship faster, integrate more easily and build systems that hold up as the business grows. Every solution is built to be maintainable, secure and ready for what comes next.",
+      "tags": [
+        "Web & application engineering",
+        "Mobile engineering",
+        "API & microservices",
+        "Cloud engineering",
+        "Application modernization",
+        "Quality engineering"
+      ],
+      "cta": {
+        "label": "Explore digital engineering",
+        "href": "digital-engineering.html"
+      }
+    },
+    {
+      "title": "Business transformation",
+      "tagline": "Transform how the business works.",
+      "desc": "Modernize systems and processes to create stronger, more efficient ways of working. We look across people, technology and workflows to remove friction, connect disconnected systems and give teams the tools they need to move faster. The outcome is a business that runs on processes built for today, not decisions made years ago.",
+      "tags": [
+        "Digital transformation",
+        "CRM",
+        "E-commerce",
+        "Business applications",
+        "Process modernization",
+        "SaaS"
+      ],
+      "cta": {
+        "label": "Explore business transformation",
+        "href": "business-transformation.html"
+      }
+    },
+    {
+      "title": "Digital experience",
+      "tagline": "Design better digital interactions.",
+      "desc": "Create digital experiences that work better for customers, employees and the business. From research and design to the systems that keep experiences consistent at scale, we focus on interactions that are intuitive, accessible and aligned with what people actually need. Better experience drives better outcomes on both sides of the relationship.",
+      "tags": [
+        "UX strategy",
+        "UI design",
+        "Product design",
+        "Customer experience",
+        "Employee experience",
+        "Design systems"
+      ],
+      "cta": {
+        "label": "Explore digital experience",
+        "href": "digital-experience.html"
+      }
+    },
+    {
+      "title": "Growth transformation",
+      "tagline": "Create demand that converts.",
+      "desc": "Bring AI search, SEO, digital marketing and digital channels together to create qualified demand and improve conversion. We connect strategy, content and measurement so every channel works toward the same outcome instead of pulling in different directions. The focus stays on attention that converts into real business results.",
+      "tags": [
+        "AI search & visibility",
+        "SEO",
+        "Performance marketing",
+        "Content & demand generation",
+        "Conversion optimization",
+        "Analytics & measurement"
+      ],
+      "cta": {
+        "label": "Explore growth transformation",
+        "href": "growth-transformation.html"
+      }
+    }
+  ],
+  "OPPORTUNITY_STEPS": [
+    {
+      "n": "01",
+      "title": "Accelerate",
+      "desc": "Move from idea to implementation faster."
+    },
+    {
+      "n": "02",
+      "title": "Apply",
+      "desc": "Use the right technology where it creates real business value."
+    },
+    {
+      "n": "03",
+      "title": "Evolve",
+      "desc": "Continuously improve products, systems and experiences as your business changes."
+    }
+  ],
+  "INSIGHT_COLORS": [
+    {
+      "bg": "var(--success)",
+      "text": "dark"
+    },
+    {
+      "bg": "var(--attention)",
+      "text": "dark"
+    },
+    {
+      "bg": "var(--accent)",
+      "text": "light"
+    }
+  ],
+  "INSIGHTS": [
+    {
+      "cat": "AI / Technology",
+      "title": "AI and the changing technology landscape",
+      "readTime": "6 min read",
+      "thumb": "url(assets/insights/ai-tech.jpg)"
+    },
+    {
+      "cat": "Business / Transformation",
+      "title": "Business transformation without the disruption",
+      "readTime": "8 min read"
+    },
+    {
+      "cat": "Growth / Digital",
+      "title": "Turning technology into business growth",
+      "readTime": "5 min read",
+      "thumb": "url(assets/insights/growth.jpg)"
+    },
+    {
+      "cat": "Digital Experience",
+      "title": "Designing digital experiences people actually use",
+      "readTime": "6 min read"
+    },
+    {
+      "cat": "Digital Engineering",
+      "title": "Building digital products for what's next",
+      "readTime": "7 min read",
+      "thumb": "url(assets/insights/cloud.jpg)"
+    },
+    {
+      "cat": "Data / Analytics",
+      "title": "What good data discipline looks like",
+      "readTime": "5 min read"
+    }
+  ],
+  "FOOTER_COLS": [
+    {
+      "title": "Services",
+      "links": [
+        {
+          "label": "AI transformation",
+          "href": "ai-transformation.html"
+        },
+        {
+          "label": "Digital engineering",
+          "href": "digital-engineering.html"
+        },
+        {
+          "label": "Business transformation",
+          "href": "business-transformation.html"
+        },
+        {
+          "label": "Digital experience",
+          "href": "digital-experience.html"
+        },
+        {
+          "label": "Growth transformation",
+          "href": "growth-transformation.html"
+        }
+      ]
+    },
+    {
+      "title": "Products & Platforms",
+      "links": [
+        {
+          "label": "EVOQ",
+          "href": "evoq.html"
+        }
+      ]
+    },
+    {
+      "title": "Insights",
+      "links": [
+        {
+          "label": "Blogs",
+          "href": "#"
+        },
+        {
+          "label": "Case studies",
+          "href": "#"
+        },
+        {
+          "label": "Whitepapers",
+          "href": "#"
+        },
+        {
+          "label": "Featured projects",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "title": "Company",
+      "links": [
+        {
+          "label": "About",
+          "href": "#"
+        },
+        {
+          "label": "Our approach",
+          "href": "#"
+        },
+        {
+          "label": "Clients",
+          "href": "#"
+        },
+        {
+          "label": "Careers",
+          "href": "#"
+        }
+      ]
+    },
+    {
+      "title": "Connect",
+      "links": [
+        {
+          "label": "Let's talk",
+          "href": "#contact"
+        },
+        {
+          "label": "Contact us",
+          "href": "#contact"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,84 @@
+/* =========================================================================
+   SDL ADMIN — DESIGN TOKENS
+   Imported BEFORE admin-theme.css so every later rule can use these roles.
+
+   The palette is SDL Blue — RGB(43, 73, 219) / #2B49DB — laid over the
+   EFTMRA admin's structure in place of its teal/deep-ocean scheme. Every
+   brand colour in admin-theme.css, admin-overrides.css and
+   admin-dashboard.css sits on the same 230° hue as these tokens.
+
+   Measured against white:
+     ink           #141B3E  16.7:1  AAA
+     muted-strong  #343956  11.3:1  AAA
+     blue          #2B49DB   6.2:1  AA
+     muted         #6C7399   4.6:1  AA
+     blue-light    #6A80E6   3.6:1  large text only
+
+   So SDL Blue carries every interactive role and blue-light is kept for
+   borders, icons and decorative fills, never small text.
+   ========================================================================= */
+
+/*
+ * Payload declares its own tokens under `html[data-theme='light']`, which is more
+ * specific than a bare `:root`. Matching that specificity is what makes the remap
+ * below actually take effect — with `:root` alone the admin kept Materio's
+ * #44425c body text.
+ */
+:root,
+html[data-theme="light"],
+html[data-theme="dark"] {
+  /* ---- Brand: SDL Blue and its scale ---- */
+  --sdl-ink: #141b3e;
+  --sdl-blue: #2b49db;
+  --sdl-blue-hover: #2239b0;
+  --sdl-blue-light: #6a80e6;
+  --sdl-blue-pale: #c9d1f6;
+  --sdl-blue-wash: #f1f3fd;
+  --sdl-blue-line: #dfe4f8;
+  --sdl-muted: #6c7399;
+  --sdl-muted-strong: #343956;
+  --sdl-amber: #c9a84c;
+
+  /* ---- Admin roles ---- */
+  --sdl-admin-primary: var(--sdl-blue);
+  --sdl-admin-primary-hover: var(--sdl-blue-hover);
+  --sdl-admin-primary-soft: rgba(43, 73, 219, 0.09);
+  --sdl-admin-accent: var(--sdl-blue-light);
+
+  --sdl-admin-text: var(--sdl-ink);
+  --sdl-admin-text-muted: var(--sdl-muted-strong);
+  /* Icons and rules only — never text. */
+  --sdl-admin-text-faint: var(--sdl-muted);
+
+  --sdl-admin-surface: #ffffff;
+  --sdl-admin-surface-sunken: var(--sdl-blue-wash);
+  --sdl-admin-border: var(--sdl-blue-line);
+  --sdl-admin-border-strong: var(--sdl-blue-pale);
+  --sdl-admin-focus: rgba(43, 73, 219, 0.28);
+  --sdl-admin-radius: 10px;
+
+  /* Darker than Payload's defaults so validation messages clear AA on white:
+     success 4.9:1, error 6.4:1, warning 5.9:1. */
+  --sdl-admin-success: #1e7b5e;
+  --sdl-admin-error: #b3261e;
+  --sdl-admin-warning: #8a5a00;
+
+  /* ---- Payload's own variables, remapped so built-in components follow ---- */
+  --theme-text: var(--sdl-admin-text);
+  --theme-elevation-1000: var(--sdl-admin-text);
+  --theme-elevation-900: var(--sdl-admin-text);
+  --theme-elevation-850: var(--sdl-admin-text);
+  --theme-elevation-800: var(--sdl-admin-text);
+  --theme-elevation-600: var(--sdl-admin-text-muted);
+  --theme-elevation-500: var(--sdl-admin-text-muted);
+  --theme-elevation-400: var(--sdl-admin-text-faint);
+  --theme-elevation-250: var(--sdl-admin-border-strong);
+  --theme-elevation-150: var(--sdl-admin-border);
+  --theme-elevation-100: var(--sdl-admin-border);
+  --theme-elevation-50: var(--sdl-admin-surface-sunken);
+  --theme-elevation-0: var(--sdl-admin-surface);
+
+  --theme-success-500: var(--sdl-admin-success);
+  --theme-error-500: var(--sdl-admin-error);
+  --theme-warning-500: var(--sdl-admin-warning);
+}

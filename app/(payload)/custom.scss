@@ -1,0 +1,30 @@
+/* SDL admin overrides.
+ *
+ * Class conventions carried over from the EFTMRA reference, renamed to the sdl- prefix:
+ *   .sdl-settings-tabs   tabbed settings globals
+ *   .sdl-materio-card    a collapsible card inside a settings tab
+ *   .sdl-settings-field  a field inside such a card
+ *   .sdl-form-section    a grouped section on a document form
+ */
+
+/* The ported theme hides a collapsible header's "Toggle block" label only inside
+ * `.collapsible-field`. The page builder's block and array rows use the same header, and there the
+ * label rendered over the row title ("Toggle blockHero"). Visually hidden, still announced. */
+.blocks-field .collapsible__toggle > span,
+.array-field .collapsible__toggle > span {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  clip-path: inset(50%);
+  border: 0;
+}
+
+/* "Social DNA Labs" is longer than the reference's brand name and was truncated in the sidebar
+ * head at the reference's 24px; this size fits it beside the mark and the menu toggle. */
+.sdl-admin-nav__title {
+  font-size: 1.125rem;
+}
