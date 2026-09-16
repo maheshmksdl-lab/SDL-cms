@@ -97,8 +97,12 @@ function postgresPool() {
      * request at a time, so a larger pool buys nothing and only starves other instances. The
      * short idle timeout matters just as much — Vercel freezes rather than terminates instances,
      * so without it their connections stay checked out long after the request finishes.
+     *
+     * Two, not one: @payloadcms/db-postgres `connect()` checks out a client with `pool.connect()`
+     * to attach an error listener and never releases it. With `max: 1` that permanently holds the
+     * only slot, and every query then fails with "timeout exceeded when trying to connect".
      */
-    max: 1,
+    max: 2,
     idleTimeoutMillis: 10_000,
     connectionTimeoutMillis: 15_000,
   }
