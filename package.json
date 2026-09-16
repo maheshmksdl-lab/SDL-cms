@@ -28,7 +28,9 @@
     "typecheck": "tsc --noEmit",
     "test": "vitest run --config vitest.config.mts",
     "test:watch": "vitest --config vitest.config.mts",
-    "test:integration": "vitest run --config vitest.integration.config.mts"
+    "test:integration": "vitest run --config vitest.integration.config.mts",
+    "migrate:prod": "tsx scripts/with-env.ts .env.production npx payload migrate",
+    "migrate:status:prod": "tsx scripts/with-env.ts .env.production npx payload migrate:status"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.88.0",
