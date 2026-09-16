@@ -10,7 +10,7 @@
     "predev": "pnpm generate:types && pnpm generate:importmap",
     "dev": "next dev -p 3001",
     "prebuild": "pnpm verify:env && pnpm generate:types && pnpm generate:importmap && next typegen",
-    "build": "next build",
+    "build": "pnpm generate:importmap && next build",
     "start": "next start -p 3001",
     "generate:types": "payload generate:types",
     "generate:importmap": "payload generate:importmap",
@@ -70,7 +70,8 @@
     "eslint": "ESLint 9 with flat config. ESLint 10 is published and typescript-eslint supports it, but 9 is the battle-tested choice for a new project. @eslint/js is a SEPARATE package in flat config — it does not ship with eslint.",
     "bundler": "Next 16 uses Turbopack for dev and build by default. If the Phase 0 spike (plan 3.1c) shows Payload failing under a Turbopack production build, change `build` to `next build --webpack` and record it in docs/DECISIONS.md.",
     "lint": "`next lint` was removed in Next 16 and `next build` no longer lints. ESLint runs as its own script and its own CI step.",
-    "migrations": "Payload 3.88 migrate:create emits MigrateUpArgs/MigrateDownArgs as a VALUE import, but db-postgres exports them as types only — the migration then throws at runtime under ESM. The repair is CHAINED into migrate:create, not wired as a post- script, because pnpm does not run pre/post scripts by default (v7+). Always create migrations with 'pnpm migrate:create'; calling 'pnpm payload migrate:create' directly skips the repair."
+    "migrations": "Payload 3.88 migrate:create emits MigrateUpArgs/MigrateDownArgs as a VALUE import, but db-postgres exports them as types only — the migration then throws at runtime under ESM. The repair is CHAINED into migrate:create, not wired as a post- script, because pnpm does not run pre/post scripts by default (v7+). Always create migrations with 'pnpm migrate:create'; calling 'pnpm payload migrate:create' directly skips the repair.",
+    "buildCodegen": "generate:importmap is CHAINED into `build` for the same reason as migrations above: pnpm does not run pre/post scripts (v7+), so the `prebuild` hook never fires under 'pnpm run build' — which is exactly what Vercel runs. importMap.js is gitignored (**/importMap.js), so a fresh deploy checkout had no copy and the build failed with \"Can't resolve '../importMap.js'\". Generating it is preferred to committing it: it is derived from payload.config.ts and a committed copy goes stale silently. prebuild is left in place for npm, where it also runs verify:env and generate:types."
   },
   "packageManager": "pnpm@8.15.5+sha1.a58c038faac410c947dbdb93eb30994037d0fce2"
 }
