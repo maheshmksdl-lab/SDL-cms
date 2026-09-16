@@ -80,6 +80,27 @@ function postgresPool() {
       ca: fs.readFileSync(path.resolve(dirname, 'certs/aiven-ca.pem')),
       rejectUnauthorized: true,
     },
+
+    /*
+     * Serverless pool sizing. Remote means Vercel, where every concurrent invocation is a
+     * SEPARATE process with its own pool — so the pool size multiplies by the number of live
+     * instances, and node-postgres defaults to `max: 10` each. A handful of concurrent requests
+     * therefore exhausts a managed Postgres connection limit.
+     *
+     * Measured against production before this was set: 12 parallel requests to
+     * /api/pages?depth=2 returned 500 four times while the same request sequentially returned
+     * 200 every time, and a direct psql connection was refused with "remaining connection slots
+     * are reserved for roles with the SUPERUSER attribute". It also broke `next build` on the
+     * web app, whose three workers fetch concurrently.
+     *
+     * One connection per invocation is the right shape: a serverless function handles a single
+     * request at a time, so a larger pool buys nothing and only starves other instances. The
+     * short idle timeout matters just as much — Vercel freezes rather than terminates instances,
+     * so without it their connections stay checked out long after the request finishes.
+     */
+    max: 1,
+    idleTimeoutMillis: 10_000,
+    connectionTimeoutMillis: 15_000,
   }
 }
 
