@@ -1,3 +1,4 @@
+import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 import sharp from 'sharp'
@@ -32,6 +33,55 @@ import { SiteSettings } from './src/globals/SiteSettings'
 import { EmailSettings } from './src/globals/EmailSettings'
 
 const dirname = path.dirname(fileURLToPath(import.meta.url))
+
+/**
+ * Postgres pool settings, with the TLS trust anchor the managed database needs.
+ *
+ * Aiven signs each service certificate with a PER-PROJECT CA that is in no system trust store,
+ * so verification only succeeds if that CA is supplied explicitly. It ships in `certs/`, read
+ * relative to this file — never an absolute path, which would resolve on one machine and not on
+ * the deployment host.
+ *
+ * Two behaviours here are not obvious, and both were verified against the live database:
+ *
+ *   1. ANY `sslmode` in the connection string makes pg-connection-string construct its own
+ *      `ssl` object, and THAT wins over the one passed below — the CA is silently ignored and
+ *      the connection dies with "self-signed certificate in certificate chain". Measured:
+ *      `sslmode=require` and `sslmode=verify-full` both fail, no `sslmode` succeeds. So the
+ *      parameter is stripped here, making this correct whatever the environment happens to set.
+ *   2. `sslrootcert` is stripped for the same precedence reason, and because pg resolves it with
+ *      `fs.readFileSync` at connect time — a path valid on a developer machine throws on Linux.
+ *
+ * TLS is attached only for remote hosts: local development runs a plain Postgres with SSL
+ * disabled, which refuses the handshake outright ("The server does not support SSL connections").
+ */
+function postgresPool() {
+  const raw = process.env.DATABASE_URI || ''
+  if (!raw) return { connectionString: '' }
+
+  let url: URL
+  try {
+    url = new URL(raw)
+  } catch {
+    // Not a parseable URL — hand it to pg untouched rather than mangling it.
+    return { connectionString: raw }
+  }
+
+  url.searchParams.delete('sslmode')
+  url.searchParams.delete('sslrootcert')
+
+  if (/^(localhost|127\.0\.0\.1|\[::1\]|::1)$/.test(url.hostname)) {
+    return { connectionString: url.toString() }
+  }
+
+  return {
+    connectionString: url.toString(),
+    ssl: {
+      ca: fs.readFileSync(path.resolve(dirname, 'certs/aiven-ca.pem')),
+      rejectUnauthorized: true,
+    },
+  }
+}
 
 // ── Origin helpers (copied from the EFTMRA reference — it parses these correctly) ──
 
@@ -252,7 +302,7 @@ export default buildConfig({
   sharp,
 
   db: postgresAdapter({
-    pool: { connectionString: process.env.DATABASE_URI || '' },
+    pool: postgresPool(),
     /*
      * Schema changes ship as reviewed migration files, never as an implicit push. This is the
      * setting that makes `payload migrate` meaningful rather than advisory.
