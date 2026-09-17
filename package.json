@@ -10,7 +10,7 @@
     "predev": "pnpm generate:types && pnpm generate:importmap",
     "dev": "next dev -p 3001",
     "prebuild": "pnpm verify:env && pnpm generate:types && pnpm generate:importmap && next typegen",
-    "build": "pnpm generate:importmap && next build",
+    "build": "pnpm verify:env && pnpm generate:importmap && next build",
     "start": "next start -p 3001",
     "generate:types": "payload generate:types",
     "generate:importmap": "payload generate:importmap",
@@ -31,7 +31,9 @@
     "test:integration": "vitest run --config vitest.integration.config.mts",
     "migrate:prod": "tsx scripts/with-env.ts .env.production npx payload migrate",
     "migrate:status:prod": "tsx scripts/with-env.ts .env.production npx payload migrate:status",
-    "seed:prod": "tsx scripts/with-env.ts .env.production tsx src/seeds/index.ts" 
+    "seed:prod": "tsx scripts/with-env.ts .env.production tsx src/seeds/index.ts",
+    "check:media": "tsx scripts/check-media.ts",
+    "check:media:prod": "tsx scripts/with-env.ts .env.production tsx scripts/check-media.ts"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.88.0",

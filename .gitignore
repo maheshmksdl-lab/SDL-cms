@@ -30,9 +30,16 @@ cms/src/payload-types.ts
 web/lib/payload-types.ts
 **/importMap.js
 
-# Uploaded media — never commit; production uses object storage
-cms/media/*
-!cms/media/.gitkeep
+# Uploaded media — COMMITTED ON PURPOSE.
+#
+# Production serves media from the deployment itself, not object storage, so these files must
+# travel with the build. The rule that used to sit here was `cms/media/*`, which never matched
+# anything: a pattern containing a slash is anchored to the directory holding the .gitignore,
+# and this file lives in `cms/`, so it only ever described `cms/cms/media/`. The files were
+# tracked by accident, and are now tracked deliberately.
+#
+# Do not re-add an ignore rule here without first moving media to object storage — untracking
+# these files removes every image from production.
 
 # Test output
 coverage/
