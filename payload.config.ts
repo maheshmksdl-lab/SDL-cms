@@ -16,7 +16,7 @@ import { Media } from './src/collections/Media'
 import { RoleManagement } from './src/collections/RoleManagement'
 import { Pages } from './src/collections/Pages'
 import {
-  CaseStudies, Clients, InsightCategories, Insights, Redirects, Services, Testimonials,
+  CaseStudies, Clients, InsightCategories, Insights, Products, Redirects, Services, Testimonials,
 } from './src/collections/content'
 import { Forms, Leads } from './src/collections/forms'
 import { EmailAccounts, EmailTemplates } from './src/collections/email'
@@ -278,6 +278,7 @@ const collections: CollectionConfig[] = [
   withAccess(CaseStudies, { read: publishedOnly('case-studies'), ...crud('case-studies') }, 'case-studies', tagsFor.simple('case-studies')),
 
   withAccess(InsightCategories, { read: publicRead('insight-categories'), ...crud('insight-categories') }, 'insight-categories', tagsFor.simple('insight-categories')),
+  withAccess(Products, { read: publicRead('products'), ...crud('products') }, 'products', tagsFor.simple('products')),
   withAccess(Clients, { read: publicRead('clients'), ...crud('clients') }, 'clients', tagsFor.simple('clients')),
   withAccess(Testimonials, { read: publicRead('testimonials'), ...crud('testimonials') }, 'testimonials', tagsFor.simple('testimonials')),
   withAccess(Redirects, { read: publicRead('redirects'), ...crud('redirects') }, 'redirects', tagsFor.simple('redirects')),

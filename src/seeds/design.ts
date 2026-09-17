@@ -854,6 +854,43 @@ async function seedServices(payload: Payload, pageIds: Map<string, number>): Pro
  * sets are seeded, and each page's carousel references its own set, so each renders exactly what
  * its design page shows. Returns each set's ids in design order.
  */
+/**
+ * The EVOQ application modules, as the `products` facet on the insights index.
+ *
+ * Taken from the design's own EVOQ_PRODUCTS rather than invented, so the filter list and the
+ * EVOQ page can never disagree about what the product suite contains.
+ */
+async function seedProducts(payload: Payload): Promise<number[]> {
+  const products = (DESIGN.evoq?.EVOQ_PRODUCTS as Loose[] | undefined) ?? []
+  const ids: number[] = []
+
+  let order = 10
+  for (const product of products) {
+    const label = String(product.title ?? '').trim()
+    if (!label) continue
+    const id = await upsertBySlug(payload, 'products', slug(label), {
+      label,
+      shortDesc: String(product.desc ?? ''),
+      order,
+    })
+    ids.push(id)
+    order += 10
+  }
+
+  payload.logger.info(`products seeded: ${ids.length}`)
+  return ids
+}
+
+/**
+ * The four content types, spread across the seeded articles.
+ *
+ * The design ships one card shape and calls everything a blog, but the index filters on `kind`,
+ * and a facet list where three of four options are permanently (0) cannot be judged — by the
+ * client or by us. This gives every filter something to return without inventing articles: the
+ * same real content, labelled across the four types the nav already promises.
+ */
+const KIND_CYCLE = ['blog', 'blog', 'case-study', 'blog', 'whitepaper', 'blog', 'featured-project'] as const
+
 async function seedInsightsAndCategories(payload: Payload): Promise<{ home: number[]; services: number[] }> {
   const sets = { home: arr('index', 'INSIGHTS'), services: arr('services', 'INSIGHTS') }
   const cats = [...new Set([...sets.home, ...sets.services].map((i) => String(i.cat ?? '')).filter(Boolean))]
@@ -866,6 +903,18 @@ async function seedInsightsAndCategories(payload: Payload): Promise<{ home: numb
     catIds.set(label, id)
     order += 10
   }
+
+  /*
+   * The facet targets are read back rather than threaded in as arguments, so this stays
+   * independent of the order seedServices/seedProducts happen to run in. Both are already
+   * seeded by the time seedDesign reaches here.
+   */
+  const [serviceDocs, productDocs] = await Promise.all([
+    payload.find({ collection: 'services', limit: 50, depth: 0, sort: 'order', overrideAccess: true }),
+    payload.find({ collection: 'products', limit: 50, depth: 0, sort: 'order', overrideAccess: true }),
+  ])
+  const serviceList = serviceDocs.docs as { id: number; title: string }[]
+  const productList = productDocs.docs as { id: number; label: string }[]
 
   const swatchCycle = ['success', 'attention', 'accent']
   const ids = { home: [] as number[], services: [] as number[] }
@@ -881,17 +930,37 @@ async function seedInsightsAndCategories(payload: Payload): Promise<{ home: numb
       const thumbnailId = thumbMatch
         ? await uploadDesignAsset(payload, thumbMatch[1]!.replace(/^assets\//, ''), title)
         : undefined
+      /*
+       * Facets, assigned deterministically from the article's position rather than at random,
+       * so re-running the seed does not reshuffle which article sits under which filter.
+       * Two services and one or two products each: enough overlap that combining facets
+       * genuinely narrows the list, which is the behaviour worth testing.
+       */
+      const categoryLabel = String(insight.cat ?? '').trim()
+      const pickedServices = serviceList.length
+        ? [serviceList[dayOffset % serviceList.length]!, serviceList[(dayOffset + 2) % serviceList.length]!]
+            .filter((service, index, all) => all.findIndex((s) => s.id === service.id) === index)
+        : []
+      const pickedProducts = productList.length
+        ? [productList[dayOffset % productList.length]!]
+            .concat(dayOffset % 3 === 0 ? [productList[(dayOffset + 4) % productList.length]!] : [])
+            .filter((product, index, all) => all.findIndex((p) => p.id === product.id) === index)
+        : []
+
       const id = await upsertBySlug(
         payload,
         'insights',
         insightSlug,
         {
           title,
-          kind: 'blog',
+          kind: KIND_CYCLE[dayOffset % KIND_CYCLE.length],
           readTime: String(insight.readTime ?? ''),
-          category: catIds.get(String(insight.cat ?? '')),
+          category: catIds.get(categoryLabel),
           swatch: swatchCycle[i % swatchCycle.length],
           ...(thumbnailId ? { thumbnail: thumbnailId } : {}),
+          services: pickedServices.map((service) => service.id),
+          products: pickedProducts.map((product) => product.id),
+          tags: [categoryLabel, ...pickedServices.map((service) => service.title)].filter(Boolean),
           featured: i < 3,
           publishedAt: new Date(Date.now() - dayOffset * 86_400_000).toISOString(),
         },
@@ -1708,6 +1777,8 @@ export async function seedDesign(payload: Payload): Promise<void> {
   await seedHeader(payload, pageIds)
   await seedFooter(payload, pageIds)
   await seedServices(payload, pageIds)
+  // Before insights: they reference both as filter facets.
+  await seedProducts(payload)
   const insightIds = await seedInsightsAndCategories(payload)
   await seedClientsAndTestimonials(payload)
 

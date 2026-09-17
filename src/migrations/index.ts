@@ -9,6 +9,7 @@ import * as migration_20260911_103748_capability_and_case_study_variants from '.
 import * as migration_20260911_112623_value_grid_variants_and_tech_intro from './20260911_112623_value_grid_variants_and_tech_intro';
 import * as migration_20260914_062147 from './20260914_062147';
 import * as migration_20260917_101500_seed_default_superadmin from './20260917_101500_seed_default_superadmin';
+import * as migration_20260917_102020_insights_facets_and_products from './20260917_102020_insights_facets_and_products';
 
 export const migrations = [
   {
@@ -65,5 +66,10 @@ export const migrations = [
     up: migration_20260917_101500_seed_default_superadmin.up,
     down: migration_20260917_101500_seed_default_superadmin.down,
     name: '20260917_101500_seed_default_superadmin',
+  },
+  {
+    up: migration_20260917_102020_insights_facets_and_products.up,
+    down: migration_20260917_102020_insights_facets_and_products.down,
+    name: '20260917_102020_insights_facets_and_products'
   },
 ];
