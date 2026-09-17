@@ -30,7 +30,8 @@
     "test:watch": "vitest --config vitest.config.mts",
     "test:integration": "vitest run --config vitest.integration.config.mts",
     "migrate:prod": "tsx scripts/with-env.ts .env.production npx payload migrate",
-    "migrate:status:prod": "tsx scripts/with-env.ts .env.production npx payload migrate:status"
+    "migrate:status:prod": "tsx scripts/with-env.ts .env.production npx payload migrate:status",
+    "seed:prod": "tsx scripts/with-env.ts .env.production tsx src/seeds/index.ts" 
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.88.0",
