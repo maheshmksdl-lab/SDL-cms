@@ -67,3 +67,5 @@ yarn-debug.log*
 # Database dumps
 *.dump
 *.sql.gz
+.vercel
+.env*

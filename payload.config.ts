@@ -56,19 +56,23 @@ const dirname = path.dirname(fileURLToPath(import.meta.url))
  * disabled, which refuses the handshake outright ("The server does not support SSL connections").
  */
 function postgresPool() {
-  const raw = process.env.DATABASE_URI || ''
+  // Dashboard-pasted values often keep the quotes from a .env file; strip them and whitespace.
+  const raw = (process.env.DATABASE_URI || '').trim().replace(/^(['"])(.*)\1$/, '$2').trim()
   if (!raw) return { connectionString: '' }
 
   let url: URL
   try {
     url = new URL(raw)
   } catch {
-    // Not a parseable URL — hand it to pg untouched rather than mangling it.
-    return { connectionString: raw }
+    // Passing it through untouched would let an embedded sslmode override the CA below and fail
+    // later with a misleading certificate error — fail here with the real cause instead.
+    throw new Error('DATABASE_URI is not a valid postgres:// URL (check for stray characters)')
   }
 
-  url.searchParams.delete('sslmode')
-  url.searchParams.delete('sslrootcert')
+  // Every one of these makes pg build its own ssl config, which replaces the one passed below.
+  for (const param of ['ssl', 'sslmode', 'sslrootcert', 'sslcert', 'sslkey', 'uselibpqcompat']) {
+    url.searchParams.delete(param)
+  }
 
   if (/^(localhost|127\.0\.0\.1|\[::1\]|::1)$/.test(url.hostname)) {
     return { connectionString: url.toString() }
