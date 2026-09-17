@@ -1,7 +1,8 @@
 /**
  * Seed entry point. Idempotent — safe to re-run against an existing database.
  *
- *   pnpm seed              roles, RBAC matrix, email templates, contact form, preview user,
+ *   pnpm seed              roles, RBAC matrix, super admin (CMS_ADMIN_EMAIL), email templates,
+ *                          contact form, preview user,
  *                          and the design content (globals + collections + fourteen pages)
  *   SEED_DESIGN=false pnpm seed     skip the design content
  */
@@ -13,6 +14,7 @@ import { seedRoles } from './roles'
 import { seedRoleModuleVisibility } from './roleModuleVisibility'
 import { seedForms } from './forms'
 import { seedPreviewUser } from './previewUser'
+import { ensureSuperAdmin } from './superAdmin'
 import { seedDesign } from './design'
 
 async function main() {
@@ -23,6 +25,9 @@ async function main() {
 
   payload.logger.info('Seeding the RBAC matrix…')
   await seedRoleModuleVisibility(payload)
+
+  payload.logger.info('Ensuring the default super admin…')
+  await ensureSuperAdmin(payload)
 
   payload.logger.info('Seeding email templates and the contact form…')
   await seedForms(payload)

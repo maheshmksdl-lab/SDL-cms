@@ -1,4 +1,4 @@
-import type { CollectionConfig, Payload, Where } from 'payload'
+import type { CollectionConfig, PayloadRequest, Where } from 'payload'
 
 /**
  * CMS accounts.
@@ -19,10 +19,10 @@ const ADMIN_ONLY_ROLES = ['admin', 'superadmin']
 type RoleRelationshipValue = number | string | { value?: string | null } | null | undefined
 
 async function resolveRoleKey({
-  payload,
+  req,
   selectedRole,
 }: {
-  payload: Payload
+  req: PayloadRequest
   selectedRole: RoleRelationshipValue
 }): Promise<string | undefined> {
   if (!selectedRole) return undefined
@@ -31,11 +31,14 @@ async function resolveRoleKey({
   const id = typeof selectedRole === 'string' || typeof selectedRole === 'number' ? selectedRole : undefined
   if (!id) return undefined
 
-  const role = await payload.findByID({
+  // `req` keeps the lookup inside the write's transaction. Without it a role created earlier in
+  // the same transaction — as a migration does on a fresh database — is not visible yet.
+  const role = await req.payload.findByID({
     collection: 'role-management',
     id,
     depth: 0,
     overrideAccess: true,
+    req,
   })
 
   return typeof role?.value === 'string' && role.value ? role.value : undefined
@@ -121,7 +124,7 @@ export const Users: CollectionConfig = {
         }
 
         const resolved = await resolveRoleKey({
-          payload: req.payload,
+          req,
           selectedRole: data.roleSelection as RoleRelationshipValue,
         })
         if (resolved) return { ...data, role: resolved }
