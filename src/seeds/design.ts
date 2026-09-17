@@ -712,13 +712,29 @@ const contactLink = (label: string): Loose => ({ label, type: 'external', url: '
 
 // ── globals ───────────────────────────────────────────────────────────────────
 
+/**
+ * The brand wordmark shown in the header and footer.
+ *
+ * Not a design-extract asset like the client logos — it ships in this repo, in `media/` — but
+ * it is resolved through the same find-or-create helper, which looks there by filename.
+ *
+ * It was seeded by nobody: `seedHeader` and `seedFooter` set `logoAlt` and left `logo` unset,
+ * so the only reason it appeared locally was a manual upload through the admin on one machine.
+ * Production had the FILE (it is committed, and serves 200) but no Media document pointing at
+ * it, so `header.logo` was null and the site rendered its empty `<span class="sdl-logo">`
+ * fallback — a logo-shaped hole in the header.
+ */
+const BRAND_LOGO_FILE = 'sdl-logo.svg'
+
 async function seedHeader(payload: Payload, pageIds: Map<string, number>): Promise<void> {
   const menus = arr('index', 'MENUS')
+  const logoId = await uploadDesignAsset(payload, BRAND_LOGO_FILE, 'Social DNA Labs')
   await payload.updateGlobal({
     slug: 'header',
     overrideAccess: true,
     data: {
       logoAlt: 'Social DNA Labs',
+      ...(logoId ? { logo: logoId } : {}),
       megaMenuEnabled: true,
       cta: anchorCta("Let's talk"),
       menuItems: menus.map((menu) => {
@@ -746,11 +762,14 @@ async function seedHeader(payload: Payload, pageIds: Map<string, number>): Promi
 
 async function seedFooter(payload: Payload, pageIds: Map<string, number>): Promise<void> {
   const cols = arr('index', 'FOOTER_COLS')
+  // Same omission as the header, and the same empty-space symptom at the foot of every page.
+  const logoId = await uploadDesignAsset(payload, BRAND_LOGO_FILE, 'Social DNA Labs')
   await payload.updateGlobal({
     slug: 'footer',
     overrideAccess: true,
     data: {
       logoAlt: 'Social DNA Labs',
+      ...(logoId ? { logo: logoId } : {}),
       tagline: 'Technology, experience and AI for businesses building what comes next.',
       bottomRightText: 'Business impact, by design.',
       copyrightText: '© {year} Social DNA Labs',

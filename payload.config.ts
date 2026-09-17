@@ -138,10 +138,49 @@ const sdlListView = { path: './src/components/admin/SdlListView.tsx', exportName
 const serverOrigin = normalizeOrigin(process.env.NEXT_PUBLIC_SERVER_URL || 'http://localhost:3001')
 const webOrigin = normalizeOrigin(process.env.WEB_URL || 'http://localhost:3000')
 
+/**
+ * The origins this deployment is actually reachable on, according to the platform itself.
+ *
+ * `VERCEL_PROJECT_PRODUCTION_URL` is the project's canonical production domain (a custom domain
+ * once one is attached); `VERCEL_URL` is this specific deployment. Neither is set off-Vercel.
+ *
+ * These exist because of a real lockout. `NEXT_PUBLIC_SERVER_URL` was set to a deployment URL
+ * that no longer existed (`sdl-cms-ten.vercel.app`) while the admin was served from
+ * `sdl-cms.vercel.app`. The csrf allowlist is built from that variable, and Payload's
+ * `extractJWT` DISCARDS the auth cookie outright when the request's `Origin` is not on the
+ * list — so every editor was silently anonymous. Reads are public here, so the admin loaded and
+ * looked fine; every save failed with "You are not allowed to perform this action."
+ *
+ * Trusting the platform's own answer for the CMS's origin means a stale or mistyped
+ * `NEXT_PUBLIC_SERVER_URL` can no longer lock anyone out of the admin panel.
+ */
+const platformOrigins = [
+  process.env.VERCEL_PROJECT_PRODUCTION_URL,
+  process.env.VERCEL_URL,
+]
+  .filter((host): host is string => Boolean(host))
+  .map((host) => normalizeOrigin(host))
+  .filter((origin): origin is string => Boolean(origin))
+
 function allowedOrigins(value?: string): string[] {
   const configured = parseOriginList(value)
-  const defaults = [serverOrigin, webOrigin].filter((o): o is string => Boolean(o))
+  const defaults = [serverOrigin, webOrigin, ...platformOrigins].filter((o): o is string =>
+    Boolean(o),
+  )
   return [...new Set([...configured, ...defaults])]
+}
+
+/*
+ * A mismatch here is not fatal any more — the allowlist above covers it — but it still means
+ * every media `url` Payload emits points at the wrong host, which breaks images on the public
+ * site. That is invisible from inside the CMS, so say so at boot.
+ */
+if (platformOrigins.length && serverOrigin && !platformOrigins.includes(serverOrigin)) {
+  console.warn(
+    `[payload] NEXT_PUBLIC_SERVER_URL is ${serverOrigin}, but this deployment serves ` +
+      `${platformOrigins.join(', ')}. Media URLs will point at ${serverOrigin} and will not load. ` +
+      `Set NEXT_PUBLIC_SERVER_URL to the domain this CMS is actually served from.`,
+  )
 }
 
 /**
