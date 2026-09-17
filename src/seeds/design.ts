@@ -574,27 +574,49 @@ const slug = (s: string): string =>
 
 /**
  * The design's own real asset files (client logos, testimonial avatars, insight thumbnails)
- * live in the sibling `sdl-2.0/assets/` checkout, not in this repo — so this is best-effort:
- * an environment without that checkout (CI, another machine) gets no image rather than a
- * fabricated one, exactly like the rest of this seed treats missing real assets.
+ * live in the sibling `sdl-2.0/assets/` checkout, not in this repo.
  */
 const DESIGN_ASSETS_DIR = path.resolve(DIRNAME, '../../../../sdl-2.0/assets')
+
+/**
+ * The CMS media directory, which IS committed to this repo and deploys with the app (see
+ * `.gitignore` — production serves media from the deployment, not object storage).
+ *
+ * This is the second place an asset is looked for, and it is what makes the seed runnable from
+ * a machine without the `sdl-2.0` checkout. It is flat — `assets/clients/client1.jpg` in the
+ * design data is `client1.jpg` here — so the lookup is by BASENAME, never by relative path.
+ */
+const MEDIA_DIR = process.env.SDL_MEDIA_DIR
+  ? path.resolve(process.cwd(), process.env.SDL_MEDIA_DIR)
+  : path.resolve(process.cwd(), 'media')
 
 const MIME_BY_EXT: Record<string, string> = {
   '.jpg': 'image/jpeg', '.jpeg': 'image/jpeg', '.png': 'image/png', '.svg': 'image/svg+xml',
 }
 
-/** Finds-or-creates the Media doc for a design asset, by its own filename. Returns undefined
- * if the file is not present in this checkout. */
+/**
+ * Finds-or-creates the Media doc for a design asset, by its own filename.
+ *
+ * Order matters, and it is the opposite of what it was.
+ *
+ * This used to check `fs.existsSync(DESIGN_ASSETS_DIR/...)` FIRST and bail out before ever
+ * querying the database. Run from an environment without the `sdl-2.0` checkout — which is
+ * every environment except one developer machine — it therefore returned undefined for every
+ * image. That is how production ended up with 14 pages, 12 insights and ZERO media: the seed
+ * reported success while silently skipping every upload, and `clients` (whose logo is required)
+ * was skipped wholesale along with it.
+ *
+ * Looking the document up by filename first makes the common case — media already in the
+ * database — need no source file at all. Only a genuinely new asset falls through to the disk
+ * lookup, which now tries the committed `media/` directory as well as the design checkout.
+ */
 async function uploadDesignAsset(
   payload: Payload,
   relativePath: string,
   alt: string,
 ): Promise<number | undefined> {
-  const absolutePath = path.join(DESIGN_ASSETS_DIR, relativePath)
-  if (!fs.existsSync(absolutePath)) return undefined
+  const filename = path.basename(relativePath)
 
-  const filename = path.basename(absolutePath)
   const existing = await payload.find({
     collection: 'media',
     where: { filename: { equals: filename } },
@@ -603,13 +625,24 @@ async function uploadDesignAsset(
   })
   if (existing.docs[0]) return (existing.docs[0] as { id: number }).id
 
-  const buffer = fs.readFileSync(absolutePath)
+  const candidates = [path.join(DESIGN_ASSETS_DIR, relativePath), path.join(MEDIA_DIR, filename)]
+  const sourcePath = candidates.find((candidate) => fs.existsSync(candidate))
+  if (!sourcePath) return undefined
+
+  const buffer = fs.readFileSync(sourcePath)
   const mimetype = MIME_BY_EXT[path.extname(filename).toLowerCase()] ?? 'application/octet-stream'
   const doc = await payload.create({
     collection: 'media',
     data: { alt },
     file: { data: buffer, mimetype, name: filename, size: buffer.length },
     overrideAccess: true,
+    /*
+     * Without this, Payload appends `-1`, `-2`, … whenever the target filename is already on
+     * disk, and the new document then points at a file the deployment does not have. That is
+     * exactly how `client1-1.jpg` and `client1-2.jpg` got into `media/`. Re-seeding must reuse
+     * the committed filename, not fork a new one.
+     */
+    overwriteExistingFiles: true,
   })
   return doc.id as number
 }

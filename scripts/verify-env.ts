@@ -52,16 +52,18 @@ const RULES: Rule[] = [
   },
   { name: 'PAYLOAD_CORS_ORIGINS', required: 'production', check: notLocalhostInProd },
   { name: 'PAYLOAD_CSRF_ORIGINS', required: 'production', check: notLocalhostInProd },
-  // Object storage is a hard requirement in production — local media is lost on a move to a new
-  // host and is not shared between instances (plan §8.6). If any S3_* is set, the whole set must be.
-  {
-    name: 'S3_BUCKET',
-    required: 'production',
-    check: () =>
-      isProduction && !process.env.S3_BUCKET
-        ? 'production must use object storage for media (plan §8.6) — set S3_BUCKET and its credentials'
-        : null,
-  },
+  /*
+   * Object storage is OPTIONAL, and that is a deliberate reversal of plan §8.6.
+   *
+   * This rule used to fail the build whenever `S3_BUCKET` was unset in production. It never
+   * actually did so — it is wired as `prebuild`, and pnpm does not run pre/post scripts — but
+   * more importantly the requirement no longer matches how this project ships media: the
+   * `media/` directory is committed and deploys with the CMS, so a fresh host has every file.
+   *
+   * The trade-off that buys: uploads through the admin panel do not persist, because the
+   * deployment filesystem is read-only. Media changes go through a commit. Set the S3_* group
+   * to move to object storage and lift that restriction.
+   */
 ]
 
 const S3_GROUP = ['S3_BUCKET', 'S3_REGION', 'S3_ACCESS_KEY_ID', 'S3_SECRET_ACCESS_KEY']
