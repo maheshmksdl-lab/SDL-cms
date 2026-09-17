@@ -23,6 +23,7 @@ export type ModuleKey =
   | 'insights'
   | 'insight-categories'
   | 'services'
+  | 'products'
   | 'case-studies'
   | 'clients'
   | 'testimonials'
@@ -66,6 +67,7 @@ export const moduleOptions: { label: string; value: ModuleKey }[] = [
   { label: 'Insights', value: 'insights' },
   { label: 'Insight Categories', value: 'insight-categories' },
   { label: 'Services', value: 'services' },
+  { label: 'Products', value: 'products' },
   { label: 'Case Studies', value: 'case-studies' },
   { label: 'Clients', value: 'clients' },
   { label: 'Testimonials', value: 'testimonials' },
@@ -92,7 +94,7 @@ const EDITOR_MODULES: ModuleKey[] = [
 
 /** A manager also owns the marketing surface: services, clients, forms and the nav. */
 const MANAGER_MODULES: ModuleKey[] = [
-  ...EDITOR_MODULES, 'services', 'clients', 'forms', 'leads', 'header', 'footer', 'redirects',
+  ...EDITOR_MODULES, 'services', 'products', 'clients', 'forms', 'leads', 'header', 'footer', 'redirects',
 ]
 
 /** A site admin additionally operates the system: users, roles, email and settings. */
@@ -103,7 +105,7 @@ const SITEADMIN_MODULES: ModuleKey[] = [
 
 /** Everything the public site renders — what the `preview@` service user needs to read drafts. */
 const PREVIEW_MODULES: ModuleKey[] = [
-  'pages', 'insights', 'insight-categories', 'services', 'case-studies',
+  'pages', 'insights', 'insight-categories', 'services', 'products', 'case-studies',
   'clients', 'testimonials', 'media', 'forms', 'redirects', 'header', 'footer', 'site-settings',
 ]
 

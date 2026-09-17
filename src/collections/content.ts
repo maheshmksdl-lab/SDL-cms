@@ -87,6 +87,30 @@ export const InsightCategories: CollectionConfig = {
 }
 
 /**
+ * Products — the EVOQ application modules, as a filter facet on the insights index.
+ *
+ * A collection rather than a select on `insights` because the list is editorial and changes
+ * without a deploy: a new EVOQ module should appear as a filter the moment it is published,
+ * exactly as a new service pillar does. It mirrors InsightCategories' shape for that reason.
+ */
+export const Products: CollectionConfig = {
+  slug: 'products',
+  admin: {
+    useAsTitle: 'label',
+    defaultColumns: ['label', 'order', 'updatedAt'],
+    group: 'Content',
+    description: 'Product modules. Used as a filter on the insights index.',
+  },
+  defaultSort: 'order',
+  fields: [
+    { name: 'label', type: 'text', required: true },
+    { name: 'slug', type: 'text', required: true, unique: true, index: true, validate: slugValidate },
+    { name: 'shortDesc', label: 'Short description', type: 'textarea' },
+    { name: 'order', type: 'number', defaultValue: 100 },
+  ],
+}
+
+/**
  * Insights — blogs, case studies, whitepapers and featured projects in one collection.
  *
  * ASSUMPTION, pending the client answer to Appendix C question 3: the nav lists these as four
@@ -181,6 +205,40 @@ export const Insights: CollectionConfig = {
               admin: {
                 description:
                   'Optional. Cards with no image fall back to the solid swatch above, as the design does.',
+              },
+            },
+            /*
+             * The two facet fields on the insights index, alongside `kind`.
+             *
+             * Relationships, not a select each: the sidebar's options ARE the published services
+             * and products, so adding a service pillar adds a filter with no deploy. `hasMany`
+             * because an article about commerce on mobile belongs under both.
+             */
+            {
+              type: 'row',
+              fields: [
+                {
+                  name: 'services',
+                  type: 'relationship',
+                  relationTo: 'services',
+                  hasMany: true,
+                  admin: { width: '50%', description: 'Filters this article under these service pillars.' },
+                },
+                {
+                  name: 'products',
+                  type: 'relationship',
+                  relationTo: 'products',
+                  hasMany: true,
+                  admin: { width: '50%', description: 'Filters this article under these products.' },
+                },
+              ],
+            },
+            {
+              name: 'tags',
+              type: 'text',
+              hasMany: true,
+              admin: {
+                description: 'Free-text labels shown in the article sidebar. Not a filter facet.',
               },
             },
             {
