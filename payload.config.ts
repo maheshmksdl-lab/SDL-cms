@@ -84,7 +84,6 @@ function postgresPool() {
       ca: fs.readFileSync(path.resolve(dirname, 'certs/aiven-ca.pem')),
       rejectUnauthorized: true,
     },
-
     /*
      * Serverless pool sizing. Remote means Vercel, where every concurrent invocation is a
      * SEPARATE process with its own pool — so the pool size multiplies by the number of live
