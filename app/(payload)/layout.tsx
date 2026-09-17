@@ -13,13 +13,15 @@ import React from 'react'
  *   3. admin-theme.css      the shell: sidebar rail, header, lists, forms, dashboard shortcut
  *   4. admin-overrides.css  must beat admin-theme.css's hard-coded colours
  *   5. admin-dashboard.css  the dashboard view (inline in the reference, so last in its cascade)
- *   6. custom.scss          SDL-only additions
+ *   6. admin-role-permissions.css  the Role Permissions matrix
+ *   7. custom.scss          SDL-only additions
  */
 import '@payloadcms/next/css'
 import './admin-tokens.css'
 import './admin-theme.css'
 import './admin-overrides.css'
 import './admin-dashboard.css'
+import './admin-role-permissions.css'
 import './custom.scss'
 
 import { importMap } from './admin/importMap.js'

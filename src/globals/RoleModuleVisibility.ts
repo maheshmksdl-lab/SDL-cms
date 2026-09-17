@@ -3,6 +3,27 @@ import type { GlobalConfig } from 'payload'
 import { defaultRolePermissions, moduleOptions, type CrudOperation } from '../access/rbac'
 
 /**
+ * The matrix is rendered by SdlRolePermissionsMatrix, not by Payload's array field.
+ *
+ * 19 modules × 6 roles is 114 rows. Payload renders those as 114 collapsed "Permission N"
+ * strips, which cannot be scanned, compared across roles, or navigated — the permission you
+ * want is somewhere in a very long column. The `ui` field below replaces that with a role ×
+ * module grid; the array itself stays the stored shape and is simply hidden.
+ */
+const permissionsMatrixField = {
+  name: 'permissionsMatrix',
+  type: 'ui' as const,
+  admin: {
+    components: {
+      Field: './src/components/admin/SdlRolePermissionsMatrix.tsx#default',
+    },
+    // Read by the component through `field.admin.custom` — it needs the module list to build
+    // the rows and the compiled-in defaults to seed a newly registered role.
+    custom: { defaultPermissions: defaultRolePermissions, modules: moduleOptions },
+  },
+}
+
+/**
  * The editable RBAC matrix.
  *
  * Adapted from the EFTMRA reference. The normalisation is the important part: the stored rows
@@ -73,6 +94,7 @@ export const RoleModuleVisibility: GlobalConfig = {
     beforeValidate: [({ data }) => ({ ...data, permissions: normalize(data?.permissions) })],
   },
   fields: [
+    permissionsMatrixField,
     {
       name: 'permissions',
       type: 'array',
@@ -80,6 +102,10 @@ export const RoleModuleVisibility: GlobalConfig = {
       admin: {
         description: 'One row per role and module. Rows are regenerated automatically.',
         initCollapsed: true,
+        // The stored shape, driven entirely through the matrix above. Hidden rather than
+        // removed: it is still the field the access layer reads, and every checkbox in the
+        // matrix writes to a `permissions.N.*` path in this array's form state.
+        hidden: true,
       },
       fields: [
         {

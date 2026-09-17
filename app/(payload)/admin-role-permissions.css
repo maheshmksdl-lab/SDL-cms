@@ -1,0 +1,328 @@
+/* =========================================================================
+   SDL ADMIN — ROLE PERMISSIONS MATRIX
+
+   The grid rendered by src/components/admin/SdlRolePermissionsMatrix.tsx, in
+   place of Payload's default array-field rows on the Role Permissions global.
+
+   Ported from the EFTMRA reference, which carried these rules in a
+   `<style jsx>` block inside the component — duplicated almost verbatim twice
+   in the same block, with the second copy silently winning. Here they live
+   with the rest of the admin theme, once, on the SDL tokens.
+   ========================================================================= */
+
+.sdl-role-permissions {
+  --sdl-rp-height: clamp(520px, 72vh, 760px);
+  /* A floor, not a fixed width: the grid fills the panel when the roles fit and scrolls
+     sideways when they do not. At 240px the fourth column was clipped at common widths. */
+  --sdl-rp-column: 210px;
+  --sdl-rp-nav: 240px;
+
+  display: grid;
+  grid-template-columns: minmax(200px, var(--sdl-rp-nav)) minmax(0, 1fr);
+  align-items: stretch;
+  min-height: var(--sdl-rp-height);
+  border: 1px solid var(--sdl-blue-line, #dfe4f8);
+  border-radius: 12px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(20, 27, 62, 0.06);
+  overflow: hidden;
+}
+
+/* ---- Module rail ---- */
+
+.sdl-role-permissions__nav {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  height: var(--sdl-rp-height);
+  min-height: 0;
+  border-right: 1px solid var(--sdl-blue-line, #dfe4f8);
+  background: var(--sdl-blue-wash, #f1f3fd);
+}
+
+.sdl-role-permissions__nav-title {
+  display: flex;
+  min-height: 4.25rem;
+  align-items: center;
+  border-bottom: 1px solid var(--sdl-blue-line, #dfe4f8);
+  padding: 1.25rem;
+  color: var(--sdl-ink, #141b3e);
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.sdl-role-permissions__module-list {
+  min-height: 0;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  padding: 0.55rem;
+}
+
+.sdl-role-permissions__module {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  border-radius: 8px;
+  padding: 0.72rem 0.85rem;
+  color: var(--sdl-muted-strong, #343956);
+  font-size: 0.92rem;
+  font-weight: 500;
+  line-height: 1.25;
+  text-align: left;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 160ms ease, color 160ms ease, box-shadow 160ms ease;
+}
+
+.sdl-role-permissions__module:hover {
+  background: #fff;
+  color: var(--sdl-ink, #141b3e);
+}
+
+.sdl-role-permissions__module.is-active {
+  background: var(--sdl-blue, #2b49db);
+  color: #fff;
+  box-shadow: 0 8px 18px rgba(43, 73, 219, 0.18);
+}
+
+/* ---- Panel ---- */
+
+.sdl-role-permissions__panel {
+  display: grid;
+  grid-template-rows: auto minmax(0, 1fr);
+  min-width: 0;
+  min-height: 0;
+  height: var(--sdl-rp-height);
+  background: #fff;
+  overflow: hidden;
+}
+
+.sdl-role-permissions__panel-header {
+  display: flex;
+  min-height: 4.25rem;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border-bottom: 1px solid var(--sdl-blue-line, #dfe4f8);
+  padding: 1rem 1.35rem;
+  color: var(--sdl-muted, #6c7399);
+  font-size: 0.83rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sdl-role-permissions__panel-header strong {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--sdl-ink, #141b3e);
+  font-size: 1rem;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+.sdl-role-permissions__role-count {
+  display: inline-flex;
+  min-height: 2.1rem;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.3rem 0.8rem;
+  background: var(--sdl-blue-wash, #f1f3fd);
+  color: var(--sdl-blue, #2b49db);
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+/* ---- Grid ---- */
+
+.sdl-role-permissions__table-scroll {
+  position: relative;
+  min-height: 0;
+  overflow: auto;
+  overscroll-behavior: contain;
+  background: #fff;
+}
+
+.sdl-role-permissions__table {
+  /* Each role gets a readable column; past that the grid scrolls rather than crushes. */
+  width: max(100%, calc(var(--sdl-role-count, 4) * var(--sdl-rp-column)));
+  border-collapse: separate;
+  border-spacing: 0;
+  table-layout: fixed;
+}
+
+.sdl-role-permissions__table th,
+.sdl-role-permissions__table td {
+  vertical-align: top;
+  border-right: 1px solid var(--sdl-blue-line, #dfe4f8);
+  border-bottom: 1px solid var(--sdl-blue-line, #dfe4f8);
+  padding: 1rem;
+  background: #fff;
+  text-align: left;
+}
+
+.sdl-role-permissions__table th:last-child,
+.sdl-role-permissions__table td:last-child {
+  border-right: 0;
+}
+
+.sdl-role-permissions__table thead th {
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  background: #fbfbfd;
+  box-shadow: 0 1px 0 var(--sdl-blue-line, #dfe4f8);
+}
+
+.sdl-role-permissions__role-title {
+  display: inline-flex;
+  min-height: 2rem;
+  align-items: center;
+  border-radius: 999px;
+  padding: 0.35rem 1rem;
+  background: var(--sdl-blue, #2b49db);
+  color: #fff;
+  font-size: 0.95rem;
+  font-weight: 600;
+  line-height: 1;
+  box-shadow: 0 8px 18px rgba(43, 73, 219, 0.16);
+}
+
+/* The full-width band that names the module the row beneath it belongs to. */
+.sdl-role-permissions__module-cell {
+  position: sticky;
+  left: 0;
+  z-index: 2;
+  background: var(--sdl-blue-wash, #f1f3fd);
+  color: var(--sdl-ink, #141b3e);
+  font-size: 1.05rem;
+  font-weight: 700;
+  line-height: 1.35;
+}
+
+/* Keeps the module name in view while the grid scrolls sideways. */
+.sdl-role-permissions__module-label {
+  position: sticky;
+  left: 1rem;
+  display: inline-flex;
+  align-items: center;
+  background: inherit;
+}
+
+.sdl-role-permissions__table tbody tr:hover td {
+  background: #fbfcff;
+}
+
+/* ---- Switches ---- */
+
+.sdl-role-permissions__toggles {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.sdl-role-permissions__toggle {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  border: 1px solid var(--sdl-blue-line, #dfe4f8);
+  border-radius: 9px;
+  padding: 0.7rem 0.8rem;
+  color: var(--sdl-ink, #141b3e);
+  cursor: pointer;
+}
+
+.sdl-role-permissions__toggle[data-locked='true'] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.sdl-role-permissions__toggle-text {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.6rem;
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.sdl-role-permissions__toggle-short {
+  display: inline-flex;
+  width: 1.45rem;
+  height: 1.45rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  background: var(--sdl-blue-wash, #f1f3fd);
+  color: var(--sdl-muted-strong, #343956);
+  font-size: 0.72rem;
+  font-weight: 800;
+}
+
+/* Visually hidden, not removed — the switch beside it is the visible control. */
+.sdl-role-permissions__toggle input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.sdl-role-permissions__switch {
+  position: relative;
+  width: 2.35rem;
+  height: 1.3rem;
+  flex: 0 0 auto;
+  border-radius: 999px;
+  background: #cfd3dc;
+  transition: background 160ms ease;
+}
+
+.sdl-role-permissions__switch::before {
+  content: '';
+  position: absolute;
+  top: 0.18rem;
+  left: 0.2rem;
+  width: 0.94rem;
+  height: 0.94rem;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 2px rgba(20, 27, 62, 0.22);
+  transition: transform 160ms ease;
+}
+
+.sdl-role-permissions__toggle input:checked + .sdl-role-permissions__switch {
+  background: var(--sdl-blue, #2b49db);
+}
+
+.sdl-role-permissions__toggle input:checked + .sdl-role-permissions__switch::before {
+  transform: translateX(1.02rem);
+}
+
+/* Keyboard focus has to be visible on the switch, since the input itself is hidden. */
+.sdl-role-permissions__toggle input:focus-visible + .sdl-role-permissions__switch {
+  outline: 2px solid var(--sdl-blue, #2b49db);
+  outline-offset: 2px;
+}
+
+/* The rail collapses above the grid on narrow screens rather than squeezing both. */
+@media (max-width: 1024px) {
+  .sdl-role-permissions {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .sdl-role-permissions__nav {
+    height: auto;
+    border-right: 0;
+    border-bottom: 1px solid var(--sdl-blue-line, #dfe4f8);
+  }
+
+  .sdl-role-permissions__module-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.35rem;
+    max-height: 9rem;
+  }
+
+  .sdl-role-permissions__module {
+    width: auto;
+  }
+}
