@@ -11,6 +11,7 @@ import * as migration_20260914_062147 from './20260914_062147';
 import * as migration_20260917_101500_seed_default_superadmin from './20260917_101500_seed_default_superadmin';
 import * as migration_20260917_102020_insights_facets_and_products from './20260917_102020_insights_facets_and_products';
 import * as migration_20260918_073719_contact_offices_block from './20260918_073719_contact_offices_block';
+import * as migration_20260918_103432_clients_testimonials_pages from './20260918_103432_clients_testimonials_pages';
 
 export const migrations = [
   {
@@ -76,6 +77,11 @@ export const migrations = [
   {
     up: migration_20260918_073719_contact_offices_block.up,
     down: migration_20260918_073719_contact_offices_block.down,
-    name: '20260918_073719_contact_offices_block'
+    name: '20260918_073719_contact_offices_block',
+  },
+  {
+    up: migration_20260918_103432_clients_testimonials_pages.up,
+    down: migration_20260918_103432_clients_testimonials_pages.down,
+    name: '20260918_103432_clients_testimonials_pages'
   },
 ];

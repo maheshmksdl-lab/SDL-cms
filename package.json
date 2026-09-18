@@ -38,6 +38,8 @@
     "link:nav:prod": "tsx scripts/with-env.ts .env.production tsx scripts/link-insights-nav.ts",
     "add:contact": "tsx scripts/add-contact-page.ts",
     "add:contact:prod": "tsx scripts/with-env.ts .env.production tsx scripts/add-contact-page.ts",
+    "add:clients-testimonials": "tsx scripts/add-clients-testimonials-pages.ts",
+    "add:clients-testimonials:prod": "tsx scripts/with-env.ts .env.production tsx scripts/add-clients-testimonials-pages.ts",
     "check:media": "tsx scripts/check-media.ts",
     "check:media:prod": "tsx scripts/with-env.ts .env.production tsx scripts/check-media.ts"
   },

@@ -320,14 +320,67 @@
     {
       "name": "Andy Collen",
       "role": "Great flexibility!",
+      "designation": "CEO at Happy Trails",
       "avatar": "assets/testimonials/andy.png",
+      "rating": 5,
       "quote": "Jumping into a new ring of technology can sometimes be frustrating. However, the professional, talented folks at Social DNA Labs made App development fun and exciting. With Social DNA Labs, the possibilities are endless."
     },
     {
       "name": "Jay Shah",
       "role": "Super support!",
+      "designation": "CEO at Archiron Designs",
       "avatar": "assets/testimonials/jayesh.png",
+      "rating": 5,
       "quote": "Social DNA Labs provided my business the Data Systems with fully-fledged digital marketing services encompassing demand generation, digital advertising, search engine optimization, marketing automation, and lead generation. Their team works as an extension of our team, who are extremely efficient and provide real-time metrics that indicate the constant value our organization is receiving."
+    },
+    {
+      "name": "Surendar PM",
+      "role": "Thanks for making our work easier",
+      "designation": "from The Anglican Centre",
+      "rating": 5,
+      "quote": "We can now easily manage our multiple worship spaces in one place without any booking issues. Thanks to the team for creating a user-friendly website and an effective booking management portal."
+    },
+    {
+      "name": "Stuart John",
+      "role": "Excellent Support!",
+      "designation": "CMO at Talentosoft",
+      "rating": 5,
+      "quote": "The search results of my website across all search engines have steeply improved. Not only did they build a perfect website for my offline store, but they also made it a point to increase my brand’s online presence. My sales have since doubled."
+    },
+    {
+      "name": "Sekhar G K",
+      "role": "Amazing Strategies",
+      "designation": "Architect at Nuetech",
+      "rating": 5,
+      "quote": "Their unique way of approaching the challenges my organization once faced highly impressed me. Most of my website visitors are now turning into buyers of my products. The Mobile App created by this Digital Enterprise for my business has boosted my company’s reputation."
+    },
+    {
+      "name": "Bruce Holt",
+      "role": "Great Digital Services!",
+      "designation": "Manager at TechDream",
+      "rating": 5,
+      "quote": "I had always received end-to-end support when it came to making my presence known on the web. My website quickly picked up over a million other similar sites. I do not exactly know what they do to make you an internet sensation. But there is one thing for sure; they are leading the Digital Marketing Agency in the industry."
+    },
+    {
+      "name": "Mark Levine",
+      "role": "Perfect IoT Solutions",
+      "designation": "PR at CTA",
+      "rating": 5,
+      "quote": "Social DNA Labs provided us with services relating to IoT & web app development. Within just a few months, they closely studied and understood our products, strengths, and weaknesses. They developed result-oriented products for us that left all of us pleased. I admire their hard work and support along the way."
+    },
+    {
+      "name": "Melissa James",
+      "role": "Blockchain Professionals",
+      "designation": "CEO at SNAP",
+      "rating": 5,
+      "quote": "I feel extremely glad to share all about the services and assistance I received from Social DNA Labs so far. From product selection at the hardware level to implementing blockchain applications, and overall product design, they produced outputs that helped my company to stay ahead of the game. After screening many companies, Social DNA Labs bagged the deal. They have an edge where they bring a true Engineering solution mindset."
+    },
+    {
+      "name": "Will Twidwell",
+      "role": "Angular Experts",
+      "designation": "Strategic Development at Webstock",
+      "rating": 5,
+      "quote": "The team from Social DNA Labs is like an extension of our development team. They closely work with our internal teams to deliver on-time results. We have recently undertaken a project involving AngularJS that is contributing significantly to enhancing our product and architecture. They have also provided us with additional resources to support the prototype development of certain concepts."
     }
   ],
   "INSIGHT_COLORS": [

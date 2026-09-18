@@ -1061,7 +1061,9 @@ async function seedClientsAndTestimonials(payload: Payload): Promise<void> {
     const data = {
       name,
       role: String(t.role ?? ''),
+      designation: t.designation ? String(t.designation) : undefined,
       quote: String(t.quote ?? ''),
+      rating: typeof t.rating === 'number' ? t.rating : 5,
       ...(avatarId ? { avatar: avatarId } : {}),
       featured: true,
       order,

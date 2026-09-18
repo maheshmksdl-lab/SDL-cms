@@ -18,6 +18,7 @@ import { seedPreviewUser } from './previewUser'
 import { ensureSuperAdmin } from './superAdmin'
 import { seedDesign } from './design'
 import { seedContactPage } from './contactPage'
+import { seedClientsTestimonialsPages } from './clientsTestimonialsPages'
 
 async function main() {
   const payload = await getPayload({ config })
@@ -44,6 +45,10 @@ async function main() {
     // After the design seed, which resets the footer's links to the home page's #contact.
     payload.logger.info('Adding the Contact Us page…')
     await seedContactPage(payload)
+
+    // After the Contact Us page, whose id the closing CTA on both new pages links to.
+    payload.logger.info('Adding the Clients and Testimonials pages…')
+    await seedClientsTestimonialsPages(payload)
   }
 
   payload.logger.info('Seed complete.')
