@@ -3,7 +3,8 @@
  *
  *   pnpm seed              roles, RBAC matrix, super admin (CMS_ADMIN_EMAIL), email templates,
  *                          contact form, preview user,
- *                          and the design content (globals + collections + fourteen pages)
+ *                          and the design content (globals + collections + fourteen pages),
+ *                          then the Contact Us page, its form and the footer link
  *   SEED_DESIGN=false pnpm seed     skip the design content
  */
 import 'dotenv/config'
@@ -16,6 +17,7 @@ import { seedForms } from './forms'
 import { seedPreviewUser } from './previewUser'
 import { ensureSuperAdmin } from './superAdmin'
 import { seedDesign } from './design'
+import { seedContactPage } from './contactPage'
 
 async function main() {
   const payload = await getPayload({ config })
@@ -38,6 +40,10 @@ async function main() {
   if (process.env.SEED_DESIGN !== 'false') {
     payload.logger.info('Seeding design content (globals, collections, pages)…')
     await seedDesign(payload)
+
+    // After the design seed, which resets the footer's links to the home page's #contact.
+    payload.logger.info('Adding the Contact Us page…')
+    await seedContactPage(payload)
   }
 
   payload.logger.info('Seed complete.')
