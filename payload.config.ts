@@ -8,7 +8,7 @@ import { lexicalEditor } from '@payloadcms/richtext-lexical'
 
 import {
   canCreate, canDelete, canRead, canReadRoleManagement, canReadUsersOrSelf,
-  canUpdate, canUpdateUsersOrSelf, publicCreate, publicRead, publishedOnly, type ModuleKey,
+  canUpdate, canUpdateUsersOrSelf, formSubmissionCreate, publicRead, publishedOnly, type ModuleKey,
 } from './src/access/rbac'
 
 import { Users } from './src/collections/Users'
@@ -289,11 +289,11 @@ const collections: CollectionConfig[] = [
   // ── Forms ─────────────────────────────────────────────────────────────────
   // The form DEFINITION is public so the frontend can render and validate against it.
   withAccess(Forms, { read: publicRead('forms'), ...crud('forms') }, 'forms', tagsFor.forms),
-  // Anonymous visitors may create a lead and nothing else — this is the only public write
-  // path on the whole API.
+  // The only anonymous write on the whole API, and only through the website's form route,
+  // which proves itself with the shared secret (see formSubmissionCreate).
   withAccess(Leads, {
     read: canRead('leads'),
-    create: publicCreate('leads'),
+    create: formSubmissionCreate('leads'),
     update: canUpdate('leads'),
     delete: canDelete('leads'),
   }, 'leads'),
