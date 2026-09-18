@@ -710,6 +710,34 @@ const anchorCta = (label: string, anchor = 'contact'): Loose => ({ label, type: 
  */
 const contactLink = (label: string): Loose => ({ label, type: 'external', url: '/#contact', newTab: false })
 
+/**
+ * A link to a route the frontend owns rather than a CMS page.
+ *
+ * `/insights` is a route, not a Page document — a filtered view of a collection — so there is no
+ * page id to point an `internal` link at. `external` with a root-relative url is how this schema
+ * expresses that, exactly as `contactLink` does; `resolveLink` passes the url straight through.
+ */
+const routeLink = (label: string, url: string): Loose => ({
+  label,
+  type: 'external',
+  url,
+  newTab: false,
+})
+
+/**
+ * The Insights menu, pointed at the insights index.
+ *
+ * Every entry here was seeded as `anchor: contact` because the page did not exist yet — the nav
+ * promised four content types and delivered a jump to the contact form. The sub-items now deep
+ * link into the index's content-type filter, which is what `?type=` on the explorer is for.
+ */
+const INSIGHTS_MENU_LINKS: Record<string, string> = {
+  Blogs: '/insights?type=blog',
+  'Case studies': '/insights?type=case-study',
+  Whitepapers: '/insights?type=whitepaper',
+  'Featured projects': '/insights?type=featured-project',
+}
+
 // ── globals ───────────────────────────────────────────────────────────────────
 
 /**
@@ -742,16 +770,24 @@ async function seedHeader(payload: Payload, pageIds: Map<string, number>): Promi
           title: String(item.title ?? ''),
           desc: String(item.desc ?? ''),
           iconKey: ICON_KEY[String(item.title ?? '')],
-          link: link(String(item.title ?? ''), item.href as string | undefined, pageIds),
+          link:
+            INSIGHTS_MENU_LINKS[String(item.title ?? '')]
+              ? routeLink(String(item.title ?? ''), INSIGHTS_MENU_LINKS[String(item.title ?? '')]!)
+              : link(String(item.title ?? ''), item.href as string | undefined, pageIds),
         }))
         const cta = menu.cta as Loose | undefined
+        const isInsights = String(menu.key ?? menu.label ?? '').toLowerCase() === 'insights'
         return {
           label: String(menu.label ?? ''),
           key: String(menu.key ?? menu.label ?? '').toLowerCase(),
-          link: link(String(menu.label ?? ''), menu.href as string | undefined, pageIds),
+          link: isInsights
+            ? routeLink(String(menu.label ?? 'Insights'), '/insights')
+            : link(String(menu.label ?? ''), menu.href as string | undefined, pageIds),
           subItems,
           submenuCTA: cta
-            ? link(String(cta.label ?? 'Explore'), cta.href as string | undefined, pageIds)
+            ? isInsights
+              ? routeLink(String(cta.label ?? 'Explore insights'), '/insights')
+              : link(String(cta.label ?? 'Explore'), cta.href as string | undefined, pageIds)
             : undefined,
         }
       }),

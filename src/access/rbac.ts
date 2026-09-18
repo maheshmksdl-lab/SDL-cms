@@ -12,6 +12,8 @@
  *
  * These functions are the SECURITY BOUNDARY. `admin.hidden` only removes UI.
  */
+import { timingSafeEqual } from 'node:crypto'
+
 import type { Access, AccessArgs as PayloadAccessArgs, Where } from 'payload'
 
 export const ADMIN_ONLY_ROLES = ['admin', 'superadmin'] as const
@@ -330,12 +332,37 @@ export function publishedOnly(moduleKey?: ModuleKey, statusField = '_status') {
   }) satisfies Access
 }
 
-/** Anonymous create, for public form submissions. */
-export function publicCreate(moduleKey?: ModuleKey) {
+/**
+ * The header the website's form route proves itself with. The web app sends the same name
+ * (web/app/api/forms/[slug]/route.ts); the value is REVALIDATE_SECRET, which both apps already
+ * share and which verify-env refuses to build without.
+ */
+export const FORM_SECRET_HEADER = 'x-sdl-form-secret'
+
+function hasFormSecret(headers: Headers | undefined): boolean {
+  const expected = process.env.REVALIDATE_SECRET
+  const given = headers?.get(FORM_SECRET_HEADER)
+  if (!expected || !given) return false
+  const a = Buffer.from(given)
+  const b = Buffer.from(expected)
+  return a.length === b.length && timingSafeEqual(a, b)
+}
+
+/**
+ * Anonymous create for form submissions — from the website's own server, and nowhere else.
+ *
+ * The website's /api/forms/[slug] route is where a submission is checked: against its Form's
+ * declared fields, a rate limit, the honeypot and reCAPTCHA. Anonymous create used to be open
+ * outright, which made POST /api/leads a side door around every one of those checks — any shape
+ * of data, at any rate, and a confirmation email sent to whatever address the caller supplied.
+ * Now an anonymous request must carry the shared secret, which only that route holds.
+ *
+ * Signed-in staff are judged on their role, exactly as before.
+ */
+export function formSubmissionCreate(moduleKey: ModuleKey) {
   return (async (args: AccessArgs) => {
-    if (!args.req.user) return true
-    if (!moduleKey) return true
-    return canUseOperation(args, moduleKey, 'create')
+    if (args.req.user) return canUseOperation(args, moduleKey, 'create')
+    return hasFormSecret(args.req.headers)
   }) satisfies Access
 }
 

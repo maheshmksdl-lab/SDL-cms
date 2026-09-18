@@ -1,5 +1,5 @@
 /**
- * The page-builder block set — 22 sections plus a rich-text escape hatch.
+ * The page-builder block set — 23 sections plus a rich-text escape hatch.
  *
  * `layoutBlocks` is what Pages.layout accepts. Order here is the order editors see in the
  * "Add block" menu, grouped roughly by where each is used.
@@ -40,6 +40,7 @@ import {
   ProductGridBlock,
   RichTextBlock,
 } from './evoq'
+import { ContactOfficesBlock } from './contact'
 
 export const layoutBlocks: Block[] = [
   HeroBlock,
@@ -54,6 +55,9 @@ export const layoutBlocks: Block[] = [
   TestimonialsBlock,
   InsightsCarouselBlock,
   ContactFormBlock,
+
+  // Contact Us
+  ContactOfficesBlock,
 
   // Service detail
   NarrativeBlock,
