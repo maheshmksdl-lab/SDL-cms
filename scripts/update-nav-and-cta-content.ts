@@ -20,6 +20,7 @@
  *   pnpm update:nav-cta              against .env (local)
  *   pnpm update:nav-cta:prod         against .env.production
  *   DRY_RUN=true pnpm update:nav-cta:prod
+ *   STEPS=1 pnpm update:nav-cta:prod   run only the listed steps (comma-separated, e.g. "1,3")
  *
  * Safe to re-run: each step is idempotent — re-running after the dropdown items are already gone,
  * the footer links already fixed, or the CTAs already repointed is a no-op for that step.
@@ -29,6 +30,7 @@ import { getPayload, type Payload } from 'payload'
 import config from '../payload.config.js'
 
 const DRY_RUN = process.env.DRY_RUN === 'true'
+const STEPS = new Set((process.env.STEPS || '1,2,3').split(',').map((step) => step.trim()))
 
 type Loose = Record<string, unknown>
 
@@ -171,15 +173,23 @@ async function main() {
   console.log(`\n  target: ${process.env.NEXT_PUBLIC_SERVER_URL}`)
   console.log(`  mode:   ${DRY_RUN ? 'DRY RUN — nothing will be written' : 'WRITE'}\n`)
 
-  console.log('-- 1. Header Company dropdown --')
-  await updateHeaderCompanyDropdown(payload)
+  console.log(`  steps:  ${[...STEPS].join(', ')}\n`)
 
-  console.log('\n-- 2. Footer Insights links --')
-  await updateFooterInsightsLinks(payload)
+  if (STEPS.has('1')) {
+    console.log('-- 1. Header Company dropdown --')
+    await updateHeaderCompanyDropdown(payload)
+  }
 
-  console.log('\n-- 3. "Talk to ... expert" CTAs -> /contact-us --')
-  const ctaCount = await redirectTalkToExpertCtas(payload)
-  console.log(`\n  ${DRY_RUN ? 'would update' : 'updated'} ${ctaCount} CTA(s) total\n`)
+  if (STEPS.has('2')) {
+    console.log('\n-- 2. Footer Insights links --')
+    await updateFooterInsightsLinks(payload)
+  }
+
+  if (STEPS.has('3')) {
+    console.log('\n-- 3. "Talk to ... expert" CTAs -> /contact-us --')
+    const ctaCount = await redirectTalkToExpertCtas(payload)
+    console.log(`\n  ${DRY_RUN ? 'would update' : 'updated'} ${ctaCount} CTA(s) total\n`)
+  }
 
   process.exit(0)
 }

@@ -19,7 +19,9 @@ const MAX_IMAGE_DIMENSION = 2400
  * Sizes are taken from the design's actual consumers, not invented:
  *   thumb    400x300  — admin list view and generic cards
  *   insight  720x900  — the insights carousel card (portrait bias)
- *   logo     320x160  — the client logo strip, `contain` so marks are never cropped
+ *   logo     320x160  — the client logo strip, `contain` so marks are never cropped. The
+ *                      letterbox is filled white: sharp's default fill is black, and a JPEG has
+ *                      no alpha to hide it, so every non-2:1 logo came out with black bars.
  *   avatar   160x160  — testimonial avatars
  *   og      1200x630  — social sharing
  *
@@ -30,7 +32,13 @@ const MAX_IMAGE_DIMENSION = 2400
 export const MEDIA_IMAGE_SIZES = [
   { name: 'thumb', width: 400, height: 300 },
   { name: 'insight', width: 720, height: 900 },
-  { name: 'logo', width: 320, height: 160, fit: 'contain' as const },
+  {
+    name: 'logo',
+    width: 320,
+    height: 160,
+    fit: 'contain' as const,
+    background: { r: 255, g: 255, b: 255, alpha: 1 },
+  },
   { name: 'avatar', width: 160, height: 160 },
   { name: 'og', width: 1200, height: 630 },
 ] as const
