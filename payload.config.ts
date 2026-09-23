@@ -101,11 +101,26 @@ function postgresPool() {
      * short idle timeout matters just as much — Vercel freezes rather than terminates instances,
      * so without it their connections stay checked out long after the request finishes.
      *
-     * Two, not one: @payloadcms/db-postgres `connect()` checks out a client with `pool.connect()`
-     * to attach an error listener and never releases it. With `max: 1` that permanently holds the
-     * only slot, and every query then fails with "timeout exceeded when trying to connect".
+     * Four, not two: @payloadcms/db-postgres `connect()` checks out a client with `pool.connect()`
+     * to attach an error listener and never releases it, so the usable pool is always `max - 1`.
+     * At `max: 2` that left exactly ONE usable connection, which deadlocked every update and
+     * delete in production:
+     *
+     *   Failed query: select ... from "payload_locked_documents" ...
+     *   params: document,46,…: timeout exceeded when trying to connect
+     *
+     * Payload checks its document-lock table before mutating an existing document. That query
+     * needs a second connection WHILE the write's transaction still holds the first, so with one
+     * usable slot it waited out connectionTimeoutMillis and surfaced in the admin panel as
+     * "Unable to delete 1 out of 1 Insight. Something went wrong." Creates were unaffected, because
+     * a document that does not exist yet is never lock-checked — which is exactly the shape the
+     * bug report had.
+     *
+     * Three usable connections covers transaction + lock check with one spare. Still small enough
+     * for serverless: the point of a tight pool is to avoid starving OTHER instances, and going
+     * from 2 to 4 per invocation is far cheaper than an admin panel that cannot edit or delete.
      */
-    max: 2,
+    max: 4,
     idleTimeoutMillis: 10_000,
     connectionTimeoutMillis: 15_000,
   }
