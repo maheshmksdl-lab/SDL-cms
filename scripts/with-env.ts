@@ -25,10 +25,22 @@ import path from 'node:path'
 import process from 'node:process'
 import dotenv from 'dotenv'
 
-const [envFile, command, ...args] = process.argv.slice(2)
+const [envFile, ...rest] = process.argv.slice(2)
+
+/*
+ * Schema migrations run against the DIRECT database endpoint, not the connection pooler.
+ *
+ * Production runtime points DATABASE_URI at Aiven's PgBouncer, which is what keeps a few dozen
+ * frozen Vercel instances from exhausting the server's connection slots. PgBouncer pools per
+ * TRANSACTION though, so session-scoped DDL behaviour is not guaranteed across statements —
+ * migrations are the one workload that wants its own real backend connection. This is the same
+ * split Prisma and Drizzle document as DIRECT_URL.
+ */
+const directDb = rest[0] === '--direct-db'
+const [command, ...args] = directDb ? rest.slice(1) : rest
 
 if (!envFile || !command) {
-  console.error('usage: tsx scripts/with-env.ts <env-file> <command> [...args]')
+  console.error('usage: tsx scripts/with-env.ts <env-file> [--direct-db] <command> [...args]')
   console.error('   e.g. tsx scripts/with-env.ts .env.production npx payload migrate:status')
   process.exit(1)
 }
@@ -59,6 +71,21 @@ console.log(
   `with-env: ${envFile} → ${applied} variable(s) set` +
     (applied === Object.keys(parsed).length ? '' : `, ${Object.keys(parsed).length - applied} already in the shell`),
 )
+
+/*
+ * Swap in the direct endpoint AFTER loading, so it overrides whatever the env file set. Falling
+ * back rather than failing keeps this working against a database with no pooler in front of it,
+ * which is every local setup and production before the Aiven pool is created.
+ */
+if (directDb) {
+  const direct = process.env.DATABASE_URI_DIRECT?.trim()
+  if (direct) {
+    process.env.DATABASE_URI = direct
+    console.log('with-env: --direct-db → using DATABASE_URI_DIRECT (bypassing the connection pooler)')
+  } else {
+    console.log('with-env: --direct-db → DATABASE_URI_DIRECT is unset, using DATABASE_URI as-is')
+  }
+}
 
 /*
  * `shell: true` is required on Windows: `npx`, `payload` and the rest of node_modules/.bin are
