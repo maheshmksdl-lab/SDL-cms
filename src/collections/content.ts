@@ -338,18 +338,35 @@ export const Testimonials: CollectionConfig = {
     { name: 'name', type: 'text', required: true },
     {
       name: 'role',
+      label: 'Headline',
       type: 'text',
-      admin: { description: 'The design uses this as a short headline, e.g. "Great flexibility!".' },
+      admin: { description: 'The short headline on the card, e.g. "Great flexibility!".' },
+    },
+    {
+      name: 'designation',
+      type: 'text',
+      admin: {
+        description:
+          'The person’s title and company, shown under their name — e.g. "CEO at Happy Trails" or "from The Anglican Centre".',
+      },
     },
     { name: 'avatar', type: 'upload', relationTo: 'media' },
     { name: 'quote', type: 'textarea', required: true },
     {
       type: 'row',
       fields: [
+        {
+          name: 'rating',
+          type: 'number',
+          min: 1,
+          max: 5,
+          defaultValue: 5,
+          admin: { width: '50%', description: 'Stars shown on the card (1–5).' },
+        },
         { name: 'featured', type: 'checkbox', defaultValue: true, admin: { width: '50%' } },
-        { name: 'order', type: 'number', defaultValue: 100, admin: { width: '50%' } },
       ],
     },
+    { name: 'order', type: 'number', defaultValue: 100 },
   ],
 }
 

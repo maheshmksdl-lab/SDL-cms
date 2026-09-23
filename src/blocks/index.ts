@@ -41,6 +41,7 @@ import {
   RichTextBlock,
 } from './evoq'
 import { ContactOfficesBlock } from './contact'
+import { PageIntroBlock, ClientsGridBlock, TestimonialsGridBlock, SuccessCtaBlock } from './company'
 
 export const layoutBlocks: Block[] = [
   HeroBlock,
@@ -58,6 +59,12 @@ export const layoutBlocks: Block[] = [
 
   // Contact Us
   ContactOfficesBlock,
+
+  // Clients & Testimonials
+  PageIntroBlock,
+  ClientsGridBlock,
+  TestimonialsGridBlock,
+  SuccessCtaBlock,
 
   // Service detail
   NarrativeBlock,

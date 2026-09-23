@@ -38,8 +38,20 @@
     "link:nav:prod": "tsx scripts/with-env.ts .env.production tsx scripts/link-insights-nav.ts",
     "add:contact": "tsx scripts/add-contact-page.ts",
     "add:contact:prod": "tsx scripts/with-env.ts .env.production tsx scripts/add-contact-page.ts",
+    "add:clients-testimonials": "tsx scripts/add-clients-testimonials-pages.ts",
+    "add:clients-testimonials:prod": "tsx scripts/with-env.ts .env.production tsx scripts/add-clients-testimonials-pages.ts",
     "check:media": "tsx scripts/check-media.ts",
-    "check:media:prod": "tsx scripts/with-env.ts .env.production tsx scripts/check-media.ts"
+    "check:media:prod": "tsx scripts/with-env.ts .env.production tsx scripts/check-media.ts",
+    "migrate:insights": "tsx scripts/migrate-insights-from-legacy-site.ts",
+    "migrate:insights:prod": "tsx scripts/with-env.ts .env.production tsx scripts/migrate-insights-from-legacy-site.ts",
+    "migrate:clients": "tsx scripts/migrate-clients-from-legacy-site.ts",
+    "migrate:clients:prod": "tsx scripts/with-env.ts .env.production tsx scripts/migrate-clients-from-legacy-site.ts",
+    "update:service-hero": "tsx scripts/update-service-hero-copy.ts",
+    "update:service-hero:prod": "tsx scripts/with-env.ts .env.production tsx scripts/update-service-hero-copy.ts",
+    "update:nav-cta": "tsx scripts/update-nav-and-cta-content.ts",
+    "update:nav-cta:prod": "tsx scripts/with-env.ts .env.production tsx scripts/update-nav-and-cta-content.ts",
+    "update:lets-talk-labels": "tsx scripts/update-lets-talk-form-labels.ts",
+    "update:lets-talk-labels:prod": "tsx scripts/with-env.ts .env.production tsx scripts/update-lets-talk-form-labels.ts"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.88.0",
