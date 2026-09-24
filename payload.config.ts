@@ -123,8 +123,27 @@ function postgresPool() {
     max: 4,
     idleTimeoutMillis: 10_000,
     connectionTimeoutMillis: 15_000,
+    /*
+     * The server closes any session idle for longer than this — the half of the cleanup
+     * `idleTimeoutMillis` cannot do. That timer runs in the function, and a frozen Vercel instance
+     * runs no timers, so its connections stayed open until the instance was finally destroyed.
+     * The client Payload checks out at connect() and never releases (see above) is never idle
+     * from the pool's point of view at all, so it was held for the instance's whole life.
+     *
+     * With no connection pooler in front of the database, those leaked sessions filled every
+     * slot: "remaining connection slots are reserved for roles with the SUPERUSER attribute",
+     * on reads, on `next build`, and on admin sign-in — which is how editors saw "the login does
+     * not work" while the credentials were correct. Measured again on 2026-09-24: a single
+     * diagnostic connection was refused while production was otherwise idle.
+     *
+     * 30s is well past any gap between the queries of one request, and a session the server
+     * closes surfaces as a pool/client `error`, which `onInit` below handles.
+     */
+    options: `-c idle_session_timeout=${IDLE_SESSION_TIMEOUT_MS}`,
   }
 }
+
+const IDLE_SESSION_TIMEOUT_MS = 30_000
 
 // ── Origin helpers (copied from the EFTMRA reference — it parses these correctly) ──
 
@@ -379,6 +398,50 @@ export default buildConfig({
 
   // GET /api/health — DB-connectivity probe for uptime monitoring (plan §8.8).
   endpoints: [healthEndpoint],
+
+  /*
+   * Handling for sessions the server closes (idle_session_timeout, above). Remote only: local
+   * development sets no server timeout, so none of this ever fires there.
+   *
+   * 1. node-postgres re-emits an idle client's error on the POOL, and an EventEmitter with no
+   *    `error` listener throws — which would kill the function. The pool has already discarded
+   *    that client, so logging is all there is to do.
+   * 2. A CHECKED-OUT client the server closes stays counted against `max` until it is released.
+   *    The adapter's connect() client is never released, and on the resulting ECONNRESET the
+   *    adapter checks out a replacement — so without releasing the dead one, every timeout cost
+   *    a slot for good, and after three the pool was full of dead clients. Measured locally with
+   *    a 1s timeout: totalCount went 1 → 3 after one cycle and the next query hung. Releasing
+   *    with the error destroys the client and frees its slot. 57P05 is idle-session-timeout
+   *    only — a session inside a query or a transaction is never closed for it.
+   */
+  onInit: async (payload) => {
+    type PgClient = { on: (event: 'error', fn: (err: Error & { code?: string }) => void) => void; release: (err?: Error) => void }
+    type PgPool = {
+      on(event: 'error', fn: (err: Error) => void): void
+      on(event: 'connect', fn: (client: PgClient) => void): void
+      /** pg-pool's own list of open clients. */
+      _clients?: PgClient[]
+    }
+
+    const pool = (payload.db as unknown as { pool?: PgPool }).pool
+    if (!pool) return
+
+    const releaseWhenClosedForIdleness = (client: PgClient) => {
+      client.on('error', (err) => {
+        if (err.code !== '57P05') return
+        try {
+          client.release(err)
+        } catch {
+          // Not checked out (the pool already dropped it) — nothing to free.
+        }
+      })
+    }
+
+    pool.on('error', (err) => payload.logger.warn(`postgres: idle connection closed (${err.message})`))
+    pool.on('connect', releaseWhenClosedForIdleness)
+    // The adapter's own client connected before this hook ran, so it missed the listener above.
+    for (const client of pool._clients ?? []) releaseWhenClosedForIdleness(client)
+  },
 
   editor: lexicalEditor({}),
   secret: process.env.PAYLOAD_SECRET || '',
