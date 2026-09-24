@@ -46,12 +46,8 @@
     "migrate:insights:prod": "tsx scripts/with-env.ts .env.production tsx scripts/migrate-insights-from-legacy-site.ts",
     "migrate:clients": "tsx scripts/migrate-clients-from-legacy-site.ts",
     "migrate:clients:prod": "tsx scripts/with-env.ts .env.production tsx scripts/migrate-clients-from-legacy-site.ts",
-    "update:service-hero": "tsx scripts/update-service-hero-copy.ts",
-    "update:service-hero:prod": "tsx scripts/with-env.ts .env.production tsx scripts/update-service-hero-copy.ts",
     "update:nav-cta": "tsx scripts/update-nav-and-cta-content.ts",
-    "update:nav-cta:prod": "tsx scripts/with-env.ts .env.production tsx scripts/update-nav-and-cta-content.ts",
-    "update:lets-talk-labels": "tsx scripts/update-lets-talk-form-labels.ts",
-    "update:lets-talk-labels:prod": "tsx scripts/with-env.ts .env.production tsx scripts/update-lets-talk-form-labels.ts"
+    "update:nav-cta:prod": "tsx scripts/with-env.ts .env.production tsx scripts/update-nav-and-cta-content.ts"
   },
   "dependencies": {
     "@payloadcms/db-postgres": "3.88.0",

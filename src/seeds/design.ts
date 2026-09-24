@@ -186,8 +186,8 @@ const SERVICE_COPY: Record<string, ServiceCopy> = {
   'ai-transformation': {
     hero: {
       kicker: 'AI transformation',
-      lines: [{ before: 'Turn AI potential' }, { accent: 'into business value.' }],
-      sub: 'Move beyond experimentation with practical AI strategies, intelligent capabilities and AI-powered solutions built around the way your business works.',
+      lines: [{ before: 'Turn intelligence' }, { accent: 'into action.' }],
+      sub: 'Activate intelligence across the business to uncover opportunities, strengthen decisions, automate processes and improve how work gets done.',
       primary: 'Talk to an AI expert', secondary: 'Explore AI capabilities',
     },
     narrativeKicker: "AI is changing what's possible",
@@ -217,8 +217,8 @@ const SERVICE_COPY: Record<string, ServiceCopy> = {
   'business-transformation': {
     hero: {
       kicker: 'Business transformation',
-      lines: [{ before: 'Change how the' }, { accent: 'business works.' }],
-      sub: 'Modernize processes, applications and business capabilities to remove friction, improve efficiency and create a stronger foundation for growth.',
+      lines: [{ before: 'Simplify complexity.' }, { accent: 'Strengthen the business.' }],
+      sub: 'Modernize processes and business capabilities to improve efficiency, increase agility and create a stronger foundation for growth.',
       primary: 'Talk to a transformation expert', secondary: 'Explore transformation capabilities',
     },
     narrativeKicker: 'Business change needs more than new technology',
@@ -248,8 +248,8 @@ const SERVICE_COPY: Record<string, ServiceCopy> = {
   'digital-experience': {
     hero: {
       kicker: 'Digital experience',
-      lines: [{ before: 'Design experiences' }, { accent: 'people want to use.' }],
-      sub: 'Create intuitive digital experiences across customer and employee journeys, bringing together strategy, design and technology to make every interaction simpler and more effective.',
+      lines: [{ before: 'Make every digital interaction' }, { accent: 'count.' }],
+      sub: 'Design intuitive digital experiences around how people think, interact and get things done, making every journey clearer, simpler and more effective.',
       primary: 'Talk to an expert', secondary: 'Explore experience capabilities',
     },
     narrativeKicker: 'Experience is more than how it looks',
@@ -276,8 +276,8 @@ const SERVICE_COPY: Record<string, ServiceCopy> = {
   'growth-transformation': {
     hero: {
       kicker: 'Growth transformation',
-      lines: [{ before: 'Turn digital presence' }, { accent: 'into demand.' }],
-      sub: 'Bring AI search, SEO, content, campaigns, digital channels and conversion together to attract the right audiences, create qualified demand and improve business performance.',
+      lines: [{ before: 'Precision. Performance.' }, { accent: 'Growth.' }],
+      sub: 'Make every digital effort more targeted, measurable and effective, from discovery and engagement to conversion.',
       primary: 'Talk to a growth expert', secondary: 'Explore growth capabilities',
     },
     narrativeKicker: 'Growth needs more than more traffic',
@@ -309,8 +309,8 @@ const SERVICE_COPY: Record<string, ServiceCopy> = {
 const DE_COPY = {
   hero: {
     kicker: 'Digital engineering',
-    lines: [{ before: 'Build, modernize and scale' }, { accent: 'digital technology.' }],
-    sub: 'Engineer digital products, applications and platforms with modern architecture, AI-enabled development and the technology expertise to support changing business needs.',
+    lines: [{ before: 'Transform technology' }, { accent: 'into digital advantage.' }],
+    sub: 'Design, develop and modernize applications and platforms with modern architecture, AI-accelerated engineering and the expertise to evolve with your business.',
     primary: 'Talk to an engineering expert', secondary: 'Explore engineering capabilities',
   } satisfies HeroCopy,
   narrativeKicker: 'Technology should keep up with the business',
@@ -754,8 +754,24 @@ const INSIGHTS_MENU_LINKS: Record<string, string> = {
  */
 const BRAND_LOGO_FILE = 'sdl-logo.svg'
 
+/**
+ * Header dropdown entries the design data still lists but the live site has dropped, keyed by
+ * menu key. The Company dropdown shows About and Clients only — "Our approach" and "Careers"
+ * have no pages behind them. The footer's Company column is a separate list and is unaffected.
+ */
+const REMOVED_SUBMENU_ITEMS: Record<string, readonly string[]> = {
+  company: ['Our approach', 'Careers'],
+}
+
 async function seedHeader(payload: Payload, pageIds: Map<string, number>): Promise<void> {
-  const menus = arr('index', 'MENUS')
+  const menus = arr('index', 'MENUS').map((menu) => {
+    const removed = REMOVED_SUBMENU_ITEMS[String(menu.key ?? menu.label ?? '').toLowerCase()]
+    if (!removed) return menu
+    const items = ((menu.items as Loose[] | undefined) ?? []).filter(
+      (item) => !removed.includes(String(item.title ?? '')),
+    )
+    return { ...menu, items }
+  })
   const logoId = await uploadDesignAsset(payload, BRAND_LOGO_FILE, 'Social DNA Labs')
   await payload.updateGlobal({
     slug: 'header',
@@ -882,15 +898,6 @@ async function seedServices(payload: Payload, pageIds: Map<string, number>): Pro
 }
 
 /**
- * Insights and their categories.
- *
- * The two pages carrying a carousel show DIFFERENT articles in the design: index.html's INSIGHTS
- * is placeholder copy ("Add a strong recent AI or technology article" — Appendix C Q1 flags real
- * articles as pending client input), while services.html's already names real perspectives. Both
- * sets are seeded, and each page's carousel references its own set, so each renders exactly what
- * its design page shows. Returns each set's ids in design order.
- */
-/**
  * The EVOQ application modules, as the `products` facet on the insights index.
  *
  * Taken from the design's own EVOQ_PRODUCTS rather than invented, so the filter list and the
@@ -918,97 +925,59 @@ async function seedProducts(payload: Payload): Promise<number[]> {
 }
 
 /**
- * The four content types, spread across the seeded articles.
+ * The insight categories, taken from the design's two INSIGHTS arrays.
  *
- * The design ships one card shape and calls everything a blog, but the index filters on `kind`,
- * and a facet list where three of four options are permanently (0) cannot be judged — by the
- * client or by us. This gives every filter something to return without inventing articles: the
- * same real content, labelled across the four types the nav already promises.
+ * Only the categories are seeded from those arrays, not the articles. The articles in them were
+ * placeholder copy ("Add a strong recent AI or technology article" — Appendix C Q1 flagged real
+ * articles as pending client input) and have been replaced by the articles migrated from the
+ * legacy site (see ./legacyInsights). Those real articles reuse these categories by slug.
  */
-const KIND_CYCLE = ['blog', 'blog', 'case-study', 'blog', 'whitepaper', 'blog', 'featured-project'] as const
-
-async function seedInsightsAndCategories(payload: Payload): Promise<{ home: number[]; services: number[] }> {
-  const sets = { home: arr('index', 'INSIGHTS'), services: arr('services', 'INSIGHTS') }
-  const cats = [...new Set([...sets.home, ...sets.services].map((i) => String(i.cat ?? '')).filter(Boolean))]
-
-  const catIds = new Map<string, number>()
+async function seedInsightCategories(payload: Payload): Promise<void> {
+  const cats = [...new Set(PLACEHOLDER_INSIGHTS.map((i) => String(i.cat ?? '')).filter(Boolean))]
   let order = 10
   for (const label of cats) {
-    const catSlug = label.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
-    const id = await upsertBySlug(payload, 'insight-categories', catSlug, { label, order })
-    catIds.set(label, id)
+    await upsertBySlug(payload, 'insight-categories', contentSlug(label), { label, order })
     order += 10
   }
+  payload.logger.info(`insight categories seeded: ${cats.length}`)
+}
 
-  /*
-   * The facet targets are read back rather than threaded in as arguments, so this stays
-   * independent of the order seedServices/seedProducts happen to run in. Both are already
-   * seeded by the time seedDesign reaches here.
-   */
-  const [serviceDocs, productDocs] = await Promise.all([
-    payload.find({ collection: 'services', limit: 50, depth: 0, sort: 'order', overrideAccess: true }),
-    payload.find({ collection: 'products', limit: 50, depth: 0, sort: 'order', overrideAccess: true }),
-  ])
-  const serviceList = serviceDocs.docs as { id: number; title: string }[]
-  const productList = productDocs.docs as { id: number; label: string }[]
+/** Both design INSIGHTS arrays: home (index.html) first, then services.html. */
+const PLACEHOLDER_INSIGHTS: Loose[] = [...arr('index', 'INSIGHTS'), ...arr('services', 'INSIGHTS')]
 
-  const swatchCycle = ['success', 'attention', 'accent']
-  const ids = { home: [] as number[], services: [] as number[] }
-  let dayOffset = 0
-  for (const key of ['home', 'services'] as const) {
-    let i = 0
-    for (const insight of sets[key]) {
-      const title = String(insight.title ?? '')
-      const insightSlug = title.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '').slice(0, 60)
-      // Only half the design's cards have a `thumb` — the rest fall back to the solid swatch,
-      // exactly as the design itself does.
-      const thumbMatch = typeof insight.thumb === 'string' ? /url\(([^)]+)\)/.exec(insight.thumb) : null
-      const thumbnailId = thumbMatch
-        ? await uploadDesignAsset(payload, thumbMatch[1]!.replace(/^assets\//, ''), title)
-        : undefined
-      /*
-       * Facets, assigned deterministically from the article's position rather than at random,
-       * so re-running the seed does not reshuffle which article sits under which filter.
-       * Two services and one or two products each: enough overlap that combining facets
-       * genuinely narrows the list, which is the behaviour worth testing.
-       */
-      const categoryLabel = String(insight.cat ?? '').trim()
-      const pickedServices = serviceList.length
-        ? [serviceList[dayOffset % serviceList.length]!, serviceList[(dayOffset + 2) % serviceList.length]!]
-            .filter((service, index, all) => all.findIndex((s) => s.id === service.id) === index)
-        : []
-      const pickedProducts = productList.length
-        ? [productList[dayOffset % productList.length]!]
-            .concat(dayOffset % 3 === 0 ? [productList[(dayOffset + 4) % productList.length]!] : [])
-            .filter((product, index, all) => all.findIndex((p) => p.id === product.id) === index)
-        : []
+/**
+ * The slugging insights and their categories have always used — unlike `slug`, it drops `&`
+ * rather than spelling it out. Changing it would orphan every existing category and article.
+ */
+const contentSlug = (s: string): string => s.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/^-|-$/g, '')
 
-      const id = await upsertBySlug(
-        payload,
-        'insights',
-        insightSlug,
-        {
-          title,
-          kind: KIND_CYCLE[dayOffset % KIND_CYCLE.length],
-          readTime: String(insight.readTime ?? ''),
-          category: catIds.get(categoryLabel),
-          swatch: swatchCycle[i % swatchCycle.length],
-          ...(thumbnailId ? { thumbnail: thumbnailId } : {}),
-          services: pickedServices.map((service) => service.id),
-          products: pickedProducts.map((product) => product.id),
-          tags: [categoryLabel, ...pickedServices.map((service) => service.title)].filter(Boolean),
-          featured: i < 3,
-          publishedAt: new Date(Date.now() - dayOffset * 86_400_000).toISOString(),
-        },
-        true,
-      )
-      ids[key].push(id)
-      i += 1
-      dayOffset += 1
-    }
+/** The slug an earlier version of this seed gave each placeholder article. */
+const placeholderInsightSlug = (title: string): string => contentSlug(title).slice(0, 60)
+
+/**
+ * Deletes the 12 placeholder articles earlier versions of this seed created, so re-seeding a
+ * database that still has them converges on the same state as a fresh one. A document is only
+ * deleted when BOTH its slug and its exact title match a placeholder — an article an editor has
+ * since rewritten under the same slug is left alone.
+ */
+async function retirePlaceholderInsights(payload: Payload): Promise<void> {
+  const titleBySlug = new Map(
+    PLACEHOLDER_INSIGHTS.map((i) => String(i.title ?? '')).filter(Boolean).map((t) => [placeholderInsightSlug(t), t]),
+  )
+  const found = await payload.find({
+    collection: 'insights',
+    where: { slug: { in: [...titleBySlug.keys()] } },
+    limit: 100,
+    depth: 0,
+    overrideAccess: true,
+  })
+  let removed = 0
+  for (const doc of found.docs as { id: number; slug: string; title: string }[]) {
+    if (titleBySlug.get(doc.slug) !== doc.title) continue
+    await payload.delete({ collection: 'insights', id: doc.id, overrideAccess: true })
+    removed += 1
   }
-  payload.logger.info(`insights seeded: ${ids.home.length} home + ${ids.services.length} services, ${cats.length} categories`)
-  return ids
+  if (removed) payload.logger.info(`placeholder insights removed: ${removed}`)
 }
 
 async function seedClientsAndTestimonials(payload: Payload): Promise<void> {
@@ -1098,8 +1067,6 @@ type LayoutContext = {
   pageIds: Map<string, number>
   formId?: number
   servicesFormId?: number
-  homeInsightIds: number[]
-  servicesInsightIds: number[]
   assets: Partial<Record<'evoqHero' | 'evoqLogo' | 'zohoLogo' | 'salesforceLogo', number>>
 }
 
@@ -1386,7 +1353,8 @@ function buildLayout(spec: PageSpec, ctx: LayoutContext): Loose[] {
       {
         blockType: 'insights-carousel',
         kicker: c.insightsKicker, title: c.insightsTitle, sub: c.insightsSub,
-        source: 'manual', insights: ctx.homeInsightIds, footerText: c.insightsFooterText,
+        // The newest published articles, so the carousel never needs hand-curating to stay current.
+        source: 'latest', limit: 6, footerText: c.insightsFooterText,
         cta: anchorCta('Explore insights', 'contact'),
         settings: settings({ anchorId: 'insights', background: 'white', spacing: 'tight' }),
       },
@@ -1425,7 +1393,7 @@ function buildLayout(spec: PageSpec, ctx: LayoutContext): Loose[] {
       {
         blockType: 'insights-carousel',
         kicker: c.insightsKicker, title: c.insightsTitle, sub: c.insightsSub,
-        source: 'manual', insights: ctx.servicesInsightIds, footerText: HOME_COPY.insightsFooterText,
+        source: 'latest', limit: 6, footerText: HOME_COPY.insightsFooterText,
         cta: anchorCta('View all insights', 'contact'),
         settings: settings({ anchorId: 'insights', background: 'white', spacing: 'tight' }),
       },
@@ -1817,7 +1785,8 @@ export async function seedDesign(payload: Payload): Promise<void> {
   await seedServices(payload, pageIds)
   // Before insights: they reference both as filter facets.
   await seedProducts(payload)
-  const insightIds = await seedInsightsAndCategories(payload)
+  await seedInsightCategories(payload)
+  await retirePlaceholderInsights(payload)
   await seedClientsAndTestimonials(payload)
 
   // 3. The design's own artwork the layouts place: EVOQ's hero and mark, the two partner logos.
@@ -1832,8 +1801,6 @@ export async function seedDesign(payload: Payload): Promise<void> {
     pageIds,
     formId: await formIdBySlug(payload, 'contact'),
     servicesFormId: await formIdBySlug(payload, 'services-contact'),
-    homeInsightIds: insightIds.home,
-    servicesInsightIds: insightIds.services,
     assets,
   }
 

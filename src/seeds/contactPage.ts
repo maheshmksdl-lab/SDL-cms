@@ -4,8 +4,9 @@ import type { Payload } from 'payload'
  * The Contact Us page: its enquiry form, the page itself, and the footer's "Contact us" link.
  *
  * Idempotent, and careful with content an editor may already have changed:
- *   - the form and the page are CREATED if missing and otherwise left exactly as they are — the
- *     page's copy and the form's fields are the CMS's to own once they exist
+ *   - the form and the page are CREATED if missing and otherwise left as they are — the page's
+ *     copy and the form's fields are the CMS's to own once they exist. The one exception: form
+ *     fields still holding an earlier seed's exact values are upgraded (see SUPERSEDED_FIELDS)
  *   - the footer is the one thing rewritten on every run, and only the `link` of the entries
  *     labelled "Contact us"; every other column, link and setting is kept
  *
@@ -27,19 +28,35 @@ const CONTACT_US_FORM = {
     title: 'Thank you — your enquiry has been received.',
     body: 'Someone from our team will get back to you shortly.',
   },
+  /*
+   * Labels, placeholders and required-ness follow the "Let's talk" reference design. The popup
+   * (LetsTalkModal) and this page's embedded form both render this one Form document.
+   */
   fields: [
-    { label: 'Name', name: 'name', type: 'text', required: true, width: 'half' },
-    { label: 'Email', name: 'email', type: 'email', required: true, width: 'half' },
-    { label: 'Company', name: 'company', type: 'text', required: true, width: 'half' },
-    { label: 'Phone', name: 'phone', type: 'tel', required: true, width: 'half' },
+    { label: 'Name', name: 'name', type: 'text', placeholder: 'Your name', required: true, width: 'half' },
+    { label: 'Work email', name: 'email', type: 'email', placeholder: 'you@company.com', required: true, width: 'half' },
+    { label: 'Company', name: 'company', type: 'text', placeholder: 'Your company', required: true, width: 'half' },
+    { label: 'Phone', name: 'phone', type: 'tel', placeholder: '+1', required: false, width: 'half' },
     {
-      label: 'Brief message of your requirements',
+      label: 'What are you looking to achieve?',
       name: 'message',
       type: 'textarea',
-      required: false,
+      placeholder: 'A little about the challenge or opportunity…',
+      required: true,
       width: 'full',
     },
   ],
+}
+
+/**
+ * The field values an earlier version of this seed created, by field name. A form whose field
+ * still carries exactly these values was never edited, so it is brought up to CONTACT_US_FORM on
+ * the next seed; a field an editor has changed in any way is left alone.
+ */
+const SUPERSEDED_FIELDS: Record<string, { label: string; required: boolean }> = {
+  email: { label: 'Email', required: true },
+  phone: { label: 'Phone', required: true },
+  message: { label: 'Brief message of your requirements', required: false },
 }
 
 const contactSection = (formId: number) => ({
@@ -84,7 +101,7 @@ async function findId(payload: Payload, collection: 'forms' | 'pages' | 'email-t
 async function ensureForm(payload: Payload, { dryRun }: Options): Promise<number | undefined> {
   const existing = await findId(payload, 'forms', CONTACT_FORM_SLUG)
   if (existing) {
-    payload.logger.info(`forms: "${CONTACT_FORM_SLUG}" exists — left as it is`)
+    await upgradeUneditedFields(payload, existing, { dryRun })
     return existing
   }
   if (dryRun) {
@@ -105,6 +122,43 @@ async function ensureForm(payload: Payload, { dryRun }: Options): Promise<number
   })
   payload.logger.info(`forms: "${CONTACT_FORM_SLUG}" created`)
   return created.id as number
+}
+
+type FormField = { name?: string | null; label?: string | null; placeholder?: string | null; required?: boolean | null }
+
+/** Rewrites only the fields still holding SUPERSEDED_FIELDS' values — see that table. */
+async function upgradeUneditedFields(payload: Payload, formId: number, { dryRun }: Options): Promise<void> {
+  const form = (await payload.findByID({ collection: 'forms', id: formId, depth: 0, overrideAccess: true })) as {
+    fields?: FormField[] | null
+  }
+  const fields = form.fields ?? []
+  let upgraded = 0
+  const next = fields.map((field) => {
+    const old = SUPERSEDED_FIELDS[String(field.name ?? '')]
+    const target = CONTACT_US_FORM.fields.find((f) => f.name === field.name)
+    if (!old || !target || field.label !== old.label || Boolean(field.required) !== old.required || field.placeholder) {
+      return field
+    }
+    upgraded += 1
+    return { ...field, label: target.label, placeholder: target.placeholder, required: target.required }
+  })
+  // Name and Company kept their labels; they only gain the placeholders the reference design has.
+  const withPlaceholders = next.map((field) => {
+    const target = CONTACT_US_FORM.fields.find((f) => f.name === field.name)
+    if (!upgraded || !target || field.placeholder || field.label !== target.label) return field
+    return { ...field, placeholder: target.placeholder }
+  })
+
+  if (!upgraded) {
+    payload.logger.info(`forms: "${CONTACT_FORM_SLUG}" exists — left as it is`)
+    return
+  }
+  if (dryRun) {
+    payload.logger.info(`forms: would update ${upgraded} unedited field(s) on "${CONTACT_FORM_SLUG}"`)
+    return
+  }
+  await payload.update({ collection: 'forms', id: formId, data: { fields: withPlaceholders } as never, overrideAccess: true })
+  payload.logger.info(`forms: "${CONTACT_FORM_SLUG}" — ${upgraded} unedited field(s) brought up to the reference design`)
 }
 
 async function ensurePage(

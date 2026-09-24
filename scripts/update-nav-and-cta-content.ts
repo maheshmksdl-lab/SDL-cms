@@ -1,6 +1,11 @@
 /**
  * A batch of small, independent content updates requested together:
  *
+ * Only step 1 has been applied to production (with STEPS=1), and it is now part of the design
+ * seed (REMOVED_SUBMENU_ITEMS in src/seeds/design.ts), so fresh databases get it too. Steps 2 and 3
+ * have NOT been applied anywhere; if they are wanted, move them into the seed as well rather than
+ * running them against one database.
+ *
  *   1. Header "Company" dropdown: remove "Our approach" and "Careers", keep About + Clients.
  *   2. Footer "Insights" column: its 4 links were seed placeholders pointing at `#contact` —
  *      point them at the real `/insights?type=...` deep links, mirroring what the Header's own

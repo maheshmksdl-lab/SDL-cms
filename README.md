@@ -90,6 +90,21 @@ put the lines back.
 Alternatively, point `cms/.env`'s `DATABASE_URI` at any database you *can* reach and run
 `pnpm migrate && pnpm seed`.
 
+Set `CMS_ADMIN_EMAIL` and `CMS_ADMIN_PASSWORD` in `cms/.env` **before** migrating: the admin
+account is created from them. With `CMS_ADMIN_EMAIL` blank no administrator exists, and every
+login to the new database fails. Setting them later works too — re-run `pnpm seed`.
+
+### The seed is the source of truth for content
+
+A fresh database plus `pnpm migrate && pnpm seed` reproduces the live site: pages, navigation,
+services, products, forms, the Insights and client logos migrated from the legacy site, and the
+Clients/Testimonials pages. Re-running it on an existing database converges on the same state.
+
+So a content change every environment needs goes into `src/seeds/` (or a migration). A script
+run by hand against one database — production, say — changes that database only, and every
+other environment and every fresh clone silently falls behind. `scripts/*:prod` wrappers exist
+to apply one seed step to a live database; the step itself still lives in `src/seeds/`.
+
 ## Conventions
 
 **Every collection goes through `withAccess()`.** It is the single seam wiring RBAC, the shared
